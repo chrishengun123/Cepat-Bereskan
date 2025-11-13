@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://cc24mc5p375ov"]
+
+[ext_resource type="PackedScene" uid="uid://t2l83e52qsey" path="res://scenes/character.tscn" id="1_3vyb7"]
+[ext_resource type="Script" uid="uid://uv6nh080t56d" path="res://scripts/player.gd" id="1_g2els"]
+[ext_resource type="Texture2D" uid="uid://cu43gksn36atn" path="res://assets/SK-placeholder.jpg" id="3_qhqgy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qhqgy"]
+
+[node name="Main (temporary)" type="Node2D"]
+
+[node name="Player" type="CharacterBody2D" parent="." node_paths=PackedStringArray("Character")]
+script = ExtResource("1_g2els")
+Character = NodePath("Character")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+shape = SubResource("RectangleShape2D_qhqgy")
+
+[node name="Character" parent="Player" instance=ExtResource("1_3vyb7")]
+
+[node name="some random image" type="Sprite2D" parent="."]
+position = Vector2(191, 195.99998)
+scale = Vector2(0.28583333, 0.16916667)
+texture = ExtResource("3_qhqgy")
