@@ -3,6 +3,7 @@ class_name Game
 
 @onready var player:Player = $Player
 @onready var ui:UI = $ui
+@onready var minigame = $minigame
 var tasks = preload("res://scenes/task.tscn")
 var minigames:Minigames = Minigames.new()
 var time_left:float = 10**10

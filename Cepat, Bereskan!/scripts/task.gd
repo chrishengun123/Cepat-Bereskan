@@ -4,13 +4,16 @@ class_name Task
 var minigames:Minigames = Minigames.new()
 var type:String
 var player_touching:bool = false
+var task_minigame
 
 func _ready() -> void:
 	material = material.duplicate()
 
 func _process(delta: float) -> void:
 	if player_touching and Input.is_action_just_pressed("ui_accept"):
-		get_parent().player.add_child(minigames.data.get(type))
+		task_minigame = minigames.scenes.get(type).instantiate()
+		get_parent().minigame.add_child()
+
 
 
 func _on_hitbox_body_entered(body: Node2D) -> void:

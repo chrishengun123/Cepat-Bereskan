@@ -8,3 +8,7 @@ const locations:Dictionary = {
 const textures:Dictionary = {
 	"placeholder": preload("res://icon.svg")
 }
+
+const scenes:Dictionary = {
+	
+}

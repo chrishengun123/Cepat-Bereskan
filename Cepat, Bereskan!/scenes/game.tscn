@@ -22,4 +22,6 @@ polygon = PackedVector2Array(56, 48, 1056, 48, 1056, 712, 56, 712, 56, 104, 160,
 [node name="Player" parent="." instance=ExtResource("3_iywne")]
 position = Vector2(232, 264)
 
+[node name="minigame" type="CanvasLayer" parent="."]
+
 [node name="ui" parent="." instance=ExtResource("4_lbhrr")]
