@@ -27,21 +27,21 @@ offset_bottom = 40.0
 
 [node name="continue" type="Button" parent="pause_menu"]
 layout_mode = 0
-offset_left = 512.0
-offset_top = 320.0
-offset_right = 640.0
-offset_bottom = 384.0
+offset_left = 480.0
+offset_top = 256.0
+offset_right = 672.0
+offset_bottom = 320.0
 theme = SubResource("Theme_nt7q6")
-text = "Start"
+text = "Continue"
 
 [node name="give_up" type="Button" parent="pause_menu"]
 layout_mode = 0
-offset_left = 512.0
-offset_top = 320.0
-offset_right = 640.0
-offset_bottom = 384.0
+offset_left = 480.0
+offset_top = 384.0
+offset_right = 672.0
+offset_bottom = 448.0
 theme = SubResource("Theme_nt7q6")
-text = "Start"
+text = "Give Up"
 
 [connection signal="pressed" from="pause_menu/continue" to="." method="_on_continue_pressed"]
 [connection signal="pressed" from="pause_menu/give_up" to="." method="_on_give_up_pressed"]
