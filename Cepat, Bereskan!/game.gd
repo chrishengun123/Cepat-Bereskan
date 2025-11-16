@@ -1,6 +1,6 @@
 extends Node2D
 
-var player
+var player:Player
 var ui
 var tasks = preload("res://task.tscn")
 var minigames:Minigames = Minigames.new()
