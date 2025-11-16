@@ -2,7 +2,7 @@ extends Node2D
 
 @onready var player:Player = $Player
 var ui
-var tasks = preload("res://task.tscn")
+var tasks = preload("res://scenes/task.tscn")
 var minigames:Minigames = Minigames.new()
 var time_left:float = 10^10
 #tasks_left:Array[Task]
