@@ -1,13 +1,20 @@
-[gd_scene load_steps=3 format=3 uid="uid://hd1ynm31f37m"]
+[gd_scene load_steps=4 format=3 uid="uid://hd1ynm31f37m"]
 
 [ext_resource type="Script" uid="uid://du7mnuc5pefnv" path="res://game.gd" id="1_80nbo"]
 [ext_resource type="PackedScene" uid="uid://c4rh0ino016d6" path="res://scenes/player.tscn" id="2_e2o6t"]
+[ext_resource type="Texture2D" uid="uid://doagv4k8kssvf" path="res://Layout test.png" id="2_feb5d"]
 
 [node name="game" type="Node2D"]
 script = ExtResource("1_80nbo")
 
+[node name="layout" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_feb5d")
+
 [node name="walls" type="StaticBody2D" parent="."]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="walls"]
+polygon = PackedVector2Array(56, 48, 1056, 48, 1056, 712, 56, 712, 56, 104, 160, 104, 160, 344, 464, 344, 464, 560, 816, 560, 816, 584, 968, 584, 968, 472, 816, 472, 816, 480, 744, 480, 744, 200, 472, 200, 472, 240, 304, 240, 304, 120, 160, 120, 160, 104, 56, 104)
 
 [node name="Player" parent="." instance=ExtResource("2_e2o6t")]
