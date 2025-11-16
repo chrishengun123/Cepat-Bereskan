@@ -1,7 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://cc24mc5p375ov"]
+[gd_scene load_steps=5 format=3 uid="uid://c4rh0ino016d6"]
 
-[ext_resource type="PackedScene" uid="uid://t2l83e52qsey" path="res://scenes/character.tscn" id="1_3vyb7"]
-[ext_resource type="Script" uid="uid://uv6nh080t56d" path="res://scripts/player.gd" id="1_g2els"]
+[ext_resource type="PackedScene" path="res://scenes/character.tscn" id="1_3vyb7"]
+[ext_resource type="Script" path="res://scripts/player.gd" id="1_g2els"]
 [ext_resource type="Texture2D" uid="uid://cu43gksn36atn" path="res://assets/SK-placeholder.jpg" id="3_qhqgy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qhqgy"]
