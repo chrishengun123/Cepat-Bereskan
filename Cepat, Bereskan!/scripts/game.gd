@@ -1,10 +1,11 @@
 extends Node2D
+class_name Game
 
 @onready var player:Player = $Player
-var ui
+@onready var ui:UI = $ui
 var tasks = preload("res://scenes/task.tscn")
 var minigames:Minigames = Minigames.new()
-var time_left:float = 10^10
+var time_left:float = 10**10
 #tasks_left:Array[Task]
 var tasks_left:Array
 
