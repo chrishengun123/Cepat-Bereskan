@@ -6,6 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qhqgy"]
 
 [node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("Character")]
+collision_layer = 2
 script = ExtResource("1_g2els")
 Character = NodePath("Character")
 
