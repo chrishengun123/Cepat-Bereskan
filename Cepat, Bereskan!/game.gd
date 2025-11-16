@@ -1,6 +1,6 @@
 extends Node2D
 
-var player:Player
+@onready var player:Player = $Player
 var ui
 var tasks = preload("res://task.tscn")
 var minigames:Minigames = Minigames.new()
