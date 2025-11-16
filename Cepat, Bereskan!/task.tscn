@@ -1,11 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://64x0c0xa7wvc"]
 
 [ext_resource type="Script" uid="uid://chqioq4hhefae" path="res://task.gd" id="1_3qm7i"]
-<<<<<<< Updated upstream
 [ext_resource type="Shader" uid="uid://l6h13xnqr04e" path="res://highlight.gdshader" id="1_ct837"]
-=======
-[ext_resource type="Shader" uid="uid://l6h13xnqr04e" path="res://outline.gdshader" id="1_ct837"]
->>>>>>> Stashed changes
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_dvyfb"]
 shader = ExtResource("1_ct837")
