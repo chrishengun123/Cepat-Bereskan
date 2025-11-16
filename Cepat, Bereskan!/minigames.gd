@@ -2,7 +2,7 @@ extends Node
 class_name Minigames
 
 const locations:Dictionary = {
-	"placeholder": [Vector2(64*1,64*1),Vector2(64*2,64*2),Vector2(64*3,64*3),Vector2(64*4,64*4),Vector2(64*5,64*5)]
+	"placeholder": [Vector2(500,300), Vector2(600,300), Vector2(700,300), Vector2(500,400), Vector2(600,400), Vector2(700,400), Vector2(500,500), Vector2(600,500), Vector2(700,500)]
 }
 
 const textures:Dictionary = {
