@@ -1,4 +1,4 @@
-[gd_resource type="SpriteFrames" load_steps=18 format=3 uid="uid://d05bkdw5uo8i8"]
+[gd_resource type="SpriteFrames" load_steps=10 format=3 uid="uid://d05bkdw5uo8i8"]
 
 [ext_resource type="Texture2D" uid="uid://hdsme4ysvl65" path="res://assets/Tak berjudul156 (1).png" id="1_wen7i"]
 
@@ -34,38 +34,6 @@ region = Rect2(3204, 0, 534, 1204)
 atlas = ExtResource("1_wen7i")
 region = Rect2(3738, 0, 534, 1204)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_wen7i"]
-atlas = ExtResource("1_wen7i")
-region = Rect2(3738, 1204, 534, 1204)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_5svbx"]
-atlas = ExtResource("1_wen7i")
-region = Rect2(3204, 1204, 534, 1204)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_qww6r"]
-atlas = ExtResource("1_wen7i")
-region = Rect2(2670, 1204, 534, 1204)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_blmqk"]
-atlas = ExtResource("1_wen7i")
-region = Rect2(2136, 1204, 534, 1204)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_520oy"]
-atlas = ExtResource("1_wen7i")
-region = Rect2(1602, 1204, 534, 1204)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_0jjpq"]
-atlas = ExtResource("1_wen7i")
-region = Rect2(1068, 1204, 534, 1204)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_lcmks"]
-atlas = ExtResource("1_wen7i")
-region = Rect2(534, 1204, 534, 1204)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_py2so"]
-atlas = ExtResource("1_wen7i")
-region = Rect2(0, 1204, 534, 1204)
-
 [resource]
 animations = [{
 "frames": [{
@@ -95,34 +63,5 @@ animations = [{
 }],
 "loop": true,
 "name": &"left",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_wen7i")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_5svbx")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_qww6r")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_blmqk")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_520oy")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_0jjpq")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_lcmks")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_py2so")
-}],
-"loop": true,
-"name": &"right",
 "speed": 5.0
 }]

@@ -10,8 +10,10 @@ func _physics_process(delta: float) -> void:
 
 func rotation(direction:Vector2) -> void:
 	if direction.x < 0:
-		character.play("left")
+		character.flip_h = false
 	elif direction.x > 0:
-		character.play("right")
+		character.flip_h = true
+	if direction != Vector2.ZERO:
+		character.play("left")
 	else:
 		character.stop()
