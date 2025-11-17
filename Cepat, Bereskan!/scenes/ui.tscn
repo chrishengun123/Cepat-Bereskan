@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://bppvf2x2sut0c"]
+[gd_scene load_steps=5 format=3 uid="uid://bppvf2x2sut0c"]
 
 [ext_resource type="Script" uid="uid://cndi62fjpfqcv" path="res://scripts/ui.gd" id="1_nt7q6"]
 
@@ -7,6 +7,9 @@ font_size = 64
 
 [sub_resource type="Theme" id="Theme_nt7q6"]
 default_font_size = 32
+
+[sub_resource type="LabelSettings" id="LabelSettings_x4jx1"]
+font_size = 32
 
 [node name="ui" type="CanvasLayer"]
 process_mode = 3
@@ -44,6 +47,25 @@ offset_right = 672.0
 offset_bottom = 448.0
 theme = SubResource("Theme_nt7q6")
 text = "Give Up"
+
+[node name="dialogue_box" type="PanelContainer" parent="."]
+offset_left = 8.0
+offset_top = 512.0
+offset_right = 1144.0
+offset_bottom = 640.0
+
+[node name="margin" type="MarginContainer" parent="dialogue_box"]
+layout_mode = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_right = 32
+
+[node name="dialogue_text" type="Label" parent="dialogue_box/margin"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Lorem Ipsum Dolor Sit Amet"
+label_settings = SubResource("LabelSettings_x4jx1")
+vertical_alignment = 1
+autowrap_mode = 3
 
 [connection signal="pressed" from="pause_menu/continue" to="." method="_on_continue_pressed"]
 [connection signal="pressed" from="pause_menu/give_up" to="." method="_on_give_up_pressed"]
