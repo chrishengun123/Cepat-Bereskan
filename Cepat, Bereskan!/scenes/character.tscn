@@ -1,21 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://bo78pnw5kq8dw"]
-
-[ext_resource type="Texture2D" uid="uid://cu43gksn36atn" path="res://assets/SK-placeholder.jpg" id="1_glpr6"]
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_8uh7m"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("1_glpr6")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
+[gd_scene format=3 uid="uid://bo78pnw5kq8dw"]
 
 [node name="character" type="AnimatedSprite2D"]
-scale = Vector2(0.016979165, 0.016979165)
-sprite_frames = SubResource("SpriteFrames_8uh7m")
 
 [node name="camera" type="Camera2D" parent="."]
 zoom = Vector2(3, 3)
