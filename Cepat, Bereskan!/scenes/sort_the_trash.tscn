@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://8cygcty0tbbm"]
+
+[ext_resource type="Script" uid="uid://bpdok3asqelhx" path="res://scripts/sort_the_trash.gd" id="1_2jcaw"]
+
+[node name="sort_the_trash" type="Node2D"]
+script = ExtResource("1_2jcaw")
+
+[node name="organic_bin" type="Sprite2D" parent="."]
+
+[node name="inorganic_bin" type="Sprite2D" parent="."]
