@@ -33,7 +33,7 @@ func _process(delta: float) -> void:
 		pass
 	elif tasks_left.size() == 0:
 		pass
-	if $ui.get_child_count() > 0:
-		player.process_mode = Node.PROCESS_MODE_INHERIT
-	else:
+	if $minigame.get_child_count():
 		player.process_mode = Node.PROCESS_MODE_DISABLED
+	else:
+		player.process_mode = Node.PROCESS_MODE_INHERIT
