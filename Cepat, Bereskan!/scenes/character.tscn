@@ -13,11 +13,9 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Character" type="Node2D"]
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="character" type="AnimatedSprite2D"]
 scale = Vector2(0.016979165, 0.016979165)
 sprite_frames = SubResource("SpriteFrames_8uh7m")
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="camera" type="Camera2D" parent="."]
 zoom = Vector2(3, 3)
