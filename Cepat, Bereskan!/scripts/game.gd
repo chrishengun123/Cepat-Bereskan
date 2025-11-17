@@ -18,7 +18,7 @@ func _ready() -> void:
 		var type = task_types.pick_random()
 		var locations:Array = task_locations.get(type).duplicate()
 		task.position = locations.pop_at(randi()%locations.size())
-		task.texture = minigames.textures.get(type)
+		task.texture = minigames.textures.get(type).pick_random()
 		task.type = type
 		task_locations.set(type, locations)
 		if locations.size() == 0:
