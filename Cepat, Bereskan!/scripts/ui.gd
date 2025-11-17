@@ -8,16 +8,18 @@ var dialogue_index:int = 0
 
 func _ready() -> void:
 	game = get_parent()
-	$pause_menu.visible = false
 	print(dialogue_data.scripts)
 
 func _process(delta: float) -> void:
 	if dialogue:
 		if Input.is_action_just_pressed("next"):
 			if dialogue_index > dialogue.size():
+				$dialogue_box.visible = false
 				dialogue = []
+				get_tree().paused = false
 			else:
 				%dialogue_text.text = dialogue[dialogue_index]
+				$dialogue_box.visible = true
 				dialogue_index += 1
 	else:
 		$time_left.text = str(int(get_parent().time_left/60))+":"+str(int(get_parent().time_left)%60)

@@ -49,6 +49,7 @@ theme = SubResource("Theme_nt7q6")
 text = "Give Up"
 
 [node name="dialogue_box" type="PanelContainer" parent="."]
+visible = false
 offset_left = 8.0
 offset_top = 512.0
 offset_right = 1144.0
