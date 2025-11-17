@@ -1,4 +1,4 @@
-extends Script
+extends Node
 class_name TrashData
 
 var textures:Dictionary = {
