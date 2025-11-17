@@ -9,6 +9,7 @@ font_size = 64
 default_font_size = 32
 
 [node name="ui" type="CanvasLayer"]
+process_mode = 3
 script = ExtResource("1_nt7q6")
 
 [node name="time_left" type="Label" parent="."]
