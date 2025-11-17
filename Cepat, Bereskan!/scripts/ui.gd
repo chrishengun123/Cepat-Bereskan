@@ -30,9 +30,10 @@ func start_dialogue(title):
 	get_tree().paused = true
 	dialogue = dialogue_data.scripts.get(title)
 	dialogue_index = 0
-
+	
 func _on_continue_pressed() -> void:
 	$pause_menu.visible = false
+	$audio.play()
 
 
 func _on_give_up_pressed() -> void:

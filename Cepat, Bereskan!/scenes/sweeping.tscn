@@ -10,3 +10,5 @@ script = ExtResource("1_u2u4c")
 position = Vector2(576, 320.00003)
 scale = Vector2(10, 10)
 texture = ExtResource("2_1m0b1")
+
+[node name="sfx" type="AudioStreamPlayer" parent="."]

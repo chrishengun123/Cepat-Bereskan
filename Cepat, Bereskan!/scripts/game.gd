@@ -37,3 +37,7 @@ func _process(delta: float) -> void:
 		player.process_mode = Node.PROCESS_MODE_DISABLED
 	else:
 		player.process_mode = Node.PROCESS_MODE_INHERIT
+
+
+func _on_bgm_finished() -> void:
+	$bgm.play()

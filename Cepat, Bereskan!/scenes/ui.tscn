@@ -68,5 +68,7 @@ label_settings = SubResource("LabelSettings_x4jx1")
 vertical_alignment = 1
 autowrap_mode = 3
 
+[node name="audio" type="AudioStreamPlayer" parent="."]
+
 [connection signal="pressed" from="pause_menu/continue" to="." method="_on_continue_pressed"]
 [connection signal="pressed" from="pause_menu/give_up" to="." method="_on_give_up_pressed"]
