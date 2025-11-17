@@ -1,6 +1,12 @@
-[gd_scene load_steps=2 format=3 uid="uid://b3xnm4ktg7hj6"]
+[gd_scene load_steps=3 format=3 uid="uid://b3xnm4ktg7hj6"]
 
 [ext_resource type="Script" uid="uid://4du5vne7jjv2" path="res://scripts/sweeping.gd" id="1_u2u4c"]
+[ext_resource type="Texture2D" uid="uid://d0odwr6v7mndq" path="res://assets/arrow.png" id="2_1m0b1"]
 
 [node name="sweeping" type="Node2D"]
 script = ExtResource("1_u2u4c")
+
+[node name="arrow" type="Sprite2D" parent="."]
+position = Vector2(576, 320.00003)
+scale = Vector2(10, 10)
+texture = ExtResource("2_1m0b1")
