@@ -12,7 +12,6 @@ func _process(delta: float) -> void:
 	if timer <= 0:
 		$bag_space.clear()
 		start(10)
-		print($bag_space.get_used_cells().size())
 		timer = 0.5
 
 func start(amount:int):
@@ -40,4 +39,3 @@ func start(amount:int):
 						placed = false
 				if placed:
 					$bag_space.set_pattern(rand_coords,placeholder_item)
->>>>>>> Stashed changes

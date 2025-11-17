@@ -4,6 +4,7 @@
 
 [sub_resource type="LabelSettings" id="LabelSettings_nt7q6"]
 font_size = 64
+font_color = Color(0, 0, 0, 1)
 
 [sub_resource type="Theme" id="Theme_nt7q6"]
 default_font_size = 32
@@ -48,12 +49,39 @@ offset_bottom = 448.0
 theme = SubResource("Theme_nt7q6")
 text = "Give Up"
 
+[node name="end_screen" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="end_text" type="Label" parent="end_screen"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_top = 160.0
+offset_right = 1152.0
+offset_bottom = 288.0
+text = "Lorem Ipsum"
+label_settings = SubResource("LabelSettings_nt7q6")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="end_game" type="Button" parent="end_screen"]
+layout_mode = 0
+offset_left = 480.0
+offset_top = 384.0
+offset_right = 672.0
+offset_bottom = 448.0
+theme = SubResource("Theme_nt7q6")
+text = "End Game"
+
 [node name="dialogue_box" type="PanelContainer" parent="."]
 visible = false
-offset_left = 8.0
-offset_top = 512.0
-offset_right = 1144.0
-offset_bottom = 640.0
+offset_left = 16.0
+offset_top = 488.0
+offset_right = 1136.0
+offset_bottom = 616.0
 
 [node name="margin" type="MarginContainer" parent="dialogue_box"]
 layout_mode = 2
@@ -68,7 +96,8 @@ label_settings = SubResource("LabelSettings_x4jx1")
 vertical_alignment = 1
 autowrap_mode = 3
 
-[node name="audio" type="AudioStreamPlayer" parent="."]
+[node name="sfx" type="AudioStreamPlayer" parent="."]
 
 [connection signal="pressed" from="pause_menu/continue" to="." method="_on_continue_pressed"]
 [connection signal="pressed" from="pause_menu/give_up" to="." method="_on_give_up_pressed"]
+[connection signal="pressed" from="end_screen/end_game" to="." method="_on_end_game_pressed"]
