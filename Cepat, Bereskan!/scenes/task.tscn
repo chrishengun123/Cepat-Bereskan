@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://64x0c0xa7wvc"]
 
 [ext_resource type="Script" uid="uid://chqioq4hhefae" path="res://scripts/task.gd" id="1_3qm7i"]
-[ext_resource type="Shader" uid="uid://l6h13xnqr04e" path="res://scripts/outline.gdshader" id="1_ct837"]
+[ext_resource type="Shader" uid="uid://l6h13xnqr04e" path="res://scripts/highlight.gdshader" id="1_ct837"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_dvyfb"]
 shader = ExtResource("1_ct837")
@@ -17,12 +17,12 @@ shader_parameter/enabled = false
 shader_parameter/line_color = Color(1, 1, 1, 1)
 shader_parameter/thickness = 2.0
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_ct837"]
-radius = 159.99998
+[sub_resource type="CircleShape2D" id="CircleShape2D_3qeyo"]
+radius = 3298.4846
 
 [node name="task" type="Sprite2D"]
 material = SubResource("ShaderMaterial_dvyfb")
-scale = Vector2(0.1, 0.1)
+scale = Vector2(0.01, 0.01)
 script = ExtResource("1_3qm7i")
 
 [node name="hitbox" type="Area2D" parent="."]
@@ -31,7 +31,7 @@ collision_layer = 0
 collision_mask = 2
 
 [node name="shape" type="CollisionShape2D" parent="hitbox"]
-shape = SubResource("CircleShape2D_ct837")
+shape = SubResource("CircleShape2D_3qeyo")
 
 [connection signal="body_entered" from="hitbox" to="." method="_on_hitbox_body_entered"]
 [connection signal="body_exited" from="hitbox" to="." method="_on_hitbox_body_exited"]

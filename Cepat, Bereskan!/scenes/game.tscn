@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://glqgsitcf4j0"]
+[gd_scene load_steps=6 format=3 uid="uid://glqgsitcf4j0"]
 
 [ext_resource type="Script" uid="uid://du7mnuc5pefnv" path="res://scripts/game.gd" id="1_lnu2h"]
 [ext_resource type="Texture2D" uid="uid://doagv4k8kssvf" path="res://assets/Layout test.png" id="2_lbhrr"]
 [ext_resource type="PackedScene" uid="uid://c4rh0ino016d6" path="res://scenes/player.tscn" id="3_iywne"]
 [ext_resource type="PackedScene" uid="uid://bppvf2x2sut0c" path="res://scenes/ui.tscn" id="4_lbhrr"]
+[ext_resource type="AudioStream" uid="uid://daceplyvqwajx" path="res://assets/Cepat_Bereskan_Theme_Loop.wav" id="5_iywne"]
 
 [node name="game" type="Node2D"]
 script = ExtResource("1_lnu2h")
@@ -25,3 +26,10 @@ position = Vector2(232, 264)
 [node name="minigame" type="CanvasLayer" parent="."]
 
 [node name="ui" parent="." instance=ExtResource("4_lbhrr")]
+
+[node name="bgm" type="AudioStreamPlayer" parent="."]
+process_mode = 3
+stream = ExtResource("5_iywne")
+autoplay = true
+
+[connection signal="finished" from="bgm" to="." method="_on_bgm_finished"]

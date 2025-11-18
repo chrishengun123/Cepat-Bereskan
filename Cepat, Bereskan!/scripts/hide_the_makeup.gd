@@ -1,7 +1,7 @@
 extends Node2D
 class_name HideTheMakeup
 
-var makeup_data:MakeupData = load("res://scripts/makeup_data.gd")
+var makeup_data:MakeupData = MakeupData.new()
 var makeup:Array
 const sides:Array = [Vector2i.LEFT, Vector2i.RIGHT, Vector2i.UP, Vector2i.DOWN]
 var placeholder_array:Array = []
@@ -12,7 +12,6 @@ func _process(delta: float) -> void:
 	if timer <= 0:
 		$bag_space.clear()
 		start(10)
-		print($bag_space.get_used_cells().size())
 		timer = 0.5
 
 func start(amount:int):

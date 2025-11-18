@@ -6,7 +6,7 @@ const locations:Dictionary = {
 }
 
 const textures:Dictionary = {
-	"sweeping": preload("res://icon.svg")
+	"sweeping": [preload("res://assets/DUST 1.png"), preload("res://assets/DUST 2.png")]
 }
 
 const scenes:Dictionary = {
