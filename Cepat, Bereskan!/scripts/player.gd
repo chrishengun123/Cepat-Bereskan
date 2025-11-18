@@ -5,6 +5,8 @@ class_name Player
 var direction:Vector2
 
 func _physics_process(delta: float) -> void:
+	if !Input.is_anything_pressed():
+		direction = Vector2.ZERO
 	move_and_collide(Consts.SPEED * direction * delta)
 	if direction != Vector2.ZERO:
 		character.play("left")

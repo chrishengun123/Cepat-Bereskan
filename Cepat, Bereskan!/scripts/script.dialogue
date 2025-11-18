@@ -3,7 +3,7 @@ do Global.play_sfx(load("res://assets/Keys Jingling.wav"))
 Mom: “Honey, I’m home.”
 (sound of a doorbell ringing. once. then twice. then held down for a frantic series of rings.)
 Mom: “Honey, are you there?”
-Mom:*sigh*
+Mom: *sigh*
 Mom: “Alright, you little rascal. Just wait for Mommy's punishment.”
 She lifted the corner of the worn doormat, her hand moving automatically to the small metal key under the dusty doormat.
 (sound of a key turning in the lock. CLICK SFX )
@@ -20,3 +20,27 @@ Leaning down to her sleeping son, she smiles and kisses him lightly on the foreh
 Mom: *whispering* “Good boy.”
 ( Visual please let him have a blanket on at the end )
 do Global.ui.win()
+=> END
+
+~ bad_end_sweeping
+A boy, with his chin on the broom handle, was sleeping on his feet. His head, leaning forward, kept dipping down the floor, almost falling on his face.
+Then suddenly, ( Ding Dong SFX ), the sound of a doorbell blasting through the house.
+The sound of the bell was the turning point, as the body, surprised, finally fell flat on the floor,  causing a large dust cloud.
+Boy: *Coughing* “Seriously ?”
+As the boy brushed off the dust from his clothes, the doorbell rang once again.
+Boy: “Yeah, yeah! I’m coming!”
+He pushed himself up and stumbled toward the door and stepped right onto a lonely dirty sock.
+Boy: *sighed* “Aw.. come on…”
+The boy mumbled in annoyance. Hearing the doorbell rang again, he yanked the door open.
+Just outside the door, there was a woman carrying a small luggage, smiling at him.
+Mom: “Honey, I’m home”
+Without a moment wasted, the woman pulled him in a warm hug.
+But then she froze. Letting go the young man in her grasp, she saw dust all over her and the boy’s clothes.
+Mom: “Sweetie… why are your clothes covered in dust?”
+He froze. Cold sweet starts trailing off his forehead.
+Boy: “Well… it’s a long story…”
+The man stepped aside the door, letting her see the view of the house.
+Behind him was the disaster zone of a living room. Trash everywhere, weird sticky puddles, and piles of who-knows-what piled over the floor.
+His mom squinted.
+Mom: “Oh really ?”
+That day, sounds of misery and hysteria sounded across the neighborhood.
