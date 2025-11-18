@@ -1,4 +1,4 @@
-extends Node
+extends Script
 class_name Minigames
 
 const locations:Dictionary = {

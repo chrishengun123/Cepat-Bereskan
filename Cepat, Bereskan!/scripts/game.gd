@@ -5,7 +5,7 @@ class_name Game
 @onready var ui:UI = $ui
 @onready var minigame = $minigame
 var tasks = preload("res://scenes/task.tscn")
-var minigames:Minigames = Minigames.new()
+var minigames = preload("res://scripts/minigames.gd")
 var time_left:float = 60
 #tasks_left:Array[Task]
 var tasks_left:Array = []

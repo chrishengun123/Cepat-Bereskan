@@ -1,7 +1,7 @@
 extends Sprite2D
 class_name Task
 
-var minigames:Minigames = Minigames.new()
+const minigames = preload("res://scripts/minigames.gd")
 var game:Game
 var type:String
 var player_touching:bool = false
