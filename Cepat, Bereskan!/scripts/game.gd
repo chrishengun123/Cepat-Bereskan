@@ -11,6 +11,7 @@ var time_left:float = 60
 var tasks_left:Array = []
 
 func _ready() -> void:
+	Global.game = self
 	var task_types:Array = minigames.locations.keys()
 	var task_locations:Dictionary = minigames.locations.duplicate()
 	for i in range(3):
@@ -31,9 +32,6 @@ func _process(delta: float) -> void:
 	if time_left <= 0:
 		#random ending scene depending on unfinished tasks
 		ui.start_dialogue("bad ending: sweeping")
-		pass
-	elif !tasks_left:
-		ui.start_dialogue("good ending")
 	if $minigame.get_child_count():
 		player.process_mode = Node.PROCESS_MODE_DISABLED
 	else:

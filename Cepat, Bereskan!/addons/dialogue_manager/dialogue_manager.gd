@@ -445,7 +445,7 @@ func show_example_dialogue_balloon(resource: DialogueResource, title: String = "
 
 ## Show the configured dialogue balloon
 func show_dialogue_balloon(resource: DialogueResource, title: String = "", extra_game_states: Array = []) -> Node:
-	var balloon_path: String = DMSettings.get_setting(DMSettings.BALLOON_PATH, _get_example_balloon_path())
+	var balloon_path: String = DMSettings.get_setting(DMSettings.BALLOON_PATH, _get_balloon_path())
 	if not ResourceLoader.exists(balloon_path):
 		balloon_path = _get_example_balloon_path()
 	return show_dialogue_balloon_scene(balloon_path, resource, title, extra_game_states)
@@ -496,6 +496,10 @@ func _get_example_balloon_path() -> String:
 	var balloon_path: String = "/example_balloon/small_example_balloon.tscn" if is_small_window else "/example_balloon/example_balloon.tscn"
 	return get_script().resource_path.get_base_dir() + balloon_path
 
+func _get_balloon_path() -> String:
+	var is_small_window: bool = ProjectSettings.get_setting("display/window/size/viewport_width") < 400
+	var balloon_path: String = "/balloon/small_balloon.tscn" if is_small_window else "/balloon/balloon.tscn"
+	return get_script().resource_path.get_base_dir() + balloon_path
 
 #endregion
 

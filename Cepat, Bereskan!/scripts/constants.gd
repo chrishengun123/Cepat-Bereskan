@@ -1,3 +1,4 @@
 extends Node
 
-const SPEED = 64
+const SPEED = 80
+const dialogue_script:DialogueResource = preload("res://scripts/script.dialogue")
