@@ -7,7 +7,6 @@ class_name Game
 var tasks = preload("res://scenes/task.tscn")
 var minigames = preload("res://scripts/minigames.gd")
 var time_left:float = 60
-#tasks_left:Array[Task]
 var tasks_left:Array = []
 
 func _ready() -> void:
