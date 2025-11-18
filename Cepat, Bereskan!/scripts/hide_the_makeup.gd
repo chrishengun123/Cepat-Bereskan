@@ -40,4 +40,3 @@ func start(amount:int):
 						placed = false
 				if placed:
 					$bag_space.set_pattern(rand_coords,placeholder_item)
->>>>>>> Stashed changes

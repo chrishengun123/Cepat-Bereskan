@@ -1,4 +1,4 @@
-[gd_scene load_steps=2 format=3 uid="uid://8cygcty0tbbm"]
+[gd_scene load_steps=2 format=3 uid="uid://cojc6xjhqdh03"]
 
 [ext_resource type="Script" uid="uid://bpdok3asqelhx" path="res://scripts/sort_the_trash.gd" id="1_2jcaw"]
 
