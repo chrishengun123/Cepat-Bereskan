@@ -18,10 +18,15 @@ config/icon="res://icon.svg"
 [autoload]
 
 Consts="*res://scripts/constants.gd"
+DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 
 [display]
 
 window/stretch/mode="viewport"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg")
 
 [input]
 
