@@ -27,8 +27,9 @@ func _ready() -> void:
 		tasks_left.append(task)
 
 func _process(delta: float) -> void:
-	time_left -= delta
-	if time_left <= 0:
+	if tasks_left:
+		time_left -= delta
+	if time_left <= 0 and tasks_left:
 		#random ending scene depending on unfinished tasks
 		DialogueManager.show_dialogue_balloon(Consts.dialogue_script, "bad_end_sweeping")
 		get_tree().paused = true

@@ -6,7 +6,7 @@ Mom: Honey, are you there?
 Mom: *sigh*
 Mom: Alright, you little rascal. Just wait for Mommy's punishment.
 She lifted the corner of the worn doormat, her hand moving automatically to the small metal key under the dusty doormat.
-(sound of a key turning in the lock. CLICK SFX )
+do Global.play_sfx(load("res://assets/Keys Opening 2.wav"))
 The woman pushed the door open slowly. She put down her briefcase as she moved through the house, her eyes glancing at every room she checked.
 The floor, spotless.
 The bedroom, tidy. There is even a neatly folded stack of clothes on top of the bed.
