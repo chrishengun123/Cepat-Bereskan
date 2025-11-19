@@ -1,24 +1,25 @@
 ~ intro
 A pretty teenage boy stretches his arms, eyes squinted, and his waist curved forward in an S shape
-Boy: “ Wow, last night was wild.”
-Rubbing his eyes, the boy took a step on the bedroom floor. His small feet landed on the messy floor, and he stepped on an opened can of soda
+Boy: Wow, last night was wild.
+Rubbing his eyes, the boy took a step on the bedroom floor.
 do Global.play_sfx(load("res://assets/Crash.mp3"))
-“F*ck”
+His small feet landed on the messy floor, and he stepped on an opened can of soda and fell.
+Boy: F*ck
 ( Modern home phone ringing sound )
 ( Sound of taking the phone )
-“Hello ? “
-Mom: “Honey, how is your first time being alone in house goes ?” I hope you are not lonely.
-Boy: “Ye..yeah Mom, it’s fine. Btw, why do you call me so early ?”
+Hello?
+Mom: Honey, how is your first time being alone in house goes ? I hope you are not lonely.
+Boy: Ye..yeah Mom, it’s fine. Btw, why do you call me so early ?
 Mom: Early ? It’s 2PM. Did you slept late last night ? I thought you wanna grow a few inches taller ? You should have sleep–
 ( Stop background music and put a vibration SFX )
 Boy: *raise voice a little* I Know Mom. Stop treating me as a kid.
-Mom: “... “
+Mom: ...
 ( Bring back background music )
 Mom: Ok dear. I’m driving right now, so we will talk later. I will be home in around half an hour.
 ( Beep SFX from Mom hold up the call )
 Boy: *sigh* Here goes my freedom. I should start cleaning before Mom got home in half an hour…
 ( SURPRISED SFX )
-Boy: Wait !!? Half an hour ??? I’M FINISHED  
+Boy: Wait !!? Half an hour ??? I’M FINISHED
 => END
 
 ~ good_end
