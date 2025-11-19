@@ -1,14 +1,15 @@
 extends Node
 
-
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass
-	
-func _input(ev):
-	print("key input")
-
+var flow_rate:float
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	$progress.value += flow_rate
+	if abs($progress.value-$progress.max_value) <= 1 and flow_rate == 0:
+		queue_free()
+	if $progress.value-$progress.max_value > 1:
+		$progress.value = 0
+
+func _unhandled_input(event: InputEvent) -> void:
+	flow_rate += Input.get_axis("ui_left", "ui_right") * 0.01
+	flow_rate = clamp(flow_rate, 0, 10)
