@@ -42,6 +42,7 @@ var dialogue_line: DialogueLine:
 			apply_dialogue_line()
 		else:
 			# The dialogue has finished so close the balloon
+			Global.ui.in_cutscene = false
 			if owner == null:
 				queue_free()
 			else:

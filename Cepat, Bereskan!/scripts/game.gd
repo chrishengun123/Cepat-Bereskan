@@ -25,9 +25,10 @@ func _ready() -> void:
 			task_types.erase(type)
 		add_child(task)
 		tasks_left.append(task)
+	DialogueManager.show_dialogue_balloon(Consts.dialogue_script, "intro")
 
 func _process(delta: float) -> void:
-	if tasks_left:
+	if !ui.in_cutscene and tasks_left:
 		time_left -= delta
 	if time_left <= 0 and tasks_left:
 		#random ending scene depending on unfinished tasks

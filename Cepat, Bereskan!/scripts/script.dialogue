@@ -1,5 +1,6 @@
 ~ intro
 A pretty teenage boy stretches his arms, eyes squinted, and his waist curved forward in an S shape
+do Global.ui.boy.visible = true
 Boy: Wow, last night was wild.
 Rubbing his eyes, the boy took a step on the bedroom floor.
 do Global.play_sfx(load("res://assets/Crash.mp3"))
@@ -20,6 +21,7 @@ Mom: Ok dear. I’m driving right now, so we will talk later. I will be home in 
 Boy: *sigh* Here goes my freedom. I should start cleaning before Mom got home in half an hour…
 ( SURPRISED SFX )
 Boy: Wait !!? Half an hour ??? I’M FINISHED
+do Global.ui.boy.visible = false
 => END
 
 ~ good_end

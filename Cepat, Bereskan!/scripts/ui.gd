@@ -2,8 +2,9 @@ extends CanvasLayer
 class_name UI
 
 var game:Game
+var in_cutscene:bool = false
 @onready var cutscene:Node2D = $cutscene
-@onready var dialogue_background:TextureRect = $cutscene/background
+@onready var cutscene_background:TextureRect = $cutscene/background
 @onready var boy:Node2D = $cutscene/boy
 @onready var boy_body:Node2D = $cutscene/boy/body
 @onready var boy_head:Node2D = $cutscene/boy/head
@@ -14,6 +15,7 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	$time_left.text = str(int((get_parent().time_left+1)/60))+":"+str(ceili(get_parent().time_left)%60)
+	cutscene.visible = in_cutscene
 
 func _unhandled_input(event: InputEvent) -> void:
 	if Input.is_action_just_pressed("pause"):
