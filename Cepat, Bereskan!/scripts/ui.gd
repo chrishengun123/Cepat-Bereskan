@@ -2,8 +2,11 @@ extends CanvasLayer
 class_name UI
 
 var game:Game
-var dialogue:Array = []
-var dialogue_index:int = 0
+@onready var dialogue_scene:Node2D = $dialogue_scene
+@onready var dialogue_background:TextureRect = $dialogue_scene/background
+@onready var boy:Node2D = $dialogue_scene/boy
+@onready var boy_body:Node2D = $dialogue_scene/boy/body
+@onready var boy_head:Node2D = $dialogue_scene/boy/head
 
 func _ready() -> void:
 	Global.ui = self

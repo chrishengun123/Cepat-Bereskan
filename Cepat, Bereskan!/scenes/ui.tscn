@@ -1,6 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://bppvf2x2sut0c"]
+[gd_scene load_steps=6 format=3 uid="uid://bppvf2x2sut0c"]
 
 [ext_resource type="Script" uid="uid://cndi62fjpfqcv" path="res://scripts/ui.gd" id="1_nt7q6"]
+[ext_resource type="Texture2D" uid="uid://cl352dlud10wp" path="res://assets/MC body only.png" id="2_yev5y"]
+[ext_resource type="Texture2D" uid="uid://byswiv6lax7f6" path="res://assets/Mc expression 1.png" id="3_gdt2y"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_nt7q6"]
 font_size = 64
@@ -72,6 +74,25 @@ offset_right = 672.0
 offset_bottom = 448.0
 theme = SubResource("Theme_nt7q6")
 text = "End Game"
+
+[node name="dialogue_scene" type="Node2D" parent="."]
+visible = false
+
+[node name="background" type="TextureRect" parent="dialogue_scene"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="boy" type="Node2D" parent="dialogue_scene"]
+
+[node name="body" type="Sprite2D" parent="dialogue_scene/boy"]
+position = Vector2(576.00006, 400.00003)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_yev5y")
+
+[node name="head" type="Sprite2D" parent="dialogue_scene/boy"]
+position = Vector2(576, 399.99997)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("3_gdt2y")
 
 [node name="sfx" type="AudioStreamPlayer" parent="."]
 
