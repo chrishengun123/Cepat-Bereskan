@@ -16,6 +16,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	$time_left.text = str(int((get_parent().time_left+1)/60))+":"+str(ceili(get_parent().time_left)%60)
 	cutscene.visible = in_cutscene
+	$time_left.visible = !in_cutscene
 
 func _unhandled_input(event: InputEvent) -> void:
 	if Input.is_action_just_pressed("pause"):

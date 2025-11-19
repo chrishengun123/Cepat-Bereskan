@@ -4,38 +4,82 @@ class_name HideTheMakeup
 var makeup_data = preload("res://scripts/makeup_data.gd")
 var makeup:Array
 const sides:Array = [Vector2i.LEFT, Vector2i.RIGHT, Vector2i.UP, Vector2i.DOWN]
-var placeholder_array:Array = []
+var max_bag_size:Vector2i = Vector2i(10,10)
+var makeup_patterns:Array = []
 
-var timer = 0
-func _process(delta: float) -> void:
-	timer -= delta
-	if timer <= 0:
-		$bag_space.clear()
-		start(10)
-		timer = 0.5
+func _ready() -> void:
+	start(10)
 
 func start(amount:int):
+	var possible_coords:Array = []
+	for y in max_bag_size.y:
+		for x in max_bag_size.x:
+			possible_coords.append(Vector2i(x,y))
 	for i in range(amount):
-		#chooses a random type of makeup
-		#makeup.append(makeup_data.data.keys()[randi()%makeup_data.data.size()])
-		placeholder_array.append($bag_space.tile_set.get_pattern(randi_range(0,3)))
-	#for i in range(makeup.size()):
-		#var item = makeup_data.data.get(makeup.pop_at(randi()%makeup.size()))
-		#if $bag_space.get_used_rect() == Vector2i(0,0):
-			#$bag_space.set_pattern(Vector2i(0,0),null)
-		#else:
-			#pass
-	for i in placeholder_array.size():
-		var placeholder_item:TileMapPattern = placeholder_array.pop_at(randi()%placeholder_array.size())
-		if $bag_space.get_used_rect().size == Vector2i(0,0):
-			$bag_space.set_pattern(Vector2i(0,0),placeholder_item)
-		else:
-			var placed = false
-			while !placed:
-				placed = true
-				var rand_coords = Vector2i(randi_range(0,10),randi_range(0,10))
-				for vec in placeholder_item.get_used_cells():
-					if $bag_space.get_cell_atlas_coords(rand_coords+vec) != Vector2i(-1,-1):
-						placed = false
-				if placed:
-					$bag_space.set_pattern(rand_coords,placeholder_item)
+		var success:bool = false
+		while !success:
+			var makeup_pattern:TileMapPattern = $bag_space.tile_set.get_pattern(randi_range(0,3))
+			if !$bag_space.get_used_rect().size:
+				$bag_space.set_pattern(Vector2i(5,5),makeup_pattern)
+				success = true
+			else:
+				var finished = false
+				while !finished:
+					var unchecked_coords = possible_coords.duplicate()
+					var placed = false
+					while !placed:
+						placed = true
+						if !unchecked_coords:
+							finished = true
+						else:
+							var rand_coords = unchecked_coords.pop_at(randi()%unchecked_coords.size())
+							for cell_pos in makeup_pattern.get_used_cells():
+								if (cell_pos+rand_coords).x >= max_bag_size.x or (cell_pos+rand_coords).y >= max_bag_size.y or $bag_space.get_cell_atlas_coords(cell_pos+rand_coords) != Vector2i(-1,-1):
+									placed = false
+							if !has_connection(makeup_pattern, rand_coords) or produces_hole(makeup_pattern, rand_coords):
+								placed = false
+							if placed:
+								$bag_space.set_pattern(rand_coords,makeup_pattern)
+								finished = true
+								success = true
+
+func has_connection(pattern:TileMapPattern, pos:Vector2i):
+	for i in range(pattern.get_used_cells().size()):
+		for direction in sides:
+			if $bag_space.get_cell_atlas_coords(pattern.get_used_cells()[i]+pos+direction) != -Vector2i.ONE:
+				return true
+	return false
+
+func produces_hole(pattern:TileMapPattern, pos:Vector2i):
+	var gen_result:Array = $bag_space.get_used_cells()
+	var addition:Array = pattern.get_used_cells()
+	for i in range(addition.size()):
+		addition[i] += pos
+	gen_result.append_array(addition)
+	for y in range(max_bag_size.y):
+		var sequence_checker:int = 0
+		for x in range(max_bag_size.x):
+			match sequence_checker:
+				0:
+					if gen_result.has(Vector2i(x,y)):
+						sequence_checker += 1
+				1:
+					if !gen_result.has(Vector2i(x,y)):
+						sequence_checker += 1
+				2:
+					if gen_result.has(Vector2i(x,y)):
+						return true
+	for x in range(max_bag_size.x):
+		var sequence_checker:int = 0
+		for y in range(max_bag_size.y):
+			match sequence_checker:
+				0:
+					if gen_result.has(Vector2i(x,y)):
+						sequence_checker += 1
+				1:
+					if !gen_result.has(Vector2i(x,y)):
+						sequence_checker += 1
+				2:
+					if gen_result.has(Vector2i(x,y)):
+						return true
+	return false
