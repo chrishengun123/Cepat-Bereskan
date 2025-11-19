@@ -1,7 +1,7 @@
 extends Node2D
 class_name HideTheMakeup
 
-var makeup_data:MakeupData = MakeupData.new()
+var makeup_data = preload("res://scripts/makeup_data.gd")
 var makeup:Array
 const sides:Array = [Vector2i.LEFT, Vector2i.RIGHT, Vector2i.UP, Vector2i.DOWN]
 var placeholder_array:Array = []

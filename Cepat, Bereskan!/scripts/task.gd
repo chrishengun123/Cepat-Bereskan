@@ -1,7 +1,7 @@
 extends Sprite2D
 class_name Task
 
-var minigames:Minigames = Minigames.new()
+const minigames = preload("res://scripts/minigames.gd")
 var game:Game
 var type:String
 var player_touching:bool = false
@@ -19,6 +19,8 @@ func _process(delta: float) -> void:
 		task_started = true
 	if task_started and !task_minigame:
 		game.tasks_left.erase(self)
+		if !game.tasks_left:
+			DialogueManager.show_dialogue_balloon(Consts.dialogue_script, "good_end")
 		queue_free()
 
 

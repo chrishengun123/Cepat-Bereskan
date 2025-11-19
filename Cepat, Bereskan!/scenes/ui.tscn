@@ -1,6 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://bppvf2x2sut0c"]
+[gd_scene load_steps=6 format=3 uid="uid://bppvf2x2sut0c"]
 
 [ext_resource type="Script" uid="uid://cndi62fjpfqcv" path="res://scripts/ui.gd" id="1_nt7q6"]
+[ext_resource type="Texture2D" uid="uid://cl352dlud10wp" path="res://assets/MC body only.png" id="2_yev5y"]
+[ext_resource type="Texture2D" uid="uid://byswiv6lax7f6" path="res://assets/Mc expression 1.png" id="3_gdt2y"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_nt7q6"]
 font_size = 64
@@ -8,9 +10,6 @@ font_color = Color(0, 0, 0, 1)
 
 [sub_resource type="Theme" id="Theme_nt7q6"]
 default_font_size = 32
-
-[sub_resource type="LabelSettings" id="LabelSettings_x4jx1"]
-font_size = 32
 
 [node name="ui" type="CanvasLayer"]
 process_mode = 3
@@ -76,25 +75,23 @@ offset_bottom = 448.0
 theme = SubResource("Theme_nt7q6")
 text = "End Game"
 
-[node name="dialogue_box" type="PanelContainer" parent="."]
+[node name="cutscene" type="Node2D" parent="."]
 visible = false
-offset_left = 16.0
-offset_top = 488.0
-offset_right = 1136.0
-offset_bottom = 616.0
 
-[node name="margin" type="MarginContainer" parent="dialogue_box"]
-layout_mode = 2
-theme_override_constants/margin_left = 32
-theme_override_constants/margin_right = 32
+[node name="background" type="TextureRect" parent="cutscene"]
+offset_right = 40.0
+offset_bottom = 40.0
 
-[node name="dialogue_text" type="Label" parent="dialogue_box/margin"]
-unique_name_in_owner = true
-layout_mode = 2
-text = "Lorem Ipsum Dolor Sit Amet"
-label_settings = SubResource("LabelSettings_x4jx1")
-vertical_alignment = 1
-autowrap_mode = 3
+[node name="boy" type="Node2D" parent="cutscene"]
+visible = false
+position = Vector2(576, 350)
+scale = Vector2(0.12, 0.12)
+
+[node name="body" type="Sprite2D" parent="cutscene/boy"]
+texture = ExtResource("2_yev5y")
+
+[node name="head" type="Sprite2D" parent="cutscene/boy"]
+texture = ExtResource("3_gdt2y")
 
 [node name="sfx" type="AudioStreamPlayer" parent="."]
 

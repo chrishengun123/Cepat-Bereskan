@@ -5,12 +5,12 @@ class_name Game
 @onready var ui:UI = $ui
 @onready var minigame = $minigame
 var tasks = preload("res://scenes/task.tscn")
-var minigames:Minigames = Minigames.new()
+var minigames = preload("res://scripts/minigames.gd")
 var time_left:float = 60
-#tasks_left:Array[Task]
 var tasks_left:Array = []
 
 func _ready() -> void:
+	Global.game = self
 	var task_types:Array = minigames.locations.keys()
 	var task_locations:Dictionary = minigames.locations.duplicate()
 	for i in range(3):
@@ -25,15 +25,15 @@ func _ready() -> void:
 			task_types.erase(type)
 		add_child(task)
 		tasks_left.append(task)
+	DialogueManager.show_dialogue_balloon(Consts.dialogue_script, "intro")
 
 func _process(delta: float) -> void:
-	time_left -= delta
-	if time_left <= 0:
+	if !ui.in_cutscene and tasks_left:
+		time_left -= delta
+	if time_left <= 0 and tasks_left:
 		#random ending scene depending on unfinished tasks
-		ui.start_dialogue("bad ending: sweeping")
-		pass
-	elif !tasks_left:
-		ui.start_dialogue("good ending")
+		DialogueManager.show_dialogue_balloon(Consts.dialogue_script, "bad_end_sweeping")
+		get_tree().paused = true
 	if $minigame.get_child_count():
 		player.process_mode = Node.PROCESS_MODE_DISABLED
 	else:

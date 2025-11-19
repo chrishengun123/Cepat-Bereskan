@@ -1,0 +1,73 @@
+~ intro
+A pretty teenage boy stretches his arms, eyes squinted, and his waist curved forward in an S shape
+do Global.ui.boy.visible = true
+Boy: Wow, last night was wild.
+Rubbing his eyes, the boy took a step on the bedroom floor.
+do Global.play_sfx(load("res://assets/Crash.mp3"))
+His small feet landed on the messy floor, and he stepped on an opened can of soda and fell.
+Boy: F*ck
+( Modern home phone ringing sound )
+( Sound of taking the phone )
+Hello?
+Mom: Honey, how is your first time being alone in house goes ? I hope you are not lonely.
+Boy: Ye..yeah Mom, it’s fine. Btw, why do you call me so early ?
+Mom: Early ? It’s 2PM. Did you slept late last night ? I thought you wanna grow a few inches taller ? You should have sleep–
+( Stop background music and put a vibration SFX )
+Boy: *raise voice a little* I Know Mom. Stop treating me as a kid.
+Mom: ...
+( Bring back background music )
+Mom: Ok dear. I’m driving right now, so we will talk later. I will be home in around half an hour.
+( Beep SFX from Mom hold up the call )
+Boy: *sigh* Here goes my freedom. I should start cleaning before Mom got home in half an hour…
+( SURPRISED SFX )
+Boy: Wait !!? Half an hour ??? I’M FINISHED
+do Global.ui.boy.visible = false
+=> END
+
+~ good_end
+do Global.play_sfx(load("res://assets/Keys Jingling.wav"))
+Mom: Honey, I’m home.
+(sound of a doorbell ringing. once. then twice. then held down for a frantic series of rings.)
+Mom: Honey, are you there?
+Mom: *sigh*
+Mom: Alright, you little rascal. Just wait for Mommy's punishment.
+She lifted the corner of the worn doormat, her hand moving automatically to the small metal key under the dusty doormat.
+do Global.play_sfx(load("res://assets/Keys Opening 2.wav"))
+The woman pushed the door open slowly. She put down her briefcase as she moved through the house, her eyes glancing at every room she checked.
+The floor, spotless.
+The bedroom, tidy. There is even a neatly folded stack of clothes on top of the bed.
+Mom: *Happy* Where is he ?
+She walked around and checked the trash bin, empty.
+Mom: He actually did his chores ?
+do Global.play_sfx(load("res://assets/Yawn.wav"))
+She stops on her tracks as her gaze settles on the sofa. The boy is curled up on it, fast asleep, a comic book resting on his chest.
+Her worry instantly melted, replaced by a wave of tenderness. She walks closer, gently picks up the comic book and puts it on the TV table.
+Leaning down to her sleeping son, she smiles and kisses him lightly on the forehead.
+Mom: *whispering* Good boy.
+( Visual please let him have a blanket on at the end )
+do Global.ui.win()
+=> END
+
+~ bad_end_sweeping
+A boy, with his chin on the broom handle, was sleeping on his feet. His head, leaning forward, kept dipping down the floor, almost falling on his face.
+Then suddenly, ( Ding Dong SFX ), the sound of a doorbell blasting through the house.
+The sound of the bell was the turning point, as the body, surprised, finally fell flat on the floor,  causing a large dust cloud.
+Boy: *Coughing* Seriously ?
+As the boy brushed off the dust from his clothes, the doorbell rang once again.
+Boy: Yeah, yeah! I’m coming!
+He pushed himself up and stumbled toward the door and stepped right onto a lonely dirty sock.
+Boy: *sighed* Aw.. come on…
+The boy mumbled in annoyance. Hearing the doorbell rang again, he yanked the door open.
+Just outside the door, there was a woman carrying a small luggage, smiling at him.
+Mom: Honey, I’m home
+Without a moment wasted, the woman pulled him in a warm hug.
+But then she froze. Letting go the young man in her grasp, she saw dust all over her and the boy’s clothes.
+Mom: Sweetie… why are your clothes covered in dust?
+He froze. Cold sweet starts trailing off his forehead.
+Boy: Well… it’s a long story…
+The man stepped aside the door, letting her see the view of the house.
+Behind him was the disaster zone of a living room. Trash everywhere, weird sticky puddles, and piles of who-knows-what piled over the floor.
+His mom squinted.
+Mom: Oh really ?
+That day, sounds of misery and hysteria sounded across the neighborhood.
+=> END

@@ -2,7 +2,7 @@ extends Node2D
 class_name SortTheTrash
 
 var trash_scene = preload("res://scenes/trash.tscn")
-var trash_data:TrashData = TrashData.new()
+var trash_data = preload("res://scripts/trash_data.gd")
 var unsorted:Array = []
 var sorted:Array = []
 
