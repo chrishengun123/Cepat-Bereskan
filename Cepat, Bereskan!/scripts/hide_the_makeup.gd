@@ -11,14 +11,22 @@ func _ready() -> void:
 	start(10)
 
 func start(amount:int):
+	$bag_space.clear()
+	var possible_patterns:Array = []
+	for i in range($bag_space.tile_set.get_patterns_count()):
+		possible_patterns.append($bag_space.tile_set.get_pattern(i))
 	var possible_coords:Array = []
 	for y in max_bag_size.y:
 		for x in max_bag_size.x:
 			possible_coords.append(Vector2i(x,y))
 	for i in range(amount):
+		var unchecked_patterns = possible_patterns.duplicate()
 		var success:bool = false
 		while !success:
-			var makeup_pattern:TileMapPattern = $bag_space.tile_set.get_pattern(randi_range(0,3))
+			if !unchecked_patterns:
+				start(amount)
+				return
+			var makeup_pattern:TileMapPattern = unchecked_patterns.pop_at(randi()%unchecked_patterns.size())
 			if !$bag_space.get_used_rect().size:
 				$bag_space.set_pattern(Vector2i(5,5),makeup_pattern)
 				success = true
