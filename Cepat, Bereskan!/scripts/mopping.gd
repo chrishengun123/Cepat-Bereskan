@@ -38,10 +38,12 @@ func _process(_delta: float) -> void:
 			apply_brush_to_mask(tex_pos, brush_radius_px)
 			if update_texture_every_input:
 				update_mask_texture()
-			check_percentage()
+			#check_percentage()
 			_update_label()
 		if !$sfx.playing:
 			on_mop_sfx_finished()
+	if percent_cleaned() >= target_percent:
+		queue_free()
 
 func on_mop_sfx_finished() -> void:
 	$sfx.stream = mop_sfx.pick_random()
