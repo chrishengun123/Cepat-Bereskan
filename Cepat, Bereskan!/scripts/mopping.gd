@@ -28,6 +28,9 @@ func _ready() -> void:
 	_prepare_images_and_mask()
 	_assign_mask_to_shader()
 	_update_label()
+	var cursor = load("res://assets/mop_128x128.png")
+	# CHANGE VECTOR2 BELOW WHEN CHANGING IMAGE
+	Input.set_custom_mouse_cursor(cursor, Input.CURSOR_ARROW, Vector2(50,110))
 
 func _process(_delta: float) -> void:
 	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
@@ -42,6 +45,7 @@ func _process(_delta: float) -> void:
 		if !$sfx.playing:
 			on_mop_sfx_finished()
 	if percent_cleaned() >= target_percent:
+		Input.set_custom_mouse_cursor(null)
 		queue_free()
 
 func on_mop_sfx_finished() -> void:
