@@ -28,7 +28,6 @@ func _ready() -> void:
 	_prepare_images_and_mask()
 	_assign_mask_to_shader()
 	_update_label()
-	set_process(true)
 
 func _process(_delta: float) -> void:
 	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
