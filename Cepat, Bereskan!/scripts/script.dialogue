@@ -2,22 +2,32 @@
 A pretty teenage boy stretches his arms, eyes squinted, and his waist curved forward in an S shape
 do Global.ui.boy.visible = true
 Boy: Wow, last night was wild.
+do Global.ui.boy.visible = false
 Rubbing his eyes, the boy took a step on the bedroom floor.
 do Global.play_sfx(load("res://assets/Crash.mp3"))
 His small feet landed on the messy floor, and he stepped on an opened can of soda and fell.
+do Global.ui.boy.visible = true
 Boy: F*ck
 ( Modern home phone ringing sound )
 ( Sound of taking the phone )
-Hello?
+Boy: Hello?
+do Global.ui.boy.visible = false
 Mom: Honey, how is your first time being alone in house goes ? I hope you are not lonely.
+do Global.ui.boy.visible = true
 Boy: Ye..yeah Mom, it’s fine. Btw, why do you call me so early ?
+do Global.ui.boy.visible = false
 Mom: Early ? It’s 2PM. Did you slept late last night ? I thought you wanna grow a few inches taller ? You should have sleep–
+do Global.game.bgm.stream_paused = true
 ( Stop background music and put a vibration SFX )
+do Global.ui.boy.visible = true
 Boy: *raise voice a little* I Know Mom. Stop treating me as a kid.
+do Global.ui.boy.visible = false
 Mom: ...
+do Global.game.bgm.stream_paused = false
 ( Bring back background music )
 Mom: Ok dear. I’m driving right now, so we will talk later. I will be home in around half an hour.
 ( Beep SFX from Mom hold up the call )
+do Global.ui.boy.visible = true
 Boy: *sigh* Here goes my freedom. I should start cleaning before Mom got home in half an hour…
 ( SURPRISED SFX )
 Boy: Wait !!? Half an hour ??? I’M FINISHED
@@ -52,22 +62,27 @@ do Global.ui.win()
 A boy, with his chin on the broom handle, was sleeping on his feet. His head, leaning forward, kept dipping down the floor, almost falling on his face.
 Then suddenly, ( Ding Dong SFX ), the sound of a doorbell blasting through the house.
 The sound of the bell was the turning point, as the body, surprised, finally fell flat on the floor,  causing a large dust cloud.
+do Global.ui.boy.visible = true
 Boy: *Coughing* Seriously ?
 As the boy brushed off the dust from his clothes, the doorbell rang once again.
 Boy: Yeah, yeah! I’m coming!
 He pushed himself up and stumbled toward the door and stepped right onto a lonely dirty sock.
 Boy: *sighed* Aw.. come on…
+do Global.ui.boy.visible = false
 The boy mumbled in annoyance. Hearing the doorbell rang again, he yanked the door open.
 Just outside the door, there was a woman carrying a small luggage, smiling at him.
 Mom: Honey, I’m home
 Without a moment wasted, the woman pulled him in a warm hug.
 But then she froze. Letting go the young man in her grasp, she saw dust all over her and the boy’s clothes.
 Mom: Sweetie… why are your clothes covered in dust?
+do Global.ui.boy.visible = true
 He froze. Cold sweet starts trailing off his forehead.
 Boy: Well… it’s a long story…
+do Global.ui.boy.visible = false
 The man stepped aside the door, letting her see the view of the house.
 Behind him was the disaster zone of a living room. Trash everywhere, weird sticky puddles, and piles of who-knows-what piled over the floor.
 His mom squinted.
 Mom: Oh really ?
 That day, sounds of misery and hysteria sounded across the neighborhood.
+do Global.ui.lose()
 => END

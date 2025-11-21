@@ -4,6 +4,7 @@ class_name Game
 @onready var player:Player = $Player
 @onready var ui:UI = $ui
 @onready var minigame = $minigame
+@onready var bgm:AudioStreamPlayer = $bgm
 var tasks = preload("res://scenes/task.tscn")
 var minigames = preload("res://scripts/minigames.gd")
 var time_left:float = 60

@@ -6,10 +6,10 @@
 [ext_resource type="AudioStream" uid="uid://d35a4ol4r1o2h" path="res://assets/Wking SFX 2 fix.wav" id="4_dqkch"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dqkch"]
-size = Vector2(32, 64)
+size = Vector2(384, 896)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qhqgy"]
-size = Vector2(16, 16)
+size = Vector2(384, 192)
 
 [node name="Player" type="CharacterBody2D"]
 z_index = 1
@@ -17,7 +17,6 @@ collision_layer = 0
 script = ExtResource("1_g2els")
 
 [node name="Character" parent="." instance=ExtResource("1_3vyb7")]
-scale = Vector2(0.075, 0.075)
 sprite_frames = ExtResource("3_qhqgy")
 animation = &"left"
 
@@ -26,11 +25,11 @@ collision_layer = 2
 collision_mask = 0
 
 [node name="shape" type="CollisionShape2D" parent="task_collider"]
-position = Vector2(0, -8)
+position = Vector2(0, -128)
 shape = SubResource("RectangleShape2D_dqkch")
 
 [node name="feet_collision" type="CollisionShape2D" parent="."]
-position = Vector2(0, 16)
+position = Vector2(0, 224)
 shape = SubResource("RectangleShape2D_qhqgy")
 
 [node name="sfx" type="AudioStreamPlayer" parent="."]

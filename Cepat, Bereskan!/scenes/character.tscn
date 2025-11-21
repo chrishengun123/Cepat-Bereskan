@@ -3,4 +3,4 @@
 [node name="character" type="AnimatedSprite2D"]
 
 [node name="camera" type="Camera2D" parent="."]
-zoom = Vector2(3, 3)
+zoom = Vector2(5, 5)

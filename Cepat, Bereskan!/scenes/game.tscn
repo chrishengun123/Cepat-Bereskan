@@ -10,8 +10,8 @@
 script = ExtResource("1_lnu2h")
 
 [node name="layout" type="TextureRect" parent="."]
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 1461.0
+offset_bottom = 784.0
 texture = ExtResource("2_lbhrr")
 
 [node name="walls" type="StaticBody2D" parent="."]
@@ -22,6 +22,7 @@ polygon = PackedVector2Array(56, 48, 1056, 48, 1056, 712, 56, 712, 56, 104, 160,
 
 [node name="Player" parent="." instance=ExtResource("3_iywne")]
 position = Vector2(232, 264)
+scale = Vector2(0.05, 0.05)
 
 [node name="minigame" type="CanvasLayer" parent="."]
 
