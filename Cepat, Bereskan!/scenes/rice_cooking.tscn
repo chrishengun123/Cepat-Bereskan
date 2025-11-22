@@ -1,14 +1,91 @@
-[gd_scene load_steps=2 format=3 uid="uid://cou774qrdveor"]
+[gd_scene load_steps=7 format=3 uid="uid://cou774qrdveor"]
 
 [ext_resource type="Script" uid="uid://c5re2eidhbil3" path="res://scripts/rice_cooking.gd" id="1_uvwbj"]
+[ext_resource type="Texture2D" uid="uid://c4dmcuorij63v" path="res://icon.svg" id="2_7iw1u"]
+[ext_resource type="Texture2D" uid="uid://chyh6cd5aaw2y" path="res://assets/water_temp_128x128.png" id="3_5kt2l"]
+[ext_resource type="Texture2D" uid="uid://dhamobs410srp" path="res://assets/down-hand-pointer_128x128.png" id="4_i5frx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_phbno"]
+size = Vector2(20, 12)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_7iw1u"]
+a = Vector2(63.98108, -63.506775)
+b = Vector2(-63.981033, -63.506775)
 
 [node name="rice_cooking" type="Node2D"]
 script = ExtResource("1_uvwbj")
 
 [node name="progress" type="ProgressBar" parent="."]
+visible = false
 offset_left = 128.0
-offset_top = 256.0
+offset_top = 85.0
 offset_right = 1024.0
-offset_bottom = 384.0
+offset_bottom = 213.0
 allow_greater = true
 show_percentage = false
+
+[node name="bowl" type="Sprite2D" parent="."]
+position = Vector2(570, 400)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("2_7iw1u")
+
+[node name="DownHandPointer128x128" type="Sprite2D" parent="."]
+position = Vector2(546, 259)
+scale = Vector2(2, 2)
+texture = ExtResource("4_i5frx")
+
+[node name="enough_barrier" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enough_barrier"]
+position = Vector2(588, 339)
+scale = Vector2(2, 2)
+shape = SubResource("RectangleShape2D_phbno")
+
+[node name="EnoughIndicator" type="Sprite2D" parent="enough_barrier"]
+position = Vector2(588, 339)
+scale = Vector2(0.31250012, 0.18749984)
+texture = ExtResource("2_7iw1u")
+
+[node name="inner_bowl" type="Sprite2D" parent="."]
+clip_children = 1
+position = Vector2(570, 400)
+scale = Vector2(2.11, 2.11)
+texture = ExtResource("2_7iw1u")
+
+[node name="Area2D" type="Area2D" parent="inner_bowl"]
+position = Vector2(0, 128.43576)
+scale = Vector2(1.0000001, 1.0000001)
+
+[node name="water" type="Sprite2D" parent="inner_bowl/Area2D"]
+position = Vector2(0, -3.0517578e-05)
+scale = Vector2(0.9999999, 0.9999999)
+texture = ExtResource("3_5kt2l")
+
+[node name="water_collision" type="CollisionShape2D" parent="inner_bowl/Area2D"]
+shape = SubResource("SegmentShape2D_7iw1u")
+debug_color = Color(0.9511445, 0.15210018, 3.85046e-07, 0.41960785)
+
+[node name="WaterWarning" type="Label" parent="inner_bowl/Area2D/water_collision"]
+offset_left = -44.075836
+offset_top = -61.611137
+offset_right = 44.924164
+offset_bottom = -38.611137
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 11
+text = "Keep Going!"
+horizontal_alignment = 1
+
+[node name="Instruction" type="Label" parent="."]
+offset_left = 395.0
+offset_top = 91.0
+offset_right = 744.0
+offset_bottom = 127.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 26
+text = "Press Spacebar to Fill Water"
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="area_entered" from="enough_barrier" to="." method="_on_enough_barrier_area_entered"]
+[connection signal="area_exited" from="enough_barrier" to="." method="_on_enough_barrier_area_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
