@@ -24,6 +24,8 @@ polygon = PackedVector2Array(56, 48, 1056, 48, 1056, 712, 56, 712, 56, 104, 160,
 position = Vector2(232, 264)
 scale = Vector2(0.05, 0.05)
 
+[node name="modulation" type="CanvasModulate" parent="."]
+
 [node name="minigame" type="CanvasLayer" parent="."]
 
 [node name="ui" parent="." instance=ExtResource("4_lbhrr")]

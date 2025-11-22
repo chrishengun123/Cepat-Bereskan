@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ddw4geqtpv8om"
-path="res://.godot/imported/EYELASH CURLER.png-21ea93d5232adec812c25682004ada9a.ctex"
+uid="uid://fq07vadbtgff"
+path="res://.godot/imported/TAS MAKEUP.png-a861cd3f622585f7aa500ca4f4699443.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/EYELASH CURLER.png"
-dest_files=["res://.godot/imported/EYELASH CURLER.png-21ea93d5232adec812c25682004ada9a.ctex"]
+source_file="res://assets/TAS MAKEUP.png"
+dest_files=["res://.godot/imported/TAS MAKEUP.png-a861cd3f622585f7aa500ca4f4699443.ctex"]
 
 [params]
 

@@ -8,7 +8,7 @@ do Global.play_sfx(load("res://assets/Crash.mp3"))
 His small feet landed on the messy floor, and he stepped on an opened can of soda and fell.
 do Global.ui.boy.visible = true
 Boy: F*ck
-( Modern home phone ringing sound )
+do Global.play_sfx(load("res://assets/Vibrate 1x.wav"))
 ( Sound of taking the phone )
 Boy: Hello?
 do Global.ui.boy.visible = false
@@ -24,7 +24,6 @@ Boy: *raise voice a little* I Know Mom. Stop treating me as a kid.
 do Global.ui.boy.visible = false
 Mom: ...
 do Global.game.bgm.stream_paused = false
-( Bring back background music )
 Mom: Ok dear. I’m driving right now, so we will talk later. I will be home in around half an hour.
 ( Beep SFX from Mom hold up the call )
 do Global.ui.boy.visible = true
@@ -85,4 +84,20 @@ His mom squinted.
 Mom: Oh really ?
 That day, sounds of misery and hysteria sounded across the neighborhood.
 do Global.ui.lose()
+=> END
+
+~ bad_end_sort_the_trash
+The Boy was still hunched at his desk, picking up the last empty cans, trying to build them into a small can tower. He reached for one more when the doorbell suddenly rang.
+He flinched, snatched the can, and launched it at the trash bin like a champ. However, the can sailed past the bin, straight across the living room, and hit the TV screen with a sharp crack.
+He rushed to the door and pulled it open.
+Boy: “Mom ?”
+Mom: “I missed you, honey.”
+She offered a quick, warm smile. Then her nose wrinkled. She frowned, leaning forward to sniff the air.
+Mom: “What is that smell ?”
+Boy: “Ah…nothing!”
+He tried to block the entrance with his body, but she was already stepping past him.
+Her eyes swept the room. Socks on the couch, open cans on the counter, crumpled wrappers everywhere, and a trail of mess leading toward his bedroom. Her smile vanished, replaced by a stare of pure focus. The air felt suddenly tight.
+Mom: “You live like this?”
+Her eyes flashed with fury as she marched toward him. But halfway there, her foot landed on an empty can. She slipped, her arms flailing in the air for a few moments before she fell face-first onto the floor.
+Boy: “…Mom?”
 => END

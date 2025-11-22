@@ -5,7 +5,7 @@ var flow_rate:float
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	$progress.value += flow_rate
-	if abs($progress.value-$progress.max_value) <= 1 and flow_rate == 0:
+	if abs($progress.value-$progress.max_value) <= 2 and flow_rate == 0:
 		queue_free()
 	if $progress.value-$progress.max_value > 1:
 		$progress.value = 0

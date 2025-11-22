@@ -5,14 +5,15 @@ class_name HideTheMakeup
 var makeup_data = preload("res://scripts/makeup_data.gd")
 var makeup:Array
 const sides:Array = [Vector2i.LEFT, Vector2i.RIGHT, Vector2i.UP, Vector2i.DOWN]
-var max_bag_size:Vector2i = Vector2i(12,16)
+var max_bag_size:Vector2i = Vector2i(6,7)
 var makeup_patterns:Array = []
 
-func _ready() -> void:
-	start(10)
+#func _ready() -> void:
+	#start(5)
 
 func start(amount:int):
 	bag_space.clear()
+	makeup_patterns.clear()
 	var possible_patterns:Array = []
 	for i in range(bag_space.tile_set.get_patterns_count()):
 		possible_patterns.append(bag_space.tile_set.get_pattern(i))
@@ -49,8 +50,36 @@ func start(amount:int):
 								placed = false
 							if placed:
 								bag_space.set_pattern(rand_coords,makeup_pattern)
+								makeup_patterns.append(makeup_pattern)
 								finished = true
 								success = true
+	for pattern:TileMapPattern in makeup_patterns:
+		var makeup:Makeup = Makeup.new()
+		makeup.pattern = pattern.get_used_cells()
+		match makeup.pattern:
+			[Vector2i(0,0)]:
+				makeup.type = "beauty blender"
+				makeup.texture = load("res://assets/BEAUTY BLENDER.png")
+			[Vector2i(0,0), Vector2i(1,0)]:
+				makeup.type = "beauty blender"
+				makeup.texture = load("res://assets/BEAUTY BLENDER.png")
+			[Vector2i(0,0), Vector2i(0,1)]:
+				makeup.type = "beauty blender"
+				makeup.texture = load("res://assets/BEAUTY BLENDER.png")
+			[Vector2i(1,0), Vector2i(0,1), Vector2i(1,1)]:
+				makeup.type = "beauty blender"
+				makeup.texture = load("res://assets/BEAUTY BLENDER.png")
+			[Vector2i(0,0), Vector2i(1,0), Vector2i(0,1), Vector2i(1,1)]:
+				makeup.type = "beauty blender"
+				makeup.texture = load("res://assets/BEAUTY BLENDER.png")
+			[Vector2i(0,0), Vector2i(1,0), Vector2i(2,0), Vector2i(3,0)]:
+				makeup.type = "beauty blender"
+				makeup.texture = load("res://assets/BEAUTY BLENDER.png")
+			[Vector2i(0,0), Vector2i(1,0), Vector2i(2,0), Vector2i(1,1)]:
+				makeup.type = "beauty blender"
+				makeup.texture = load("res://assets/BEAUTY BLENDER.png")
+		makeup.position = Vector2(randf_range(640,1088), randf_range(64,576))
+		add_child(makeup)
 
 func has_connection(pattern:TileMapPattern, pos:Vector2i):
 	for i in range(pattern.get_used_cells().size()):

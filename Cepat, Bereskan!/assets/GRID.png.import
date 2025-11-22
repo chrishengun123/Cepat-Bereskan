@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bgcfoxsvfym7s"
-path="res://.godot/imported/PENSIL ALIS.png-c841a1ab5e1e6ee4ca151874544aec15.ctex"
+uid="uid://dq7jnd8fgj7gb"
+path="res://.godot/imported/GRID.png-4e5e1599557e26d571e290f5fc231559.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/PENSIL ALIS.png"
-dest_files=["res://.godot/imported/PENSIL ALIS.png-c841a1ab5e1e6ee4ca151874544aec15.ctex"]
+source_file="res://assets/GRID.png"
+dest_files=["res://.godot/imported/GRID.png-4e5e1599557e26d571e290f5fc231559.ctex"]
 
 [params]
 

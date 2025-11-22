@@ -1,6 +1,18 @@
-[gd_scene load_steps=2 format=3 uid="uid://ublstt6rq2o"]
+[gd_scene load_steps=3 format=3 uid="uid://ublstt6rq2o"]
 
 [ext_resource type="Script" uid="uid://djxak0fwnuwy8" path="res://scripts/scrubbing.gd" id="1_asm1x"]
 
+[sub_resource type="LabelSettings" id="LabelSettings_asm1x"]
+font_size = 256
+font_color = Color(0, 0, 0, 1)
+
 [node name="scrubbing" type="Node2D"]
 script = ExtResource("1_asm1x")
+
+[node name="mashes" type="Label" parent="."]
+offset_right = 1152.0
+offset_bottom = 648.0
+text = "100"
+label_settings = SubResource("LabelSettings_asm1x")
+horizontal_alignment = 1
+vertical_alignment = 1

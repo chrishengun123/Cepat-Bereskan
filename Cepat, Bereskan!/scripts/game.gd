@@ -7,18 +7,24 @@ class_name Game
 @onready var bgm:AudioStreamPlayer = $bgm
 var tasks = preload("res://scenes/task.tscn")
 var minigames = preload("res://scripts/minigames.gd")
-var time_left:float = 60
+var time_left:float = 240
 var tasks_left:Array = []
 
 func _ready() -> void:
 	Global.game = self
 	var task_types:Array = minigames.locations.keys()
 	var task_locations:Dictionary = minigames.locations.duplicate()
-	for i in range(3):
+	for i in range(task_locations.size()):
+		if !task_locations.get(task_locations.keys()[i]):
+			task_locations.erase(task_locations.keys()[i])
+			task_types = task_locations.keys()
+	for i in range(5):
 		var task:Task = tasks.instantiate()
 		var type = task_types.pick_random()
-		var locations:Array = task_locations.get(type).duplicate()
-		task.position = locations.pop_at(randi()%locations.size())
+		var locations:Array = task_locations.get(type)
+		task.position = locations[randi()%locations.size()]
+		for j in range(task_locations.size()):
+			task_locations.get(task_locations.keys()[j]).erase(task.position)
 		task.texture = minigames.textures.get(type).pick_random()
 		task.type = type
 		task_locations.set(type, locations)
@@ -37,8 +43,10 @@ func _process(delta: float) -> void:
 		get_tree().paused = true
 	if $minigame.get_child_count():
 		player.process_mode = Node.PROCESS_MODE_DISABLED
+		$modulation.color = Color.DARK_GRAY
 	else:
 		player.process_mode = Node.PROCESS_MODE_INHERIT
+		$modulation.color = Color.WHITE
 
 
 func _on_bgm_finished() -> void:
