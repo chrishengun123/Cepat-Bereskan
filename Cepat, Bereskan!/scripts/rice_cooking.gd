@@ -1,4 +1,5 @@
 extends Node
+class_name Rice_Cooking
 
 var flow_rate:float
 var water_image : Image

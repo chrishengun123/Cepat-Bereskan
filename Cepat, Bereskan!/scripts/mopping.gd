@@ -1,7 +1,7 @@
 extends Node2D
 class_name Mopping
 
-var mop_sfx: Array = [preload("res://assets/Mopping.mp3")]
+var mop_sfx: Array = [preload("res://assets/Mopping Assets/Mopping.mp3")]
 
 var dirt_path: String = "res://assets/SPILLED MESS.png"
 var clean_path: String = "res://assets/FLOOR_SPRITE_3-1.jpg"
