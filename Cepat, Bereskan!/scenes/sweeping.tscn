@@ -21,3 +21,4 @@ scale = Vector2(10, 10)
 texture = ExtResource("2_1m0b1")
 
 [node name="sfx" type="AudioStreamPlayer" parent="."]
+volume_db = -10.0
