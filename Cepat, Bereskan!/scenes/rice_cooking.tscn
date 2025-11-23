@@ -85,6 +85,7 @@ theme_override_font_sizes/font_size = 26
 text = "Press Spacebar to Fill Water"
 
 [node name="Timer" type="Timer" parent="."]
+one_shot = true
 
 [connection signal="area_entered" from="enough_barrier" to="." method="_on_enough_barrier_area_entered"]
 [connection signal="area_exited" from="enough_barrier" to="." method="_on_enough_barrier_area_exited"]

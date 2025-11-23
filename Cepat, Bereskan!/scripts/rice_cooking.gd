@@ -48,4 +48,5 @@ func _on_enough_barrier_area_exited(area: Area2D) -> void:
 		timer.start()
 
 func _on_timer_timeout() -> void:
-	get_tree().reload_current_scene()
+	$inner_bowl/Area2D.position.y = 128.436
+	$inner_bowl/Area2D/water_collision/WaterWarning.text = "Keep Going!"
