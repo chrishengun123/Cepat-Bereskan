@@ -12,3 +12,17 @@ func _on_quit_pressed() -> void:
 	$sfx.stream = load("res://assets/Heavy Click (1).wav")
 	$sfx.play()
 	get_tree().quit()
+
+
+func _on_credits_pressed() -> void:
+	$sfx.stream = load("res://assets/Heavy Click (1).wav")
+	$sfx.play()
+	$main.visible = false
+	$credits.visible = true
+
+
+func _on_back_pressed() -> void:
+	$sfx.stream = load("res://assets/Light Click (1).wav")
+	$sfx.play()
+	$credits.visible = false
+	$main.visible = true

@@ -11,6 +11,7 @@ func _unhandled_input(event: InputEvent) -> void:
 	if Input.is_action_just_pressed("ui_accept"):
 		mashes_left -= 1
 		$Dirt.modulate.a -= 0.06
+		$sfx.play()
 
 		if $HandHoldingSponge.rotation > 0:
 			$HandHoldingSponge.rotation = -0.5

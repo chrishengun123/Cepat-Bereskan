@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://dv1lrt76jcxym"]
+[gd_scene load_steps=5 format=3 uid="uid://dv1lrt76jcxym"]
 
 [ext_resource type="Script" uid="uid://enyve0q27ysp" path="res://scripts/main_menu.gd" id="1_l6cm7"]
 
@@ -8,10 +8,19 @@ font_size = 64
 [sub_resource type="Theme" id="Theme_ekxnf"]
 default_font_size = 32
 
+[sub_resource type="LabelSettings" id="LabelSettings_ekxnf"]
+
 [node name="main_menu" type="Node2D"]
 script = ExtResource("1_l6cm7")
 
-[node name="title" type="Label" parent="."]
+[node name="main" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="title" type="Label" parent="main"]
+layout_mode = 0
 offset_right = 1152.0
 offset_bottom = 256.0
 text = "Cepat, Bereskan!"
@@ -19,23 +28,84 @@ label_settings = SubResource("LabelSettings_l6cm7")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="start" type="Button" parent="."]
+[node name="start" type="Button" parent="main"]
+layout_mode = 0
 offset_left = 512.0
-offset_top = 320.0
+offset_top = 288.0
 offset_right = 640.0
-offset_bottom = 384.0
+offset_bottom = 352.0
 theme = SubResource("Theme_ekxnf")
 text = "Start"
 
-[node name="quit" type="Button" parent="."]
+[node name="credits" type="Button" parent="main"]
+layout_mode = 0
 offset_left = 512.0
-offset_top = 448.0
+offset_top = 384.0
 offset_right = 640.0
-offset_bottom = 512.0
+offset_bottom = 448.0
+theme = SubResource("Theme_ekxnf")
+text = "Credits"
+
+[node name="quit" type="Button" parent="main"]
+layout_mode = 0
+offset_left = 512.0
+offset_top = 480.0
+offset_right = 640.0
+offset_bottom = 544.0
 theme = SubResource("Theme_ekxnf")
 text = "Quit"
 
+[node name="credits" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="title" type="Label" parent="credits"]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 256.0
+text = "Credits"
+label_settings = SubResource("LabelSettings_l6cm7")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="text" type="Label" parent="credits"]
+layout_mode = 0
+offset_top = 192.0
+offset_right = 1152.0
+offset_bottom = 648.0
+text = "049 - K (Hendrik) - Programmer (Leader)
+262 - Akaaaaa - Programmer
+259 - Owly (Shafa) - Programmer
+005 - raxdiusid - Programmer
+038 - Abe - Visual Artist
+069 - Shaynn - Visual Artist
+304 - Roger (Abi) - Visual Artist
+324 - Frl (Farrel) - Writer
+251 - lostfiv (Fiv) - Writer
+266 - KerisNanas - Audio Artist
+140 - Kuqieeg (Dj) - Audio Artist
+237 - Yusuf - Game Designer
+276 - Mocanjay (Naufal) - Game Producer
+
+Dialogue System by Nathan Hoad"
+label_settings = SubResource("LabelSettings_ekxnf")
+horizontal_alignment = 1
+
+[node name="back" type="Button" parent="credits"]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 32.0
+offset_right = 160.0
+offset_bottom = 96.0
+theme = SubResource("Theme_ekxnf")
+text = "Back"
+
 [node name="sfx" type="AudioStreamPlayer" parent="."]
 
-[connection signal="pressed" from="start" to="." method="_on_start_pressed"]
-[connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="main/start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="main/credits" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="main/quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="credits/back" to="." method="_on_back_pressed"]
