@@ -28,7 +28,7 @@ texture = ExtResource("3_7iw1u")
 [node name="enough_barrier" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="enough_barrier"]
-position = Vector2(537, 335.27)
+position = Vector2(537, 330.255)
 scale = Vector2(2, 2)
 shape = SubResource("RectangleShape2D_phbno")
 debug_color = Color(0.98039216, 0, 0, 0.41960785)
@@ -40,13 +40,13 @@ texture = ExtResource("2_7iw1u")
 
 [node name="inner_bowl" type="Sprite2D" parent="."]
 clip_children = 1
-position = Vector2(570, 400)
-scale = Vector2(2.11, 2.11)
+position = Vector2(570, 371.52)
+scale = Vector2(2.11, 2.5549998)
 texture = ExtResource("2_7iw1u")
 
 [node name="Area2D" type="Area2D" parent="inner_bowl"]
-position = Vector2(0, 128.43576)
-scale = Vector2(1.0000001, 1.0000001)
+position = Vector2(0, 117.21309)
+scale = Vector2(1.0000001, 0.82583183)
 
 [node name="water" type="Sprite2D" parent="inner_bowl/Area2D"]
 position = Vector2(0, -3.0517578e-05)
@@ -59,9 +59,9 @@ debug_color = Color(0.9511445, 0.15210018, 3.85046e-07, 0.41960785)
 
 [node name="WaterWarning" type="Label" parent="inner_bowl/Area2D/water_collision"]
 offset_left = -44.075836
-offset_top = -61.611137
+offset_top = -59.241447
 offset_right = 44.924164
-offset_bottom = -38.611137
+offset_bottom = -36.241447
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 11
 text = "Keep Going!"
