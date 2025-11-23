@@ -17,8 +17,9 @@ func _ready() -> void:
 func _unhandled_input(event: InputEvent) -> void:
 	if Input.is_action_just_pressed("click"):
 		for trash:Trash in unsorted:
-			if trash.get_rect().has_point(to_local(event.position)):
+			if trash.get_rect().has_point(trash.to_local(event.position)):
 				trash.held = true
+				break
 	elif Input.is_action_just_released("click"):
 		for trash:Trash in unsorted:
 			trash.held = false

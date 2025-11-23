@@ -31,6 +31,7 @@ func start(amount:int):
 			var makeup_pattern:TileMapPattern = unchecked_patterns.pop_at(randi()%unchecked_patterns.size())
 			if !bag_space.get_used_rect().size:
 				bag_space.set_pattern(Vector2i(5,5),makeup_pattern)
+				makeup_patterns.append(makeup_pattern)
 				success = true
 			else:
 				var finished = false
@@ -54,32 +55,35 @@ func start(amount:int):
 								finished = true
 								success = true
 	for pattern:TileMapPattern in makeup_patterns:
-		var makeup:Makeup = Makeup.new()
-		makeup.pattern = pattern.get_used_cells()
-		match makeup.pattern:
+		var makeup_sprite:Makeup = Makeup.new()
+		makeup_sprite.pattern = pattern.get_used_cells()
+		match makeup_sprite.pattern:
 			[Vector2i(0,0)]:
-				makeup.type = "beauty blender"
-				makeup.texture = load("res://assets/Makeup Assets/640x BEAUTY BLENDER.png")
+				makeup_sprite.type = "beauty blender"
+				makeup_sprite.texture = load("res://assets/Makeup Assets/640x BEAUTY BLENDER.png")
 			[Vector2i(0,0), Vector2i(1,0)]:
-				makeup.type = "lipstick"
-				makeup.texture = load("res://assets/Makeup Assets/640x BEAUTY BLENDER.png")
+				makeup_sprite.type = "lipstick"
+				makeup_sprite.texture = load("res://assets/Makeup Assets/1280x640 LIPSTICK.png")
 			[Vector2i(0,0), Vector2i(0,1)]:
-				makeup.type = "foundation"
-				makeup.texture = load("res://assets/Makeup Assets/640x BEAUTY BLENDER.png")
-			[Vector2i(1,0), Vector2i(0,1), Vector2i(1,1)]:
-				makeup.type = "eye shadow"
-				makeup.texture = load("res://assets/Makeup Assets/640x BEAUTY BLENDER.png")
-			[Vector2i(0,0), Vector2i(1,0), Vector2i(0,1), Vector2i(1,1)]:
-				makeup.type = ""
-				makeup.texture = load("res://assets/Makeup Assets/640x BEAUTY BLENDER.png")
+				makeup_sprite.type = "foundation"
+				makeup_sprite.texture = load("res://assets/Makeup Assets/1280x FOUNDATION.png")
+			[Vector2i(0,1), Vector2i(1,0), Vector2i(1,1)]:
+				makeup_sprite.type = "eye shadow"
+				makeup_sprite.texture = load("res://assets/Makeup Assets/1280x EYESHADOW.png")
+			[Vector2i(0,0), Vector2i(0,1), Vector2i(1,0), Vector2i(1,1)]:
+				makeup_sprite.type = "powder"
+				makeup_sprite.texture = load("res://assets/Makeup Assets/1920x COMPACT POWDER.png")
 			[Vector2i(0,0), Vector2i(1,0), Vector2i(2,0), Vector2i(3,0)]:
-				makeup.type = "beauty blender"
-				makeup.texture = load("res://assets/Makeup Assets/640x BEAUTY BLENDER.png")
-			[Vector2i(0,0), Vector2i(1,0), Vector2i(2,0), Vector2i(1,1)]:
-				makeup.type = "beauty blender"
-				makeup.texture = load("res://assets/Makeup Assets/640x BEAUTY BLENDER.png")
-		makeup.position = Vector2(randf_range(640,1088), randf_range(64,576))
-		add_child(makeup)
+				makeup_sprite.type = "beauty blender"
+				makeup_sprite.texture = load("res://assets/Makeup Assets/640x BEAUTY BLENDER.png")
+			[Vector2i(0,0), Vector2i(1,0), Vector2i(1,1), Vector2i(2,0)]:
+				makeup_sprite.type = "eyelash curler"
+				makeup_sprite.texture = load("res://assets/Makeup Assets/1920x1280 EYELASH CURLER.png")
+		makeup_sprite.position = Vector2(randf_range(640,1088), randf_range(64,576))
+		makeup_sprite.scale = Vector2.ONE*4/100
+		add_child(makeup_sprite)
+		makeup.append(makeup_sprite)
+
 
 func has_connection(pattern:TileMapPattern, pos:Vector2i):
 	for i in range(pattern.get_used_cells().size()):
@@ -125,8 +129,9 @@ func produces_hole(pattern:TileMapPattern, pos:Vector2i):
 func _unhandled_input(event: InputEvent) -> void:
 	if Input.is_action_just_pressed("click"):
 		for item:Makeup in makeup:
-			if item.get_rect().has_point(to_local(event.position)):
+			if item.get_rect().has_point(item.to_local(event.position)):
 				item.held = true
+				break
 	elif Input.is_action_just_released("click"):
 		for item:Makeup in makeup:
 			item.held = false
