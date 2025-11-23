@@ -21,7 +21,3 @@ scale = Vector2(1.5, 1.5)
 position = Vector2(138.66667, 101.33334)
 scale = Vector2(0.4, 0.4)
 tile_set = ExtResource("2_q48hb")
-
-[node name="makeup" type="TileMapLayer" parent="tilemap"]
-position = Vector2(138.667, 101.333)
-scale = Vector2(0.4, 0.4)

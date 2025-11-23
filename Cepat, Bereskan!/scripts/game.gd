@@ -4,17 +4,18 @@ class_name Game
 @onready var player:Player = $Player
 @onready var ui:UI = $ui
 @onready var minigame = $minigame
+@onready var modulation:CanvasModulate = $modulation
 @onready var bgm:AudioStreamPlayer = $bgm
 var tasks = preload("res://scenes/task.tscn")
 var minigames = preload("res://scripts/minigames.gd")
-var time_left:float = 240
+var time_left:float = 180
 var tasks_left:Array = []
 
 func _ready() -> void:
 	Global.game = self
 	var task_types:Array = minigames.locations.duplicate().keys()
 	var task_locations:Dictionary = minigames.locations.duplicate()
-	for i in range(5):
+	for i in range(7):
 		var task:Task = tasks.instantiate()
 		var type = task_types.pick_random()
 		var locations:Array = task_locations.get(type).duplicate()
@@ -49,10 +50,10 @@ func _process(delta: float) -> void:
 		get_tree().paused = true
 	if $minigame.get_child_count():
 		player.process_mode = Node.PROCESS_MODE_DISABLED
-		$modulation.color = Color.DARK_GRAY
+		modulation.color = Color.DARK_GRAY
 	else:
 		player.process_mode = Node.PROCESS_MODE_INHERIT
-		$modulation.color = Color.WHITE
+		modulation.color = Color.WHITE
 
 
 func _on_bgm_finished() -> void:

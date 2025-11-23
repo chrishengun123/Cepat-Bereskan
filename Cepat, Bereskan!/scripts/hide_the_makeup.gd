@@ -7,6 +7,7 @@ var makeup:Array
 const sides:Array = [Vector2i.LEFT, Vector2i.RIGHT, Vector2i.UP, Vector2i.DOWN]
 var max_bag_size:Vector2i = Vector2i(6,7)
 var makeup_patterns:Array = []
+var filled:Array = []
 
 func _ready() -> void:
 	start(5)
@@ -133,9 +134,16 @@ func _unhandled_input(event: InputEvent) -> void:
 				item.held = true
 				break
 	elif Input.is_action_just_released("click"):
+		filled.clear()
 		for item:Makeup in makeup:
+			var topleft:Vector2 = item.position - item.texture.get_size()*item.scale/2 + 640*item.scale/2
+			var tile_pos:Vector2i = bag_space.local_to_map(bag_space.to_local(topleft))
+			for tile in item.pattern:
+				filled.append(tile+tile_pos)
 			if item.held:
 				item.held = false
-				var topleft:Vector2 = item.position - item.texture.get_size()*item.scale/2 + 640*item.scale/2
-				var tile_pos:Vector2i = bag_space.local_to_map(bag_space.to_local(topleft))
 				item.position = bag_space.to_global(bag_space.map_to_local(tile_pos)) + item.texture.get_size()*item.scale/2 - 640*item.scale/2
+		for tile in bag_space.get_used_cells():
+			if !filled.has(tile):
+				return
+		queue_free()

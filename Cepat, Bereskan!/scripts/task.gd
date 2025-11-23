@@ -13,7 +13,7 @@ func _ready() -> void:
 	game = get_parent()
 
 func _process(delta: float) -> void:
-	if task_started and !task_minigame:
+	if task_started and !task_minigame and game.time_left > 0:
 		game.tasks_left.erase(self)
 		if !game.tasks_left:
 			DialogueManager.show_dialogue_balloon(Consts.dialogue_script, "good_end")

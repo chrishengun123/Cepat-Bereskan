@@ -4,24 +4,23 @@
 [ext_resource type="Texture2D" uid="uid://cl352dlud10wp" path="res://assets/MC body only.png" id="2_yev5y"]
 [ext_resource type="Texture2D" uid="uid://byswiv6lax7f6" path="res://assets/Mc expression 1.png" id="3_gdt2y"]
 
+[sub_resource type="Theme" id="Theme_nt7q6"]
+default_font_size = 32
+
 [sub_resource type="LabelSettings" id="LabelSettings_nt7q6"]
 font_size = 64
 font_color = Color(0, 0, 0, 1)
-
-[sub_resource type="Theme" id="Theme_nt7q6"]
-default_font_size = 32
 
 [node name="ui" type="CanvasLayer"]
 process_mode = 3
 script = ExtResource("1_nt7q6")
 
-[node name="time_left" type="Label" parent="."]
-offset_right = 1152.0
-offset_bottom = 128.0
-text = "00:00"
-label_settings = SubResource("LabelSettings_nt7q6")
-horizontal_alignment = 1
-vertical_alignment = 1
+[node name="time_left" type="ProgressBar" parent="."]
+offset_left = 64.0
+offset_top = 32.0
+offset_right = 1088.0
+offset_bottom = 96.0
+show_percentage = false
 
 [node name="pause_menu" type="Control" parent="."]
 visible = false

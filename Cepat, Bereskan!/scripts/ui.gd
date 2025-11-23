@@ -12,9 +12,11 @@ var in_cutscene:bool = false
 func _ready() -> void:
 	Global.ui = self
 	game = get_parent()
+	$time_left.max_value = game.time_left
 
 func _process(delta: float) -> void:
-	$time_left.text = str(int((get_parent().time_left+1)/60))+":"+str(ceili(get_parent().time_left)%60)
+	$time_left.value = game.time_left
+	$time_left.modulate = Color(1-$time_left.value/$time_left.max_value, $time_left.value/$time_left.max_value, 0)
 	cutscene.visible = in_cutscene
 	$time_left.visible = !in_cutscene
 
@@ -29,6 +31,9 @@ func win():
 	$end_screen.visible = true
 
 func lose():
+	for child in game.minigame.get_children():
+		child.queue_free()
+	game.modulation.color = Color.WHITE
 	%end_text.text = "Game Over"
 	$end_screen.visible = true
 
