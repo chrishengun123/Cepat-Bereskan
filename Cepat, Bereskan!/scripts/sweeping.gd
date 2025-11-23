@@ -4,6 +4,7 @@ class_name Sweeping
 var moves:Array = []
 var move_index:int = 0
 var broom_sfx:Array = [preload("res://assets/Sweeping Assets/Broom Var. 1.wav"), preload("res://assets/Sweeping Assets/Broom Var. 2.wav"), preload("res://assets/Sweeping Assets/Broom Var. 3.wav"), preload("res://assets/Sweeping Assets/Broom Var. 4.wav")]
+var broom: Sprite2D = null
 
 func rotate_arrow():
 	match moves[move_index]:
@@ -35,24 +36,106 @@ func _process(delta: float) -> void:
 				rotate_arrow()
 		else:
 			move_index = 0
+			$Dust2.modulate.a = 1
 			rotate_arrow()
 
-	var broom = Sprite2D.new()
-	if Input.is_action_just_released("ui_left"):
-		add_child(broom)
-		broom.position = Vector2(580, 333)
-		broom.rotation = 0
-		var tween = create_tween()
-		tween.tween_property(broom, "position", Vector2(500,333), 1)
-		tween.tween_property(broom, "rotation", 0.2, 1)
-	#if Input.is_action_just_released("ui_right"):
+	
+	#if Input.is_action_pressed("ui_left"):
+		#if is_instance_valid(broom):
+			#broom.queue_free()
+		#else:
+			#broom = Sprite2D.new()
+			#add_child(broom)
+			#broom.texture = preload("res://assets/Sweeping Assets/actual broom.png")
+			#broom.position = Vector2(575, 280)
+			#broom.rotation = 0
+			#broom.scale = Vector2(0.115, 0.115)
+			#var tween = create_tween()
+			#tween.parallel().tween_property(broom, "position", Vector2(500,280), 0.2)
+			#tween.parallel().tween_property(broom, "rotation", 0.2, 0.2)
+			#tween.tween_callback(func():
+				#if broom.position.x == 500:
+					#broom.queue_free()
+					#broom = null
+			#)
 		#
+	#if Input.is_action_pressed("ui_right"):
+		#if is_instance_valid(broom):
+			#broom.queue_free()
+		#else:
+			#add_child(broom)
+			#broom.texture = preload("res://assets/Sweeping Assets/actual broom.png")
+			#broom.position = Vector2(575, 280)
+			#broom.rotation = 0
+			#broom.scale = Vector2(0.115, 0.115)
+			#var tween = create_tween()
+			#tween.parallel().tween_property(broom, "position", Vector2(650,280), 0.2)
+			#tween.parallel().tween_property(broom, "rotation", -0.2, 0.2)
+			#tween.tween_callback(func():
+				#if broom.position.x == 500:
+					#broom.queue_free()
+			#)
+		
 	#if Input.is_action_just_released("ui_up"):
 		#
 	#if Input.is_action_just_released("ui_down"):
 		
+	
 
 	if Input.is_action_pressed("ui_left") or Input.is_action_pressed("ui_right") or Input.is_action_pressed("ui_up") or Input.is_action_pressed("ui_down"):
 		$arrow.material.set_shader_parameter("modulate", Color.DARK_BLUE)
 	else:
 		$arrow.material.set_shader_parameter("modulate", Color.BLUE)
+	
+	if broom:
+		pass
+		
+	else:
+		if Input.is_action_just_pressed("ui_left"):
+			spawn_broom()
+			var tween = create_tween()
+			tween.parallel().tween_property(broom, "position", Vector2(500,280), 0.2)
+			tween.parallel().tween_property(broom, "rotation", 0.2, 0.2)
+			tween.tween_callback(func():
+				if broom.position.x == 500:
+					broom.queue_free()
+			)
+			
+		if Input.is_action_just_pressed("ui_right"):
+			spawn_broom()
+			var tween = create_tween()
+			tween.parallel().tween_property(broom, "position", Vector2(650,280), 0.2)
+			tween.parallel().tween_property(broom, "rotation", -0.2, 0.2)
+			tween.tween_callback(func():
+				if broom.position.x == 650:
+					broom.queue_free()
+			)
+			
+		if Input.is_action_just_pressed("ui_up"):
+			spawn_broom()
+			var tween = create_tween()
+			tween.parallel().tween_property(broom, "position", Vector2(600,210), 0.2)
+			tween.parallel().tween_property(broom, "rotation", 0.5, 0.1)
+			tween.tween_callback(func():
+				if broom.position.y == 210:
+					broom.queue_free()
+			)
+			
+		if Input.is_action_just_pressed("ui_down"):
+			spawn_broom()
+			var tween = create_tween()
+			tween.parallel().tween_property(broom, "position", Vector2(550,350), 0.2)
+			tween.parallel().tween_property(broom, "rotation", -0.5, 0.1)
+			tween.tween_callback(func():
+				if broom.position.y == 350:
+					broom.queue_free()
+			)
+
+func spawn_broom():
+	
+	broom = Sprite2D.new()
+	add_child(broom)
+	broom.texture = preload("res://assets/Sweeping Assets/actual broom.png")
+	broom.position = Vector2(575, 280)
+	broom.rotation = 0
+	broom.scale = Vector2(0.115, 0.115)

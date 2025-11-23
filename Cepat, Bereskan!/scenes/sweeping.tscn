@@ -1,8 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://b3xnm4ktg7hj6"]
+[gd_scene load_steps=7 format=3 uid="uid://b3xnm4ktg7hj6"]
 
 [ext_resource type="Script" uid="uid://4du5vne7jjv2" path="res://scripts/sweeping.gd" id="1_u2u4c"]
 [ext_resource type="Texture2D" uid="uid://d0odwr6v7mndq" path="res://assets/arrow.png" id="2_1m0b1"]
-[ext_resource type="Shader" uid="uid://l6h13xnqr04e" path="res://scripts/highlight.gdshader" id="2_wlkic"]
+[ext_resource type="Texture2D" uid="uid://c14gmmvi5lrkr" path="res://assets/Sweeping Assets/FLOOR_SPRITE_3-1.jpg" id="2_4jyo0"]
+[ext_resource type="Shader" path="res://scripts/highlight.gdshader" id="2_wlkic"]
+[ext_resource type="Texture2D" uid="uid://dqjcq8r6xq3r8" path="res://assets/Sweeping Assets/DUST 2.png" id="5_l4pg5"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_jkwws"]
 shader = ExtResource("2_wlkic")
@@ -14,11 +16,30 @@ shader_parameter/thickness = 2.0
 [node name="sweeping" type="Node2D"]
 script = ExtResource("1_u2u4c")
 
+[node name="FloorSprite31" type="Sprite2D" parent="."]
+position = Vector2(580, 342)
+scale = Vector2(0.065, 0.065)
+texture = ExtResource("2_4jyo0")
+
 [node name="arrow" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_jkwws")
-position = Vector2(576, 320.00003)
-scale = Vector2(10, 10)
+position = Vector2(577, 184.055)
+scale = Vector2(3, 3)
 texture = ExtResource("2_1m0b1")
+
+[node name="Dust2" type="Sprite2D" parent="."]
+position = Vector2(571, 364.99997)
+scale = Vector2(0.085, 0.085)
+texture = ExtResource("5_l4pg5")
 
 [node name="sfx" type="AudioStreamPlayer" parent="."]
 volume_db = -10.0
+
+[node name="Instruction" type="Label" parent="."]
+visible = false
+offset_left = 521.0
+offset_top = 81.0
+offset_right = 627.0
+offset_bottom = 138.0
+theme_override_font_sizes/font_size = 41
+text = "Press"
