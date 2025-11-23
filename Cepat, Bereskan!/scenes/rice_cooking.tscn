@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" uid="uid://c5re2eidhbil3" path="res://scripts/rice_cooking.gd" id="1_uvwbj"]
 [ext_resource type="Texture2D" uid="uid://c4dmcuorij63v" path="res://icon.svg" id="2_7iw1u"]
-[ext_resource type="Texture2D" uid="uid://chyh6cd5aaw2y" path="res://assets/water_temp_128x128.png" id="3_5kt2l"]
-[ext_resource type="Texture2D" uid="uid://dhamobs410srp" path="res://assets/down-hand-pointer_128x128.png" id="4_i5frx"]
+[ext_resource type="Texture2D" path="res://assets/water_temp_128x128.png" id="3_5kt2l"]
+[ext_resource type="Texture2D" uid="uid://dm1y8li1nf3nr" path="res://assets/Rice Cooking Assets/HAND RICE COOKER.png" id="3_7iw1u"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_phbno"]
 size = Vector2(20, 12)
@@ -20,21 +20,22 @@ position = Vector2(570, 400)
 scale = Vector2(2.5, 2.5)
 texture = ExtResource("2_7iw1u")
 
-[node name="DownHandPointer128x128" type="Sprite2D" parent="."]
-position = Vector2(546, 259)
-scale = Vector2(2, 2)
-texture = ExtResource("4_i5frx")
+[node name="Hand" type="Sprite2D" parent="."]
+position = Vector2(581, 271)
+scale = Vector2(0.55, 0.55)
+texture = ExtResource("3_7iw1u")
 
 [node name="enough_barrier" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="enough_barrier"]
-position = Vector2(588, 339)
+position = Vector2(537, 335.27)
 scale = Vector2(2, 2)
 shape = SubResource("RectangleShape2D_phbno")
+debug_color = Color(0.98039216, 0, 0, 0.41960785)
 
-[node name="EnoughIndicator" type="Sprite2D" parent="enough_barrier"]
-position = Vector2(588, 339)
-scale = Vector2(0.31250012, 0.18749984)
+[node name="EnoughIndicator" type="Sprite2D" parent="enough_barrier/CollisionShape2D"]
+visible = false
+scale = Vector2(0.15625006, 0.09374992)
 texture = ExtResource("2_7iw1u")
 
 [node name="inner_bowl" type="Sprite2D" parent="."]
@@ -68,9 +69,9 @@ horizontal_alignment = 1
 
 [node name="Instruction" type="Label" parent="."]
 offset_left = 395.0
-offset_top = 91.0
+offset_top = 85.0
 offset_right = 744.0
-offset_bottom = 127.0
+offset_bottom = 121.0
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 26
 text = "Press Spacebar to Fill Water"
