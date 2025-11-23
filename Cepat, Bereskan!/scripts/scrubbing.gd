@@ -4,18 +4,21 @@ var mashes_left:int = 20
 
 func _ready() -> void:
 	$mashes.text = str(mashes_left)
+	$Dirt.modulate.a = 1
+	$HandHoldingSponge.rotation = 0.4
 
 func _unhandled_input(event: InputEvent) -> void:
 	if Input.is_action_just_pressed("ui_accept"):
 		mashes_left -= 1
+		$Dirt.modulate.a -= 0.06
 
-		if $HandHoldingSponge.rotation == 0:
-			$HandHoldingSponge.rotation = -0.9
-			$HandHoldingSponge.position = Vector2(545, 380)
+		if $HandHoldingSponge.rotation > 0:
+			$HandHoldingSponge.rotation = -0.5
+			$HandHoldingSponge.position = Vector2(500, 340)
 			bubble_left()
-		else:
-			$HandHoldingSponge.rotation = 0.0
-			$HandHoldingSponge.position = Vector2(660, 380)
+		elif $HandHoldingSponge.rotation < 0:
+			$HandHoldingSponge.rotation = 0.4
+			$HandHoldingSponge.position = Vector2(640, 340)
 			bubble_right()
 
 		$mashes.text = str(mashes_left)
@@ -25,8 +28,8 @@ func _unhandled_input(event: InputEvent) -> void:
 func bubble_left():
 	var bubble = Sprite2D.new()
 	bubble.texture = preload("res://assets/Scrubbing Assets/bubble_translucent_1_32x32.png")
-	bubble.position.x = randf_range(470,550)
-	bubble.position.y = randf_range(270,330)
+	bubble.position.x = randf_range(440,530)
+	bubble.position.y = randf_range(250,400)
 	add_child(bubble)
 	bubble.scale = Vector2(5, 5)
 	var tween = create_tween()
@@ -39,8 +42,8 @@ func bubble_left():
 func bubble_right():
 	var bubble = Sprite2D.new()
 	bubble.texture = preload("res://assets/Scrubbing Assets/bubble_translucent_1_32x32.png")
-	bubble.position.x = randf_range(680,760)
-	bubble.position.y = randf_range(270,330)
+	bubble.position.x = randf_range(630,720)
+	bubble.position.y = randf_range(250,400)
 	add_child(bubble)
 	bubble.scale = Vector2(5, 5)
 	var tween = create_tween()
