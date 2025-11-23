@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dbtkbatbopphj"
+path="res://.godot/imported/Mopping.mp3-3c5f521cbccf7cf7f7ac459d48674be3.mp3str"
+
+[deps]
+
+source_file="res://assets/Mopping Assets/Mopping.mp3"
+dest_files=["res://.godot/imported/Mopping.mp3-3c5f521cbccf7cf7f7ac459d48674be3.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

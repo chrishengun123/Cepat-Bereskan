@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dtsnn6l5kic5s"
-path="res://.godot/imported/LIPSTICK 2.png-a842567b464192ca5fd8661e0b82c8f3.ctex"
+uid="uid://dq7jnd8fgj7gb"
+path="res://.godot/imported/GRID.png-e5f3fd00e24c27192eb245a2f3f49ac3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/LIPSTICK 2.png"
-dest_files=["res://.godot/imported/LIPSTICK 2.png-a842567b464192ca5fd8661e0b82c8f3.ctex"]
+source_file="res://assets/Makeup Assets/GRID.png"
+dest_files=["res://.godot/imported/GRID.png-e5f3fd00e24c27192eb245a2f3f49ac3.ctex"]
 
 [params]
 

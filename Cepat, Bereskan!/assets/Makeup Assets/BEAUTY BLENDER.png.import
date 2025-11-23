@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dqjcq8r6xq3r8"
-path="res://.godot/imported/DUST 2.png-96e26166de09367678dda96ea5fb6659.ctex"
+uid="uid://7g8gq1brk6u7"
+path="res://.godot/imported/BEAUTY BLENDER.png-cdfacc50c85aa9d37a5d89e75fb87394.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/DUST 2.png"
-dest_files=["res://.godot/imported/DUST 2.png-96e26166de09367678dda96ea5fb6659.ctex"]
+source_file="res://assets/Makeup Assets/BEAUTY BLENDER.png"
+dest_files=["res://.godot/imported/BEAUTY BLENDER.png-cdfacc50c85aa9d37a5d89e75fb87394.ctex"]
 
 [params]
 

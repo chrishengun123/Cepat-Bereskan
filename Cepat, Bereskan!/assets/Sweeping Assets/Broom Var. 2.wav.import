@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://b0ou0ylj3c02y"
-path="res://.godot/imported/Broom Var. 2.wav-5dc9cf54670ffd9751b6d9a42540283a.sample"
+path="res://.godot/imported/Broom Var. 2.wav-5d25066c116ecf2cc08cba1bf0212065.sample"
 
 [deps]
 
-source_file="res://assets/Broom Var. 2.wav"
-dest_files=["res://.godot/imported/Broom Var. 2.wav-5dc9cf54670ffd9751b6d9a42540283a.sample"]
+source_file="res://assets/Sweeping Assets/Broom Var. 2.wav"
+dest_files=["res://.godot/imported/Broom Var. 2.wav-5d25066c116ecf2cc08cba1bf0212065.sample"]
 
 [params]
 

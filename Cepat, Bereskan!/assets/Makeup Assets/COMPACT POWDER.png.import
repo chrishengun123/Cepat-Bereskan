@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dhamobs410srp"
-path="res://.godot/imported/down-hand-pointer_128x128.png-4aae7b8f056deb4d93729b1b155f7cb8.ctex"
+uid="uid://ukw14cp1bhyj"
+path="res://.godot/imported/COMPACT POWDER.png-e3eff760634776d3de413db0959027d4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/down-hand-pointer_128x128.png"
-dest_files=["res://.godot/imported/down-hand-pointer_128x128.png-4aae7b8f056deb4d93729b1b155f7cb8.ctex"]
+source_file="res://assets/Makeup Assets/COMPACT POWDER.png"
+dest_files=["res://.godot/imported/COMPACT POWDER.png-e3eff760634776d3de413db0959027d4.ctex"]
 
 [params]
 

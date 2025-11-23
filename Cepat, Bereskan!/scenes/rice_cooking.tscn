@@ -15,15 +15,6 @@ b = Vector2(-63.981033, -63.506775)
 [node name="rice_cooking" type="Node2D"]
 script = ExtResource("1_uvwbj")
 
-[node name="progress" type="ProgressBar" parent="."]
-visible = false
-offset_left = 128.0
-offset_top = 85.0
-offset_right = 1024.0
-offset_bottom = 213.0
-allow_greater = true
-show_percentage = false
-
 [node name="bowl" type="Sprite2D" parent="."]
 position = Vector2(570, 400)
 scale = Vector2(2.5, 2.5)

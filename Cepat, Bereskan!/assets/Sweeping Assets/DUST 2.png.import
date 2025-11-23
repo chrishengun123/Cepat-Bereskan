@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://chyh6cd5aaw2y"
-path="res://.godot/imported/water_temp_128x128.png-6df7bfc9dfe3271409aef5d41930844c.ctex"
+uid="uid://dqjcq8r6xq3r8"
+path="res://.godot/imported/DUST 2.png-038929dae6945169bd3689501cb3fcc0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/water_temp_128x128.png"
-dest_files=["res://.godot/imported/water_temp_128x128.png-6df7bfc9dfe3271409aef5d41930844c.ctex"]
+source_file="res://assets/Sweeping Assets/DUST 2.png"
+dest_files=["res://.godot/imported/DUST 2.png-038929dae6945169bd3689501cb3fcc0.ctex"]
 
 [params]
 

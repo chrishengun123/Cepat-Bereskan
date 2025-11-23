@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cd5i4my5jenue"
-path="res://.godot/imported/FLOOR_SPRITE_3-1.jpg-5d02dbf0798a9cce43cba605a61dfb54.ctex"
+uid="uid://fq07vadbtgff"
+path="res://.godot/imported/TAS MAKEUP.png-1aaba9ad3ff6bfd040450eb061679b00.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/FLOOR_SPRITE_3-1.jpg"
-dest_files=["res://.godot/imported/FLOOR_SPRITE_3-1.jpg-5d02dbf0798a9cce43cba605a61dfb54.ctex"]
+source_file="res://assets/Makeup Assets/TAS MAKEUP.png"
+dest_files=["res://.godot/imported/TAS MAKEUP.png-1aaba9ad3ff6bfd040450eb061679b00.ctex"]
 
 [params]
 

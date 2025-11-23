@@ -10,21 +10,11 @@ var water_path : String = "res://assets/water_temp_128x128.png"
 func _ready() -> void:
 	_prepare_images()
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	#$progress.value += flow_rate
-	#if abs($progress.value-$progress.max_value) <= 2 and flow_rate == 0:
-		#queue_free()
-	#if $progress.value-$progress.max_value > 1:
-		#$progress.value = 0
 	if Input.is_key_pressed(KEY_SPACE):
 		$inner_bowl/Area2D.position.y -= 15 * delta
 	if ($inner_bowl/Area2D/water_collision/WaterWarning.text == "Full !!") and not Input.is_key_pressed(KEY_SPACE):
 		queue_free()
-
-#func _unhandled_input(event: InputEvent) -> void:
-	#flow_rate += Input.get_axis("ui_left", "ui_right") * 0.01
-	#flow_rate = clamp(flow_rate, 0, 10)
 
 func _prepare_images() -> void:
 	#pass

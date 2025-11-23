@@ -1,7 +1,7 @@
 extends Node2D
 class_name Mopping
 
-var mop_sfx: Array = [preload("res://assets/Broom Var. 4.wav")]
+var mop_sfx: Array = [preload("res://assets/Mopping.mp3")]
 
 var dirt_path: String = "res://assets/SPILLED MESS.png"
 var clean_path: String = "res://assets/FLOOR_SPRITE_3-1.jpg"
@@ -30,7 +30,7 @@ func _ready() -> void:
 	_update_label()
 	var cursor = load("res://assets/mop_128x128.png")
 	# CHANGE VECTOR2 BELOW WHEN CHANGING IMAGE
-	Input.set_custom_mouse_cursor(cursor, Input.CURSOR_ARROW, Vector2(50,110))
+	Input.set_custom_mouse_cursor(cursor, Input.CURSOR_ARROW, Vector2(50,100))
 
 func _process(_delta: float) -> void:
 	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
