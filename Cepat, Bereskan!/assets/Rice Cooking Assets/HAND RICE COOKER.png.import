@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cfgyxgbfa7oi1"
-path="res://.godot/imported/bubble_translucent_1_32x32.png-28226a5c08f11b11138477d4aa9544d7.ctex"
+uid="uid://dm1y8li1nf3nr"
+path="res://.godot/imported/HAND RICE COOKER.png-91656c90d4d7efa8b4fa26037571926e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Scrubbing Assets/bubble_translucent_1_32x32.png"
-dest_files=["res://.godot/imported/bubble_translucent_1_32x32.png-28226a5c08f11b11138477d4aa9544d7.ctex"]
+source_file="res://assets/Rice Cooking Assets/HAND RICE COOKER.png"
+dest_files=["res://.godot/imported/HAND RICE COOKER.png-91656c90d4d7efa8b4fa26037571926e.ctex"]
 
 [params]
 

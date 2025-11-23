@@ -27,28 +27,30 @@ func _unhandled_input(event: InputEvent) -> void:
 
 func bubble_left():
 	var bubble = Sprite2D.new()
-	bubble.texture = preload("res://assets/Scrubbing Assets/bubble_translucent_1_32x32.png")
-	bubble.position.x = randf_range(440,530)
+	bubble.texture = preload("res://assets/Scrubbing Assets/BUBBLES transparent.png")
+	bubble.position.x = randf_range(440,550)
 	bubble.position.y = randf_range(250,400)
 	add_child(bubble)
-	bubble.scale = Vector2(5, 5)
+	var s = randf_range(0.25, 0.34)
+	bubble.scale = Vector2(s, s)
 	var tween = create_tween()
-	tween.tween_property(bubble, "scale", Vector2(5.5, 5.5), 0.8)
+	tween.tween_property(bubble, "scale", Vector2(0.35, 0.35), 0.7)
 	tween.tween_callback(func():
-		if bubble.scale.x >= 5.5:
+		if bubble.scale.x >= 0.34:
 			bubble.queue_free()
 		)
 
 func bubble_right():
 	var bubble = Sprite2D.new()
-	bubble.texture = preload("res://assets/Scrubbing Assets/bubble_translucent_1_32x32.png")
-	bubble.position.x = randf_range(630,720)
+	bubble.texture = preload("res://assets/Scrubbing Assets/BUBBLES transparent.png")
+	bubble.position.x = randf_range(610,720)
 	bubble.position.y = randf_range(250,400)
 	add_child(bubble)
-	bubble.scale = Vector2(5, 5)
+	var s = randf_range(0.25, 0.34)
+	bubble.scale = Vector2(s, s)
 	var tween = create_tween()
-	tween.tween_property(bubble, "scale", Vector2(5.5, 5.5), 0.8)
+	tween.tween_property(bubble, "scale", Vector2(0.35, 0.35), 0.7)
 	tween.tween_callback(func():
-		if bubble.scale.x >= 5.5:
+		if bubble.scale.x >= 0.34:
 			bubble.queue_free()
 	)

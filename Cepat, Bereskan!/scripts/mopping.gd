@@ -3,8 +3,8 @@ class_name Mopping
 
 var mop_sfx: Array = [preload("res://assets/Mopping Assets/Mopping.mp3")]
 
-var dirt_path: String = "res://assets/SPILLED MESS.png"
-var clean_path: String = "res://assets/FLOOR_SPRITE_3-1.jpg"
+var dirt_path: String = "res://assets/Mopping Assets/SPILLED MESS.png"
+var clean_path: String = "res://assets/Mopping Assets/FLOOR_SPRITE_3-1.jpg"
 var brush_radius_px: int = 6
 var alpha_threshold: float = 0.05
 var target_percent: float = 100.0
@@ -28,7 +28,7 @@ func _ready() -> void:
 	_prepare_images_and_mask()
 	_assign_mask_to_shader()
 	_update_label()
-	var cursor = load("res://assets/mop_128x128.png")
+	var cursor = load("res://assets/Mopping Assets/mop_128x128.png")
 	# CHANGE VECTOR2 BELOW WHEN CHANGING IMAGE
 	Input.set_custom_mouse_cursor(cursor, Input.CURSOR_ARROW, Vector2(50,100))
 
