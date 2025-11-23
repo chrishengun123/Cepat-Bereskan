@@ -2,7 +2,7 @@ extends Node
 
 var flow_rate:float
 var water_image : Image
-var water_path : String = "res://assets/water_temp_128x128.png"
+var water_path : String = "res://assets/Rice Cooking Assets/water_temp_128x128.png"
 
 @onready var water_sprite: Sprite2D = $inner_bowl/Area2D/water
 @onready var timer = $Timer

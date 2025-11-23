@@ -3,7 +3,7 @@ class_name Sweeping
 
 var moves:Array = []
 var move_index:int = 0
-var broom_sfx:Array = [preload("res://assets/Broom Var. 1.wav"), preload("res://assets/Broom Var. 2.wav"), preload("res://assets/Broom Var. 3.wav"), preload("res://assets/Broom Var. 4.wav")]
+var broom_sfx:Array = [preload("res://assets/Sweeping Assets/Broom Var. 1.wav"), preload("res://assets/Sweeping Assets/Broom Var. 2.wav"), preload("res://assets/Sweeping Assets/Broom Var. 3.wav"), preload("res://assets/Sweeping Assets/Broom Var. 4.wav")]
 
 func rotate_arrow():
 	match moves[move_index]:

@@ -9,8 +9,8 @@ const locations:Dictionary = {
 }
 
 const textures:Dictionary = {
-	"sweeping": [preload("res://assets/DUST 1.png"), preload("res://assets/DUST 2.png")],
-	"mopping": [preload("res://assets/SPILLED MESS.png")],
+	"sweeping": [preload("res://assets/Sweeping Assets/DUST 1.png"), preload("res://assets/Sweeping Assets/DUST 2.png")],
+	"mopping": [preload("res://assets/Mopping Assets/SPILLED MESS.png")],
 	"scrubbing": [preload("res://icon.svg")],
 	"rice_cooking": [preload("res://assets/SK-placeholder.jpg")]
 }

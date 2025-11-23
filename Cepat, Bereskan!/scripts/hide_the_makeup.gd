@@ -59,25 +59,25 @@ func start(amount:int):
 		match makeup.pattern:
 			[Vector2i(0,0)]:
 				makeup.type = "beauty blender"
-				makeup.texture = load("res://assets/BEAUTY BLENDER.png")
+				makeup.texture = load("res://assets/Makeup Assets/640x BEAUTY BLENDER.png")
 			[Vector2i(0,0), Vector2i(1,0)]:
 				makeup.type = "beauty blender"
-				makeup.texture = load("res://assets/BEAUTY BLENDER.png")
+				makeup.texture = load("res://assets/Makeup Assets/640x BEAUTY BLENDER.png")
 			[Vector2i(0,0), Vector2i(0,1)]:
 				makeup.type = "beauty blender"
-				makeup.texture = load("res://assets/BEAUTY BLENDER.png")
+				makeup.texture = load("res://assets/Makeup Assets/640x BEAUTY BLENDER.png")
 			[Vector2i(1,0), Vector2i(0,1), Vector2i(1,1)]:
 				makeup.type = "beauty blender"
-				makeup.texture = load("res://assets/BEAUTY BLENDER.png")
+				makeup.texture = load("res://assets/Makeup Assets/640x BEAUTY BLENDER.png")
 			[Vector2i(0,0), Vector2i(1,0), Vector2i(0,1), Vector2i(1,1)]:
 				makeup.type = "beauty blender"
-				makeup.texture = load("res://assets/BEAUTY BLENDER.png")
+				makeup.texture = load("res://assets/Makeup Assets/640x BEAUTY BLENDER.png")
 			[Vector2i(0,0), Vector2i(1,0), Vector2i(2,0), Vector2i(3,0)]:
 				makeup.type = "beauty blender"
-				makeup.texture = load("res://assets/BEAUTY BLENDER.png")
+				makeup.texture = load("res://assets/Makeup Assets/640x BEAUTY BLENDER.png")
 			[Vector2i(0,0), Vector2i(1,0), Vector2i(2,0), Vector2i(1,1)]:
 				makeup.type = "beauty blender"
-				makeup.texture = load("res://assets/BEAUTY BLENDER.png")
+				makeup.texture = load("res://assets/Makeup Assets/640x BEAUTY BLENDER.png")
 		makeup.position = Vector2(randf_range(640,1088), randf_range(64,576))
 		add_child(makeup)
 
