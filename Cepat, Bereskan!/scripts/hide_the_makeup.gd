@@ -136,5 +136,6 @@ func _unhandled_input(event: InputEvent) -> void:
 		for item:Makeup in makeup:
 			if item.held:
 				item.held = false
-				var tile_pos:Vector2i = bag_space.local_to_map(bag_space.to_local(item.position))
-				item.position = bag_space.to_global(bag_space.map_to_local(tile_pos))
+				var topleft:Vector2 = item.position - item.texture.get_size()*item.scale/2 + 640*item.scale/2
+				var tile_pos:Vector2i = bag_space.local_to_map(bag_space.to_local(topleft))
+				item.position = bag_space.to_global(bag_space.map_to_local(tile_pos)) + item.texture.get_size()*item.scale/2 - 640*item.scale/2
