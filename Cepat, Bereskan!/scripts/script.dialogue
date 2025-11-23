@@ -10,6 +10,7 @@ do Global.ui.boy.visible = true
 Boy: F*ck
 do Global.play_sfx(load("res://assets/Vibrate 1x.wav"))
 [wait=0]
+do Global.play_sfx(load("res://assets/BeginningDialogue/Phone Answer and Close.wav"))
 ( Sound of taking the phone )
 Boy: Hello?
 do Global.ui.boy.visible = false
@@ -19,6 +20,7 @@ Boy: Ye..yeah Mom, it’s fine. Btw, why do you call me so early ?
 do Global.ui.boy.visible = false
 Mom: Early ? It’s 2PM. Did you slept late last night ? I thought you wanna grow a few inches taller ? You should have sleep–
 do Global.game.bgm.stream_paused = true
+do Global.play_sfx(load("res://assets/Vibrate 1x.wav"))
 ( Stop background music and put a vibration SFX )
 [wait=0]
 do Global.ui.boy.visible = true
@@ -27,10 +29,12 @@ do Global.ui.boy.visible = false
 Mom: ...
 do Global.game.bgm.stream_paused = false
 Mom: Ok dear. I’m driving right now, so we will talk later. I will be home in around half an hour.
+do Global.play_sfx(load("res://assets/BeginningDialogue/Phone Answer and Close.wav"))
 ( Beep SFX from Mom hold up the call )
 [wait=0]
 do Global.ui.boy.visible = true
 Boy: *sigh* Here goes my freedom. I should start cleaning before Mom got home in half an hour…
+do Global.play_sfx(load("res://assets/BeginningDialogue/Surprised SFX.wav"))
 ( SURPRISED SFX )
 Boy: Wait !!? Half an hour ??? I’M FINISHED
 do Global.ui.boy.visible = false
