@@ -13,12 +13,14 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	if Input.is_key_pressed(KEY_SPACE):
-		$inner_bowl/Area2D.position.y -= 15 * delta
+		$inner_bowl/Area2D.position.y -= 60 * delta
 	if ($inner_bowl/Area2D/water_collision/WaterWarning.text == "Full !!") and not Input.is_key_pressed(KEY_SPACE):
 		queue_free()
+	#if ($inner_bowl/Area2D/water_collision/WaterWarning.text == "Too Much !!"):
+		#$inner_bowl/Area2D.position.y = 128.436
+		#$inner_bowl/Area2D/water_collision/WaterWarning.text = "Keep Going!"
 
 func _prepare_images() -> void:
-	#pass
 	water_image = Image.new()
 	water_image.load(water_path)
 	
