@@ -28,6 +28,7 @@ func _process(delta: float) -> void:
 		$sfx.play()
 		if Input.is_action_just_released(moves[move_index]):
 			move_index += 1
+			$Dust2.modulate.a -= 0.1
 			if move_index == moves.size():
 				queue_free()
 			else:
@@ -35,6 +36,22 @@ func _process(delta: float) -> void:
 		else:
 			move_index = 0
 			rotate_arrow()
+
+	var broom = Sprite2D.new()
+	if Input.is_action_just_released("ui_left"):
+		add_child(broom)
+		broom.position = Vector2(580, 333)
+		broom.rotation = 0
+		var tween = create_tween()
+		tween.tween_property(broom, "position", Vector2(500,333), 1)
+		tween.tween_property(broom, "rotation", 0.2, 1)
+	#if Input.is_action_just_released("ui_right"):
+		#
+	#if Input.is_action_just_released("ui_up"):
+		#
+	#if Input.is_action_just_released("ui_down"):
+		
+
 	if Input.is_action_pressed("ui_left") or Input.is_action_pressed("ui_right") or Input.is_action_pressed("ui_up") or Input.is_action_pressed("ui_down"):
 		$arrow.material.set_shader_parameter("modulate", Color.DARK_BLUE)
 	else:

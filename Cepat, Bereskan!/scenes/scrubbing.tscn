@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://ublstt6rq2o"]
+[gd_scene load_steps=7 format=3 uid="uid://ublstt6rq2o"]
 
 [ext_resource type="Script" uid="uid://djxak0fwnuwy8" path="res://scripts/scrubbing.gd" id="1_asm1x"]
 [ext_resource type="Texture2D" uid="uid://bbwp401fe2mnb" path="res://assets/Scrubbing Assets/WAJAN.png" id="2_tlowa"]
 [ext_resource type="Texture2D" uid="uid://dxe0fn8p2gicv" path="res://assets/Scrubbing Assets/WAJAN'S DIRT.png" id="3_pkyul"]
 [ext_resource type="Texture2D" uid="uid://cls8u2dsr431l" path="res://assets/Scrubbing Assets/HAND WAJAN.png" id="4_tlowa"]
+[ext_resource type="AudioStream" uid="uid://ckokg5ni7y0jl" path="res://assets/Scrubbing Assets/Broom Var. 2.wav" id="5_pkyul"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_asm1x"]
 font_size = 256
@@ -36,3 +37,7 @@ position = Vector2(640, 340)
 rotation = 0.34906584
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("4_tlowa")
+
+[node name="sfx" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_pkyul")
+volume_db = -20.0

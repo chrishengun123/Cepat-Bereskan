@@ -14,6 +14,10 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if Input.is_key_pressed(KEY_SPACE):
 		$inner_bowl/Area2D.position.y -= 50 * delta
+		if !$sfx.playing:
+			$sfx.play()
+	if not Input.is_key_pressed(KEY_SPACE) and $sfx.playing:
+		$sfx.stop()
 	if ($inner_bowl/Area2D/water_collision/WaterWarning.text == "Full !!") and not Input.is_key_pressed(KEY_SPACE):
 		queue_free()
 
