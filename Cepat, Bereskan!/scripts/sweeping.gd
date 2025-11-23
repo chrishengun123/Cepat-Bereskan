@@ -12,9 +12,9 @@ func rotate_arrow():
 		"ui_right":
 			$arrow.rotation = 0
 		"ui_up":
-			$arrow.rotation = PI/2
-		"ui_down":
 			$arrow.rotation = -PI/2
+		"ui_down":
+			$arrow.rotation = PI/2
 
 func _ready() -> void:
 	$arrow.material = $arrow.material.duplicate()
@@ -35,7 +35,7 @@ func _process(delta: float) -> void:
 		else:
 			move_index = 0
 			rotate_arrow()
-	if Input.is_action_pressed("ui_left") or Input.is_action_pressed("ui_right"):
+	if Input.is_action_pressed("ui_left") or Input.is_action_pressed("ui_right") or Input.is_action_pressed("ui_up") or Input.is_action_pressed("ui_down"):
 		$arrow.material.set_shader_parameter("modulate", Color.DARK_BLUE)
 	else:
 		$arrow.material.set_shader_parameter("modulate", Color.BLUE)

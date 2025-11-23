@@ -137,4 +137,4 @@ func _unhandled_input(event: InputEvent) -> void:
 			if item.held:
 				item.held = false
 				var tile_pos:Vector2i = bag_space.local_to_map(bag_space.to_local(item.position))
-				item.position = bag_space.to_global(bag_space.map_to_local(tile_pos)) + Vector2(bag_space.tile_set.tile_size/2)
+				item.position = bag_space.to_global(bag_space.map_to_local(tile_pos))
