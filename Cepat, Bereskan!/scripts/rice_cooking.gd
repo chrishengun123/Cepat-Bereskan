@@ -16,9 +16,6 @@ func _process(delta: float) -> void:
 		$inner_bowl/Area2D.position.y -= 60 * delta
 	if ($inner_bowl/Area2D/water_collision/WaterWarning.text == "Full !!") and not Input.is_key_pressed(KEY_SPACE):
 		queue_free()
-	#if ($inner_bowl/Area2D/water_collision/WaterWarning.text == "Too Much !!"):
-		#$inner_bowl/Area2D.position.y = 128.436
-		#$inner_bowl/Area2D/water_collision/WaterWarning.text = "Keep Going!"
 
 func _prepare_images() -> void:
 	water_image = Image.new()
@@ -38,8 +35,10 @@ func _on_enough_barrier_area_entered(area: Area2D) -> void:
 func _on_enough_barrier_area_exited(area: Area2D) -> void:
 	if area == $inner_bowl/Area2D:
 		$inner_bowl/Area2D/water_collision/WaterWarning.text = "Too Much !!"
+		set_process(false)
 		timer.start()
 
 func _on_timer_timeout() -> void:
 	$inner_bowl/Area2D.position.y = 128.436
 	$inner_bowl/Area2D/water_collision/WaterWarning.text = "Keep Going!"
+	set_process(true)
