@@ -11,6 +11,10 @@ func rotate_arrow():
 			$arrow.rotation = PI
 		"ui_right":
 			$arrow.rotation = 0
+		"ui_up":
+			$arrow.rotation = PI/2
+		"ui_down":
+			$arrow.rotation = -PI/2
 
 func _ready() -> void:
 	$arrow.material = $arrow.material.duplicate()

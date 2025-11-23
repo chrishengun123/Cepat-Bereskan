@@ -12,19 +12,25 @@ var tasks_left:Array = []
 
 func _ready() -> void:
 	Global.game = self
-	var task_types:Array = minigames.locations.keys()
+	var task_types:Array = minigames.locations.duplicate().keys()
 	var task_locations:Dictionary = minigames.locations.duplicate()
-	for i in range(task_locations.size()):
-		if !task_locations.get(task_locations.keys()[i]):
-			task_locations.erase(task_locations.keys()[i])
-			task_types = task_locations.keys()
 	for i in range(5):
 		var task:Task = tasks.instantiate()
 		var type = task_types.pick_random()
-		var locations:Array = task_locations.get(type)
-		task.position = locations[randi()%locations.size()]
+		var locations:Array = task_locations.get(type).duplicate()
+		task.position = locations.pop_at(randi()%locations.size())
+		task_locations.set(type, locations)
 		for j in range(task_locations.size()):
-			task_locations.get(task_locations.keys()[j]).erase(task.position)
+			var locations_update:Array = task_locations.get(task_locations.keys()[j]).duplicate()
+			locations_update.erase(task.position)
+			task_locations.set(task_locations.keys()[j], locations_update)
+		var k = 0
+		while k < task_locations.size():
+			if task_locations.get(task_locations.keys()[k]) == []:
+				task_locations.erase(task_locations.keys()[k])
+				task_types = task_locations.keys()
+			else:
+				k += 1
 		task.texture = minigames.textures.get(type).pick_random()
 		task.type = type
 		task_locations.set(type, locations)
