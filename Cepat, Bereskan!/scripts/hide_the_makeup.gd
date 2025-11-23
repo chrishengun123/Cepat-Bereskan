@@ -30,7 +30,7 @@ func start(amount:int):
 				return
 			var makeup_pattern:TileMapPattern = unchecked_patterns.pop_at(randi()%unchecked_patterns.size())
 			if !bag_space.get_used_rect().size:
-				bag_space.set_pattern(Vector2i(5,5),makeup_pattern)
+				bag_space.set_pattern(Vector2i(3,3),makeup_pattern)
 				makeup_patterns.append(makeup_pattern)
 				success = true
 			else:
@@ -80,7 +80,7 @@ func start(amount:int):
 				makeup_sprite.type = "eyelash curler"
 				makeup_sprite.texture = load("res://assets/Makeup Assets/1920x1280 EYELASH CURLER.png")
 		makeup_sprite.position = Vector2(randf_range(640,1088), randf_range(64,576))
-		makeup_sprite.scale = Vector2.ONE*4/100
+		makeup_sprite.scale = Vector2.ONE*4.25/100
 		add_child(makeup_sprite)
 		makeup.append(makeup_sprite)
 
@@ -134,4 +134,7 @@ func _unhandled_input(event: InputEvent) -> void:
 				break
 	elif Input.is_action_just_released("click"):
 		for item:Makeup in makeup:
-			item.held = false
+			if item.held:
+				item.held = false
+				var tile_pos:Vector2i = bag_space.local_to_map(bag_space.to_local(item.position))
+				item.position = bag_space.to_global(bag_space.map_to_local(tile_pos)) + Vector2(bag_space.tile_set.tile_size/2)

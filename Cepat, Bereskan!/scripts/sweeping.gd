@@ -19,11 +19,11 @@ func rotate_arrow():
 func _ready() -> void:
 	$arrow.material = $arrow.material.duplicate()
 	for i in range(10):
-		moves.append(["ui_left", "ui_right"].pick_random())
+		moves.append(["ui_left", "ui_right", "ui_up", "ui_down"].pick_random())
 	rotate_arrow()
 
 func _process(delta: float) -> void:
-	if Input.is_action_just_released("ui_left") or Input.is_action_just_released("ui_right"):
+	if Input.is_action_just_released("ui_left") or Input.is_action_just_released("ui_right") or Input.is_action_just_released("ui_up") or Input.is_action_just_released("ui_down"):
 		$sfx.stream = broom_sfx.pick_random()
 		$sfx.play()
 		if Input.is_action_just_released(moves[move_index]):

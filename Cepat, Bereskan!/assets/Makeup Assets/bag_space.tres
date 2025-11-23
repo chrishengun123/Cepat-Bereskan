@@ -3,22 +3,22 @@
 [ext_resource type="Texture2D" uid="uid://dq7jnd8fgj7gb" path="res://assets/Makeup Assets/GRID.png" id="1_it6ms"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_08g81"]
-tile_data = PackedInt32Array(0, 2, 0)
+tile_data = PackedInt32Array(0, 0, 0)
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_tj48q"]
-tile_data = PackedInt32Array(0, 2, 0, 65536, 2, 0)
+tile_data = PackedInt32Array(0, 0, 0, 65536, 0, 0)
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_5c1n6"]
-tile_data = PackedInt32Array(65536, 2, 0, 1, 2, 0, 65537, 2, 0)
+tile_data = PackedInt32Array(0, 0, 0, 1, 0, 0)
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_sqb6a"]
-tile_data = PackedInt32Array(0, 2, 0, 65536, 2, 0, 1, 2, 0, 65537, 2, 0)
+tile_data = PackedInt32Array(65536, 0, 0, 1, 0, 0, 65537, 0, 0)
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_ywqev"]
-tile_data = PackedInt32Array(0, 2, 0, 1, 2, 0, 65537, 2, 0, 2, 2, 0)
+tile_data = PackedInt32Array(0, 0, 0, 65536, 0, 0, 1, 0, 0, 65537, 0, 0)
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_7qp6d"]
-tile_data = PackedInt32Array(0, 2, 0, 1, 2, 0)
+tile_data = PackedInt32Array(0, 0, 0, 1, 0, 0, 65537, 0, 0, 2, 0, 0)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_it6ms"]
 texture = ExtResource("1_it6ms")
@@ -27,7 +27,7 @@ texture_region_size = Vector2i(64, 64)
 
 [resource]
 tile_size = Vector2i(64, 64)
-sources/2 = SubResource("TileSetAtlasSource_it6ms")
+sources/0 = SubResource("TileSetAtlasSource_it6ms")
 pattern_0 = SubResource("TileMapPattern_08g81")
 pattern_1 = SubResource("TileMapPattern_tj48q")
 pattern_2 = SubResource("TileMapPattern_5c1n6")
