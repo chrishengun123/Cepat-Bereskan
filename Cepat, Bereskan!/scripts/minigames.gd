@@ -2,16 +2,16 @@ extends Script
 class_name Minigames
 
 const locations:Dictionary = {
-	"sweeping": [Vector2(500,300), Vector2(600,300), Vector2(500,400), Vector2(600,400), Vector2(700,400), Vector2(500,500), Vector2(600,500), Vector2(700,500)],
-	"mopping": [Vector2(500,300), Vector2(600,300), Vector2(500,400), Vector2(600,400), Vector2(700,400), Vector2(500,500), Vector2(600,500), Vector2(700,500)],
-	"scrubbing": [Vector2(896,544), Vector2(240,256)],
-	"rice_cooking": [Vector2(700,300)]
+	"sweeping": [Vector2(280,120), Vector2(280,150), Vector2(280,180), Vector2(280,210), Vector2(280,240), Vector2(310,240), Vector2(340,240), Vector2(370,240), Vector2(400,240)],
+	"mopping": [Vector2(280,120), Vector2(280,150), Vector2(280,180), Vector2(280,210), Vector2(280,240), Vector2(310,240), Vector2(340,240), Vector2(370,240), Vector2(400,240)],
+	"scrubbing": [Vector2(640,280)],
+	"rice_cooking": [Vector2(600,240)]
 }
 
 const textures:Dictionary = {
 	"sweeping": [preload("res://assets/Sweeping Assets/DUST 1.png"), preload("res://assets/Sweeping Assets/DUST 2.png")],
 	"mopping": [preload("res://assets/Mopping Assets/SPILLED MESS.png")],
-	"scrubbing": [preload("res://icon.svg")],
+	"scrubbing": [preload("res://assets/SK-placeholder.jpg")],
 	"rice_cooking": [preload("res://assets/SK-placeholder.jpg")]
 }
 

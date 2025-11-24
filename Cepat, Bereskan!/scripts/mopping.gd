@@ -20,7 +20,7 @@ var mask_image: Image   # R8 mask (0 = clean, 1 = dirt)
 var mask_texture: ImageTexture
 
 # Progress
-var total_dirt_pixels: int = 0
+var total_dirt_pixels: int = 1
 var cleaned_pixels_count: int = 0
 
 

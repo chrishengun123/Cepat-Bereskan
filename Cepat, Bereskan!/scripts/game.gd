@@ -8,7 +8,7 @@ class_name Game
 @onready var bgm:AudioStreamPlayer = $bgm
 var tasks = preload("res://scenes/task.tscn")
 var minigames = preload("res://scripts/minigames.gd")
-var time_left:float = 180
+var time_left:float = 120
 var tasks_left:Array = []
 
 func _ready() -> void:

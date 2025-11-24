@@ -2,7 +2,6 @@ extends Node2D
 class_name HideTheMakeup
 
 @onready var bag_space:TileMapLayer = $tilemap/bag_space
-var makeup_data = preload("res://scripts/makeup_data.gd")
 var makeup:Array
 const sides:Array = [Vector2i.LEFT, Vector2i.RIGHT, Vector2i.UP, Vector2i.DOWN]
 var max_bag_size:Vector2i = Vector2i(6,7)

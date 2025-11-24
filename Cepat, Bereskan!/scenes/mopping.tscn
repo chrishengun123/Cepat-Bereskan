@@ -1,9 +1,9 @@
 [gd_scene load_steps=6 format=3 uid="uid://c03vrnwqhunni"]
 
 [ext_resource type="Script" uid="uid://bynf0mq22haqw" path="res://scripts/mopping.gd" id="1_o76vt"]
-[ext_resource type="Texture2D" uid="uid://cd5i4my5jenue" path="res://assets/FLOOR_SPRITE_3-1.jpg" id="2_wxoop"]
+[ext_resource type="Texture2D" uid="uid://cd5i4my5jenue" path="res://assets/Mopping Assets/FLOOR_SPRITE_3-1.jpg" id="2_wxoop"]
 [ext_resource type="Shader" uid="uid://3endyqqcnx4r" path="res://scripts/mopping.gdshader" id="3_qji5k"]
-[ext_resource type="Texture2D" uid="uid://c8q3b1hcfcsg8" path="res://assets/SPILLED MESS.png" id="4_ftimn"]
+[ext_resource type="Texture2D" uid="uid://c8q3b1hcfcsg8" path="res://assets/Mopping Assets/SPILLED MESS.png" id="4_ftimn"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_0d33b"]
 shader = ExtResource("3_qji5k")
