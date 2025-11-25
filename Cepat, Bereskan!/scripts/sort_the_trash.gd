@@ -1,7 +1,7 @@
 extends Node2D
 class_name SortTheTrash
 
-var trash_data = preload("res://scripts/trash_data.gd")
+var trash_data = preload("res://scripts/trash_data.gd").new()
 var unsorted:Array = []
 var sorted:Array = []
 
@@ -10,7 +10,9 @@ func _ready() -> void:
 		var trash:Trash = Trash.new()
 		trash.type = ["organic", "inorganic"].pick_random()
 		trash.texture = trash_data.textures.get(trash.type).pick_random()
-		trash.position = Vector2(randf_range(56,1088),576)
+		trash.position = Vector2(randf_range(150,1000),555)
+		trash.scale = Vector2(0.1, 0.1)
+		trash.rotation = randf_range(-PI, PI)
 		unsorted.append(trash)
 		add_child(trash)
 

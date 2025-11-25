@@ -1,6 +1,14 @@
-[gd_scene load_steps=2 format=3 uid="uid://cojc6xjhqdh03"]
+[gd_scene load_steps=6 format=3 uid="uid://8cygcty0tbbm"]
 
 [ext_resource type="Script" uid="uid://bpdok3asqelhx" path="res://scripts/sort_the_trash.gd" id="1_2jcaw"]
+[ext_resource type="Texture2D" uid="uid://17cks48hlbem" path="res://assets/Trash Assets/FLOOR_SPRITE_3-1.jpg" id="2_1seqs"]
+[ext_resource type="Texture2D" uid="uid://bxrt0kqjs8gpl" path="res://assets/Trash Assets/2_trash_bin_temp_270x216.png" id="3_dkpx5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1seqs"]
+size = Vector2(50.274426, 58.616905)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ydwry"]
+size = Vector2(72.87065, 84.227135)
 
 [node name="sort_the_trash" type="Node2D"]
 script = ExtResource("1_2jcaw")
@@ -8,3 +16,32 @@ script = ExtResource("1_2jcaw")
 [node name="organic_bin" type="Sprite2D" parent="."]
 
 [node name="inorganic_bin" type="Sprite2D" parent="."]
+
+[node name="FloorSprite31" type="Sprite2D" parent="."]
+position = Vector2(293, 840)
+scale = Vector2(0.095, 0.095)
+texture = ExtResource("2_1seqs")
+
+[node name="FloorSprite32" type="Sprite2D" parent="FloorSprite31"]
+position = Vector2(6000, 0.00021743774)
+scale = Vector2(1.0000001, 1.0000001)
+texture = ExtResource("2_1seqs")
+
+[node name="TrashBin" type="Sprite2D" parent="."]
+position = Vector2(579, 282.99997)
+scale = Vector2(2.44, 2.44)
+texture = ExtResource("3_dkpx5")
+
+[node name="Organic" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Organic"]
+position = Vector2(436.5, 281.5)
+scale = Vector2(4.555, 4.555)
+shape = SubResource("RectangleShape2D_1seqs")
+
+[node name="Inorganic" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Inorganic"]
+position = Vector2(721.5, 280.5)
+scale = Vector2(3.17, 3.17)
+shape = SubResource("RectangleShape2D_ydwry")

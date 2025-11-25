@@ -103,6 +103,7 @@ func _process(delta: float) -> void:
 			
 		if Input.is_action_just_pressed("ui_right"):
 			spawn_broom()
+			broom.scale.x = -0.115
 			var tween = create_tween()
 			tween.parallel().tween_property(broom, "position", Vector2(650,280), 0.2)
 			tween.parallel().tween_property(broom, "rotation", -0.2, 0.2)
@@ -123,11 +124,14 @@ func _process(delta: float) -> void:
 			
 		if Input.is_action_just_pressed("ui_down"):
 			spawn_broom()
+			broom.position.x = 625
+			broom.scale.x = -0.115
+			broom.rotation = 0.6
 			var tween = create_tween()
-			tween.parallel().tween_property(broom, "position", Vector2(550,350), 0.2)
-			tween.parallel().tween_property(broom, "rotation", -0.5, 0.1)
+			tween.parallel().tween_property(broom, "position", Vector2(650,380), 0.2)
+			tween.parallel().tween_property(broom, "rotation", 0.3, 0.1)
 			tween.tween_callback(func():
-				if broom.position.y == 350:
+				if broom.position.y == 380:
 					broom.queue_free()
 			)
 
