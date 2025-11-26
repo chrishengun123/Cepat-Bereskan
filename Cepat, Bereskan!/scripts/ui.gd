@@ -23,6 +23,7 @@ func _process(delta: float) -> void:
 func _unhandled_input(event: InputEvent) -> void:
 	if Input.is_action_just_pressed("pause"):
 		$pause_menu.visible = !$pause_menu.visible
+		get_tree().paused = !get_tree().paused
 		$sfx.stream = load("res://assets/Light Click (1).wav")
 		$sfx.play()
 
@@ -42,6 +43,7 @@ func _on_continue_pressed() -> void:
 	$pause_menu.visible = false
 	$sfx.stream = load("res://assets/Light Click (1).wav")
 	$sfx.play()
+	get_tree().paused = false
 
 
 func _on_give_up_pressed() -> void:
@@ -49,6 +51,8 @@ func _on_give_up_pressed() -> void:
 	$sfx.play()
 	get_tree().paused = false
 	get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
+	
+	Input.set_custom_mouse_cursor(null)
 
 
 func _on_end_game_pressed() -> void:
