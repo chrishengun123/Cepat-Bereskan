@@ -46,7 +46,7 @@ func _process(delta: float) -> void:
 		time_left -= delta
 	if time_left <= 0 and tasks_left:
 		#random ending scene depending on unfinished tasks
-		DialogueManager.show_dialogue_balloon(Consts.dialogue_script, "bad_end_sweeping")
+		DialogueManager.show_dialogue_balloon(Consts.dialogue_script, "bad_end_"+tasks_left.pick_random().type)
 		get_tree().paused = true
 	if $minigame.get_child_count():
 		player.process_mode = Node.PROCESS_MODE_DISABLED

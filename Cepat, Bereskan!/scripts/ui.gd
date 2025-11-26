@@ -38,6 +38,12 @@ func lose():
 	$end_screen.visible = true
 
 
+func _on_continue_pressed() -> void:
+	$pause_menu.visible = false
+	$sfx.stream = load("res://assets/Light Click (1).wav")
+	$sfx.play()
+
+
 func _on_give_up_pressed() -> void:
 	$sfx.stream = load("res://assets/Heavy Click (1).wav")
 	$sfx.play()
