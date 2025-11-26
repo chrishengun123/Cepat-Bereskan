@@ -14,17 +14,17 @@ do Global.play_sfx(load("res://assets/BeginningDialogue/Phone Answer and Close.w
 ( Sound of taking the phone )
 Boy: Hello?
 do Global.ui.boy.visible = false
-Mom: Honey, how is your first time being alone in house goes ? I hope you are not lonely.
+Mom: Honey, how is your first time being home alone going ? I hope you are not lonely.
 do Global.ui.boy.visible = true
 Boy: Ye..yeah Mom, it’s fine. Btw, why do you call me so early ?
 do Global.ui.boy.visible = false
-Mom: Early ? It’s 2PM. Did you slept late last night ? I thought you wanna grow a few inches taller ? You should have sleep–
+Mom: Early ? It’s 2PM. Did you sleep late last night ? I thought you wanna grow a few inches taller ? You should have slept–
 do Global.game.bgm.stream_paused = true
 do Global.play_sfx(load("res://assets/Vibrate 1x.wav"))
 ( Stop background music and put a vibration SFX )
 [wait=0]
 do Global.ui.boy.visible = true
-Boy: *raise voice a little* I Know Mom. Stop treating me as a kid.
+Boy: *raise voice a little* I know Mom. Stop treating me as a kid.
 do Global.ui.boy.visible = false
 Mom: ...
 do Global.game.bgm.stream_paused = false
@@ -33,7 +33,7 @@ do Global.play_sfx(load("res://assets/BeginningDialogue/Phone Answer and Close.w
 ( Beep SFX from Mom hold up the call )
 [wait=0]
 do Global.ui.boy.visible = true
-Boy: *sigh* Here goes my freedom. I should start cleaning before Mom got home in half an hour…
+Boy: *sigh* Here goes my freedom. I should start cleaning before Mom gets home in half an hour…
 do Global.play_sfx(load("res://assets/BeginningDialogue/Surprised SFX.wav"))
 ( SURPRISED SFX )
 Boy: Wait !!? Half an hour ??? I’M FINISHED
@@ -53,14 +53,13 @@ The woman pushed the door open slowly. She put down her briefcase as she moved t
 The floor, spotless.
 The bedroom, tidy. There is even a neatly folded stack of clothes on top of the bed.
 Mom: *Happy* Where is he ?
-She walked around and checked the trash bin, empty.
+She checked the kitchen. It was neat and tidy. She even saw her favorite wok, squeaky clean, lying on the table.
 Mom: He actually did his chores ?
 do Global.play_sfx(load("res://assets/Yawn.wav"))
-She stops on her tracks as her gaze settles on the sofa. The boy is curled up on it, fast asleep, a comic book resting on his chest.
+She stopped in her tracks as her gaze settles on the sofa. The boy is curled up on it, fast asleep, a comic book resting on his chest.
 Her worry instantly melted, replaced by a wave of tenderness. She walks closer, gently picks up the comic book and puts it on the TV table.
 Leaning down to her sleeping son, she smiles and kisses him lightly on the forehead.
 Mom: *whispering* Good boy.
-( Visual please let him have a blanket on at the end )
 do Global.ui.win()
 => END
 

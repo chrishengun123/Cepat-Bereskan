@@ -4,7 +4,9 @@ class_name TrashData
 var textures:Dictionary = {
 	"organic": [
 		preload("res://assets/Trash Assets/Banana.png"), 
-		preload("res://assets/Trash Assets/Fish.png")
+		preload("res://assets/Trash Assets/Fish.png"), 
+		preload("res://assets/Trash Assets/Apple.png"), 
+		preload("res://assets/Trash Assets/Cheese.png")
 		],
 	"inorganic": [
 		preload("res://assets/Trash Assets/Chips.png"), 
