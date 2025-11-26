@@ -9,11 +9,6 @@
 [node name="game" type="Node2D"]
 script = ExtResource("1_lnu2h")
 
-[node name="grass extension" type="Sprite2D" parent="."]
-position = Vector2(2176, -459)
-scale = Vector2(0.335, 0.335)
-texture = ExtResource("2_iywne")
-
 [node name="layout" type="TextureRect" parent="."]
 offset_right = 14880.0
 offset_bottom = 7440.0
