@@ -1,9 +1,9 @@
 [gd_scene load_steps=7 format=3 uid="uid://b3xnm4ktg7hj6"]
 
 [ext_resource type="Script" uid="uid://4du5vne7jjv2" path="res://scripts/sweeping.gd" id="1_u2u4c"]
-[ext_resource type="Texture2D" uid="uid://d0odwr6v7mndq" path="res://assets/arrow.png" id="2_1m0b1"]
 [ext_resource type="Texture2D" uid="uid://c14gmmvi5lrkr" path="res://assets/Sweeping Assets/FLOOR_SPRITE_3-1.jpg" id="2_4jyo0"]
 [ext_resource type="Shader" uid="uid://l6h13xnqr04e" path="res://scripts/highlight.gdshader" id="2_wlkic"]
+[ext_resource type="Texture2D" uid="uid://73jws1tn5vvp" path="res://assets/Sweeping Assets/ARROW1_KINDA WHITE.png" id="4_q4owh"]
 [ext_resource type="Texture2D" uid="uid://dqjcq8r6xq3r8" path="res://assets/Sweeping Assets/DUST 2.png" id="5_l4pg5"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_jkwws"]
@@ -24,8 +24,8 @@ texture = ExtResource("2_4jyo0")
 [node name="arrow" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_jkwws")
 position = Vector2(577, 184.055)
-scale = Vector2(3, 3)
-texture = ExtResource("2_1m0b1")
+scale = Vector2(-0.2, -0.2)
+texture = ExtResource("4_q4owh")
 
 [node name="Dust2" type="Sprite2D" parent="."]
 position = Vector2(571, 383.99994)

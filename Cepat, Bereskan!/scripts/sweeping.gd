@@ -39,53 +39,10 @@ func _process(delta: float) -> void:
 			$Dust2.modulate.a = 1
 			rotate_arrow()
 
-	
-	#if Input.is_action_pressed("ui_left"):
-		#if is_instance_valid(broom):
-			#broom.queue_free()
-		#else:
-			#broom = Sprite2D.new()
-			#add_child(broom)
-			#broom.texture = preload("res://assets/Sweeping Assets/actual broom.png")
-			#broom.position = Vector2(575, 280)
-			#broom.rotation = 0
-			#broom.scale = Vector2(0.115, 0.115)
-			#var tween = create_tween()
-			#tween.parallel().tween_property(broom, "position", Vector2(500,280), 0.2)
-			#tween.parallel().tween_property(broom, "rotation", 0.2, 0.2)
-			#tween.tween_callback(func():
-				#if broom.position.x == 500:
-					#broom.queue_free()
-					#broom = null
-			#)
-		#
-	#if Input.is_action_pressed("ui_right"):
-		#if is_instance_valid(broom):
-			#broom.queue_free()
-		#else:
-			#add_child(broom)
-			#broom.texture = preload("res://assets/Sweeping Assets/actual broom.png")
-			#broom.position = Vector2(575, 280)
-			#broom.rotation = 0
-			#broom.scale = Vector2(0.115, 0.115)
-			#var tween = create_tween()
-			#tween.parallel().tween_property(broom, "position", Vector2(650,280), 0.2)
-			#tween.parallel().tween_property(broom, "rotation", -0.2, 0.2)
-			#tween.tween_callback(func():
-				#if broom.position.x == 500:
-					#broom.queue_free()
-			#)
-		
-	#if Input.is_action_just_released("ui_up"):
-		#
-	#if Input.is_action_just_released("ui_down"):
-		
-	
-
 	if Input.is_action_pressed("ui_left") or Input.is_action_pressed("ui_right") or Input.is_action_pressed("ui_up") or Input.is_action_pressed("ui_down"):
-		$arrow.material.set_shader_parameter("modulate", Color.DARK_BLUE)
+		$arrow.material.set_shader_parameter("modulate", Color.MISTY_ROSE)
 	else:
-		$arrow.material.set_shader_parameter("modulate", Color.BLUE)
+		$arrow.material.set_shader_parameter("modulate", null)
 	
 	if broom:
 		pass
@@ -136,7 +93,6 @@ func _process(delta: float) -> void:
 			)
 
 func spawn_broom():
-	
 	broom = Sprite2D.new()
 	add_child(broom)
 	broom.texture = preload("res://assets/Sweeping Assets/actual broom.png")
