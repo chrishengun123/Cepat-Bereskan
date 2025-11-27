@@ -47,6 +47,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if !ui.in_cutscene and tasks_left:
 		time_left -= delta
+		$bgm.pitch_scale = 1.0 + 0.3 * easeInQuad((120 - time_left) / 120) # 30% faster at the end
 	if time_left <= 0 and tasks_left:
 		for child:Node in minigame.get_children():
 			child.queue_free()
@@ -80,3 +81,8 @@ func _task_undetect(area: Area2D):
 	var task:Task = area.get_parent()
 	tasks_touched.erase(task)
 	task.material.set_shader_parameter("enabled", false)
+
+# Other functions
+
+func easeInQuad(x: float):
+	return x * x
