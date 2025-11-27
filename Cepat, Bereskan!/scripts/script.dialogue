@@ -4,14 +4,18 @@ do Global.ui.boy.visible = true
 Boy: Wow, last night was wild.
 do Global.ui.boy.visible = false
 Rubbing his eyes, the boy took a step on the bedroom floor.
+do Global.sfx_player.volume_db = -3
 do Global.play_sfx(load("res://assets/Crash.mp3"))
 His small feet landed on the messy floor, and he stepped on an opened can of soda and fell.
 do Global.ui.boy.visible = true
 Boy: F*ck
+do Global.sfx_player.volume_db = 12
 do Global.play_sfx(load("res://assets/Vibrate 1x.wav"))
 [wait=0]
+do Global.sfx_player.volume_db = -4
 do Global.play_sfx(load("res://assets/BeginningDialogue/Phone Answer and Close.wav"))
 ( Sound of taking the phone )
+do Global.sfx_player.volume_db = 0
 Boy: Hello?
 do Global.ui.boy.visible = false
 Mom: Honey, how is your first time being home alone going ? I hope you are not lonely.
@@ -20,6 +24,7 @@ Boy: Ye..yeah Mom, it’s fine. Btw, why do you call me so early ?
 do Global.ui.boy.visible = false
 Mom: Early ? It’s 2PM. Did you sleep late last night ? I thought you wanna grow a few inches taller ? You should have slept–
 do Global.game.bgm.stream_paused = true
+do Global.sfx_player.volume_db = 12
 do Global.play_sfx(load("res://assets/Vibrate 1x.wav"))
 ( Stop background music and put a vibration SFX )
 [wait=0]
@@ -27,13 +32,17 @@ do Global.ui.boy.visible = true
 Boy: *raise voice a little* I know Mom. Stop treating me as a kid.
 do Global.ui.boy.visible = false
 Mom: ...
+do Global.sfx_player.volume_db = 0
 do Global.game.bgm.stream_paused = false
 Mom: Ok dear. I’m driving right now, so we will talk later. I will be home in around half an hour.
+do Global.sfx_player.volume_db = -4
 do Global.play_sfx(load("res://assets/BeginningDialogue/Phone Answer and Close.wav"))
 ( Beep SFX from Mom hold up the call )
+do Global.sfx_player.volume_db = 0
 [wait=0]
 do Global.ui.boy.visible = true
 Boy: *sigh* Here goes my freedom. I should start cleaning before Mom gets home in half an hour…
+do Global.sfx_player.volume_db = -6
 do Global.play_sfx(load("res://assets/BeginningDialogue/Surprised SFX.wav"))
 ( SURPRISED SFX )
 Boy: Wait !!? Half an hour ??? I’M FINISHED
@@ -56,11 +65,13 @@ The bedroom, tidy. There is even a neatly folded stack of clothes on top of the 
 Mom: *Happy* Where is he ?
 She checked the kitchen. It was neat and tidy. She even saw her favorite wok, squeaky clean, lying on the table.
 Mom: He actually did his chores ?
+do Global.sfx_player.volume_db = -4
 do Global.play_sfx(load("res://assets/Yawn.wav"))
 She stopped in her tracks as her gaze settles on the sofa. The boy is curled up on it, fast asleep, a comic book resting on his chest.
 Her worry instantly melted, replaced by a wave of tenderness. She walks closer, gently picks up the comic book and puts it on the TV table.
 Leaning down to her sleeping son, she smiles and kisses him lightly on the forehead.
 Mom: *whispering* Good boy.
+do Global.sfx_player.volume_db = 0
 do Global.ui.win()
 do Global.sfx_player.stop()
 => END
