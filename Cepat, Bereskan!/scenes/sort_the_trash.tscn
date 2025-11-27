@@ -18,29 +18,30 @@ script = ExtResource("1_2jcaw")
 
 [node name="WallSprite2" type="Sprite2D" parent="."]
 position = Vector2(577, 146.00002)
-scale = Vector2(0.185, 0.185)
+scale = Vector2(18.5, 18.5)
 texture = ExtResource("2_dwlbs")
 
 [node name="FloorSprite31" type="Sprite2D" parent="."]
 position = Vector2(293, 745)
-scale = Vector2(0.095, 0.095)
+scale = Vector2(1.9, 1.9)
 texture = ExtResource("2_1seqs")
 
 [node name="FloorSprite32" type="Sprite2D" parent="FloorSprite31"]
-position = Vector2(6000, 0.00021743774)
+position = Vector2(300.00128, -7.428607e-06)
 scale = Vector2(1.0000001, 1.0000001)
 texture = ExtResource("2_1seqs")
 
 [node name="OrganicBin" type="Sprite2D" parent="."]
-position = Vector2(304, 232)
-scale = Vector2(0.435, 0.435)
+position = Vector2(304.36, 232)
+scale = Vector2(0.875, 0.875)
 texture = ExtResource("4_svu8k")
 script = ExtResource("6_svu8k")
 type = "organic"
 metadata/_custom_type_script = "uid://cu12gwchh7dqd"
 
 [node name="OrganicHitbox" type="Area2D" parent="OrganicBin"]
-position = Vector2(0, -1.5258789e-05)
+position = Vector2(-0.41140747, 0)
+scale = Vector2(0.49714285, 0.49714285)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="OrganicBin/OrganicHitbox"]
 position = Vector2(175.86206, 195.04016)
@@ -48,15 +49,16 @@ scale = Vector2(9.125, 9.125)
 shape = SubResource("RectangleShape2D_1seqs")
 
 [node name="InorganicBin" type="Sprite2D" parent="."]
-position = Vector2(744, 264)
-scale = Vector2(0.39, 0.39)
+position = Vector2(744, 264.27)
+scale = Vector2(0.8, 0.8)
 texture = ExtResource("5_y046m")
 script = ExtResource("6_svu8k")
 type = "inorganic"
 metadata/_custom_type_script = "uid://cu12gwchh7dqd"
 
 [node name="InorganicHitbox" type="Area2D" parent="InorganicBin"]
-position = Vector2(0, -3.0517578e-05)
+position = Vector2(0, -0.3374939)
+scale = Vector2(0.48749992, 0.48749992)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InorganicBin/InorganicHitbox"]
 position = Vector2(78.2052, 133.33325)

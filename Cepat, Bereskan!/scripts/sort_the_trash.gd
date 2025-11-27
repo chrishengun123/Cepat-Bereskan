@@ -13,7 +13,7 @@ func _ready() -> void:
 		trash.type = ["organic", "inorganic"].pick_random()
 		trash.texture = trash_data.textures.get(trash.type).pick_random()
 		trash.position = Vector2(randf_range(150,1000),555)
-		trash.scale = Vector2(0.12, 0.12)
+		trash.scale = Vector2(0.96, 0.96)
 		trash.rotation = randf_range(0, 2*PI)
 		unsorted.append(trash)
 		add_child(trash)

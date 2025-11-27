@@ -15,12 +15,12 @@ script = ExtResource("1_asm1x")
 
 [node name="Wajan" type="Sprite2D" parent="."]
 position = Vector2(560, 304)
-scale = Vector2(0.8, 0.8)
+scale = Vector2(1.8, 1.8)
 texture = ExtResource("2_tlowa")
 
 [node name="Dirt" type="Sprite2D" parent="."]
 position = Vector2(560, 304)
-scale = Vector2(0.99999994, 0.99999994)
+scale = Vector2(2, 2)
 texture = ExtResource("3_pkyul")
 
 [node name="mashes" type="Label" parent="."]
@@ -35,7 +35,7 @@ vertical_alignment = 1
 [node name="HandHoldingSponge" type="Sprite2D" parent="."]
 position = Vector2(640, 340)
 rotation = 0.34906584
-scale = Vector2(0.4, 0.4)
+scale = Vector2(0.8, 0.8)
 texture = ExtResource("4_tlowa")
 
 [node name="sfx" type="AudioStreamPlayer" parent="."]

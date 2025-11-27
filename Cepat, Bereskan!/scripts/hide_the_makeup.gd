@@ -60,27 +60,27 @@ func start(amount:int):
 		match makeup_sprite.pattern:
 			[Vector2i(0,0)]:
 				makeup_sprite.type = "beauty blender"
-				makeup_sprite.texture = load("res://assets/Makeup Assets/BEAUTY BLENDER.png")
+				makeup_sprite.texture = load("res://assets/Makeup Assets/BEAUTY_BLENDER.png")
 			[Vector2i(0,0), Vector2i(1,0)]:
 				makeup_sprite.type = "lipstick"
 				makeup_sprite.texture = load("res://assets/Makeup Assets/LIPSTICK REVISED.png")
 			[Vector2i(0,0), Vector2i(0,1)]:
 				makeup_sprite.type = "foundation"
-				makeup_sprite.texture = load("res://assets/Makeup Assets/FOUNDATION REVISED.png")
+				makeup_sprite.texture = load("res://assets/Makeup Assets/FOUNDATION.png")
 			[Vector2i(0,1), Vector2i(1,0), Vector2i(1,1)]:
 				makeup_sprite.type = "eye shadow"
-				makeup_sprite.texture = load("res://assets/Makeup Assets/EYESHADOW_3offset_1280x1280.png")
+				makeup_sprite.texture = load("res://assets/Makeup Assets/EYESHADOW.png")
 			[Vector2i(0,0), Vector2i(0,1), Vector2i(1,0), Vector2i(1,1)]:
 				makeup_sprite.type = "powder"
-				makeup_sprite.texture = load("res://assets/Makeup Assets/COMPACT_POWDER_1280x1280.png")
+				makeup_sprite.texture = load("res://assets/Makeup Assets/COMPACT_POWDER.png")
 			[Vector2i(0,0), Vector2i(1,0), Vector2i(2,0), Vector2i(3,0)]:
 				makeup_sprite.type = "beauty blender"
-				makeup_sprite.texture = load("res://assets/Makeup Assets/BEAUTY BLENDER.png")
+				makeup_sprite.texture = load("res://assets/Makeup Assets/BEAUTY_BLENDER.png")
 			[Vector2i(0,0), Vector2i(1,0), Vector2i(1,1), Vector2i(2,0)]:
 				makeup_sprite.type = "eyelash curler"
-				makeup_sprite.texture = load("res://assets/Makeup Assets/EYELASH CURLER REVISED.png")
+				makeup_sprite.texture = load("res://assets/Makeup Assets/EYELASH_CURLER.png")
 		makeup_sprite.position = Vector2(randf_range(640,1000), randf_range(200,600))
-		makeup_sprite.scale = Vector2.ONE*6/100
+		makeup_sprite.scale = Vector2.ONE*53/100
 		add_child(makeup_sprite)
 		makeup.append(makeup_sprite)
 
@@ -135,13 +135,13 @@ func _unhandled_input(event: InputEvent) -> void:
 	elif Input.is_action_just_released("click"):
 		filled.clear()
 		for item:Makeup in makeup:
-			var topleft:Vector2 = item.position - item.texture.get_size()*item.scale/2 + 640*item.scale/2
+			var topleft:Vector2 = item.position - item.texture.get_size()*item.scale/2 + 64*item.scale/2
 			var tile_pos:Vector2i = bag_space.local_to_map(bag_space.to_local(topleft))
 			for tile in item.pattern:
 				filled.append(tile+tile_pos)
 			if item.held:
 				item.held = false
-				item.position = bag_space.to_global(bag_space.map_to_local(tile_pos)) + item.texture.get_size()*item.scale/2 - 640*item.scale/2
+				item.position = bag_space.to_global(bag_space.map_to_local(tile_pos)) + item.texture.get_size()*item.scale/2 - 64*item.scale/2
 				#Vector2(randf_range(640,1000), randf_range(200,600))
 				if item.position.x > 1100:
 					item.position.x = 1000
@@ -149,8 +149,8 @@ func _unhandled_input(event: InputEvent) -> void:
 					item.position.x = 640
 				if item.position.y > 600:
 					item.position.y = 600
-				if item.position.y < 200:
-					item.position.y = 200
+				if item.position.y < 100:
+					item.position.y = 100
 		for tile in bag_space.get_used_cells():
 			if !filled.has(tile):
 				return

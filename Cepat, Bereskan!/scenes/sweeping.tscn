@@ -18,18 +18,18 @@ script = ExtResource("1_u2u4c")
 
 [node name="FloorSprite31" type="Sprite2D" parent="."]
 position = Vector2(580, 342)
-scale = Vector2(0.065, 0.065)
+scale = Vector2(1.3, 1.3)
 texture = ExtResource("2_4jyo0")
 
 [node name="arrow" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_jkwws")
-position = Vector2(577, 184.055)
-scale = Vector2(-0.2, -0.2)
+position = Vector2(577, 192.055)
+scale = Vector2(-4, -4)
 texture = ExtResource("4_q4owh")
 
 [node name="Dust2" type="Sprite2D" parent="."]
 position = Vector2(571, 383.99994)
-scale = Vector2(0.085, 0.085)
+scale = Vector2(8.5, 8.5)
 texture = ExtResource("5_l4pg5")
 
 [node name="sfx" type="AudioStreamPlayer" parent="."]

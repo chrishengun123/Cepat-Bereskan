@@ -17,6 +17,7 @@ collision_layer = 0
 script = ExtResource("1_g2els")
 
 [node name="Character" parent="." instance=ExtResource("1_3vyb7")]
+scale = Vector2(2, 2)
 sprite_frames = ExtResource("3_qhqgy")
 animation = &"left"
 

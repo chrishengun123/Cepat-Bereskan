@@ -32,12 +32,12 @@ func bubble_left():
 	bubble.position.x = randf_range(440,550)
 	bubble.position.y = randf_range(250,400)
 	add_child(bubble)
-	var s = randf_range(0.25, 0.34)
+	var s = randf_range(2, 2.72)
 	bubble.scale = Vector2(s, s)
 	var tween = create_tween()
-	tween.tween_property(bubble, "scale", Vector2(0.35, 0.35), 0.7)
+	tween.tween_property(bubble, "scale", Vector2(2.8, 2.8), 0.7)
 	tween.tween_callback(func():
-		if bubble.scale.x >= 0.34:
+		if bubble.scale.x >= 2.72:
 			bubble.queue_free()
 		)
 
@@ -47,11 +47,11 @@ func bubble_right():
 	bubble.position.x = randf_range(610,720)
 	bubble.position.y = randf_range(250,400)
 	add_child(bubble)
-	var s = randf_range(0.25, 0.34)
+	var s = randf_range(2, 2.72)
 	bubble.scale = Vector2(s, s)
 	var tween = create_tween()
-	tween.tween_property(bubble, "scale", Vector2(0.35, 0.35), 0.7)
+	tween.tween_property(bubble, "scale", Vector2(2.8, 2.8), 0.7)
 	tween.tween_callback(func():
-		if bubble.scale.x >= 0.34:
+		if bubble.scale.x >= 2.72:
 			bubble.queue_free()
 	)

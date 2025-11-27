@@ -23,7 +23,7 @@ texture = ExtResource("2_7iw1u")
 
 [node name="Hand" type="Sprite2D" parent="."]
 position = Vector2(581, 271)
-scale = Vector2(0.55, 0.55)
+scale = Vector2(2.2, 2.2)
 texture = ExtResource("3_7iw1u")
 
 [node name="enough_barrier" type="Area2D" parent="."]

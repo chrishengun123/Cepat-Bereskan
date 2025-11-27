@@ -60,7 +60,7 @@ func _process(delta: float) -> void:
 			
 		if Input.is_action_just_pressed("ui_right"):
 			spawn_broom()
-			broom.scale.x = -0.115
+			broom.scale.x = -2.3
 			var tween = create_tween()
 			tween.parallel().tween_property(broom, "position", Vector2(650,280), 0.2)
 			tween.parallel().tween_property(broom, "rotation", -0.2, 0.2)
@@ -82,7 +82,7 @@ func _process(delta: float) -> void:
 		if Input.is_action_just_pressed("ui_down"):
 			spawn_broom()
 			broom.position.x = 625
-			broom.scale.x = -0.115
+			broom.scale.x = -2.3
 			broom.rotation = 0.6
 			var tween = create_tween()
 			tween.parallel().tween_property(broom, "position", Vector2(650,380), 0.2)
@@ -98,4 +98,4 @@ func spawn_broom():
 	broom.texture = preload("res://assets/Sweeping Assets/actual broom.png")
 	broom.position = Vector2(575, 280)
 	broom.rotation = 0
-	broom.scale = Vector2(0.115, 0.115)
+	broom.scale = Vector2(2.3, 2.3)

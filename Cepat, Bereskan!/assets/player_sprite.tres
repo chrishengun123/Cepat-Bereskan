@@ -2,41 +2,44 @@
 
 [ext_resource type="Texture2D" uid="uid://hdsme4ysvl65" path="res://assets/Tak berjudul156 (1).png" id="1_wen7i"]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_wen7i"]
+atlas = ExtResource("1_wen7i")
+region = Rect2(0, 0, 267, 602)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_jpmoh"]
 atlas = ExtResource("1_wen7i")
-region = Rect2(0, 0, 534, 1204)
+region = Rect2(267, 0, 267, 602)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mw71i"]
 atlas = ExtResource("1_wen7i")
-region = Rect2(534, 0, 534, 1204)
+region = Rect2(534, 0, 267, 602)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_22cgy"]
 atlas = ExtResource("1_wen7i")
-region = Rect2(1068, 0, 534, 1204)
+region = Rect2(801, 0, 267, 602)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bsas8"]
 atlas = ExtResource("1_wen7i")
-region = Rect2(1602, 0, 534, 1204)
+region = Rect2(1068, 0, 267, 602)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_li5uq"]
 atlas = ExtResource("1_wen7i")
-region = Rect2(2136, 0, 534, 1204)
+region = Rect2(1335, 0, 267, 602)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_er5i5"]
 atlas = ExtResource("1_wen7i")
-region = Rect2(2670, 0, 534, 1204)
+region = Rect2(1602, 0, 267, 602)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dgmbn"]
 atlas = ExtResource("1_wen7i")
-region = Rect2(3204, 0, 534, 1204)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_potit"]
-atlas = ExtResource("1_wen7i")
-region = Rect2(3738, 0, 534, 1204)
+region = Rect2(1869, 0, 267, 602)
 
 [resource]
 animations = [{
 "frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wen7i")
+}, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_jpmoh")
 }, {
@@ -57,9 +60,6 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_dgmbn")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_potit")
 }],
 "loop": true,
 "name": &"left",
