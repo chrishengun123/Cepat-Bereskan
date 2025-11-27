@@ -2,8 +2,8 @@ extends Node
 class_name Rice_Cooking
 
 var flow_rate:float
-var water_image : Image
-var water_path : String = "res://assets/Rice Cooking Assets/Water.png"
+var water_image : Image = preload("res://assets/Rice Cooking Assets/Water.png").get_image()
+#var water_path = "res://assets/Rice Cooking Assets/Water.png"
 
 @onready var water_sprite: Sprite2D = $inner_bowl/Area2D/water
 @onready var timer = $Timer
@@ -22,8 +22,8 @@ func _process(delta: float) -> void:
 		queue_free()
 
 func _prepare_images() -> void:
-	water_image = Image.new()
-	water_image.load(water_path)
+	#water_image = Image.new()
+	#water_image.load(water_path)
 	
 	var target_size = Vector2i(200, 128)   # make sure the size is not too big/small
 	if water_image.get_size() != target_size:

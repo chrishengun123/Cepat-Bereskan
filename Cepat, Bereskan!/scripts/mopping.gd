@@ -3,8 +3,8 @@ class_name Mopping
 
 var mop_sfx: Array = [preload("res://assets/Mopping Assets/Mop 1 - short.wav")]
 
-var dirt_path: String = "res://assets/Mopping Assets/SPILLED MESS.png"
-var clean_path: String = "res://assets/Mopping Assets/FLOOR_SPRITE_3-1.jpg"
+var dirt_path = preload("res://assets/Mopping Assets/SPILLED MESS.png")
+#var clean_path = preload("res://assets/Mopping Assets/FLOOR_SPRITE_3-1.jpg")
 var brush_radius_px: int = 6
 var alpha_threshold: float = 0.05
 var target_percent: float = 100.0
@@ -15,12 +15,12 @@ var update_texture_every_input: bool = true
 @onready var percent_label: Label = $PercentLabel
 
 # Image/Texture
-var dirt_image: Image
+var dirt_image: Image = preload("res://assets/Mopping Assets/SPILLED MESS.png").get_image()
 var mask_image: Image   # R8 mask (0 = clean, 1 = dirt)
 var mask_texture: ImageTexture
 
 # Progress
-var total_dirt_pixels: int = 1
+var total_dirt_pixels: int = 0
 var cleaned_pixels_count: int = 0
 
 
@@ -40,7 +40,7 @@ func _process(_delta: float) -> void:
 			apply_brush_to_mask(tex_pos, brush_radius_px)
 			if update_texture_every_input:
 				update_mask_texture()
-			#check_percentage()
+			check_percentage()
 			_update_label()
 		if !$sfx.playing:
 			on_mop_sfx_finished()
@@ -53,8 +53,8 @@ func on_mop_sfx_finished() -> void:
 	$sfx.play()
 
 func _prepare_images_and_mask() -> void:
-	dirt_image = Image.new()
-	dirt_image.load(dirt_path)
+	#dirt_image = Image.new()
+	#dirt_image.load(dirt_path)
 	dirt_image.convert(Image.FORMAT_RGBA8)
 
 	var target_size = Vector2i(80, 80)   # make sure the size is not too big
@@ -71,7 +71,6 @@ func _prepare_images_and_mask() -> void:
 	mask_image.fill(Color(1,1,1))   # 1 = dirty
 	mask_texture = ImageTexture.create_from_image(mask_image)
 	
-	total_dirt_pixels = 0
 	for y in range(h):
 		for x in range(w):
 			var c: Color = dirt_image.get_pixel(x, y)
@@ -146,7 +145,7 @@ func percent_cleaned() -> float:
 
 func check_percentage() -> void:
 	if percent_cleaned() >= target_percent:
-		print("SUCCESS %.2f%%" % percent_cleaned())
+		#print("SUCCESS %.2f%%" % percent_cleaned())
 		set_process(false)
 	print("total size of mask: ", total_dirt_pixels, ", cleaned ", cleaned_pixels_count, "(", percent_cleaned(),") percent")
 

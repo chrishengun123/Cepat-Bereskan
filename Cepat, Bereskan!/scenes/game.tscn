@@ -9,7 +9,7 @@
 [node name="game" type="Node2D"]
 script = ExtResource("1_lnu2h")
 
-[node name="grass_externsion" type="Sprite2D" parent="."]
+[node name="grass_extension" type="Sprite2D" parent="."]
 position = Vector2(5929, -1718)
 texture = ExtResource("2_iywne")
 
