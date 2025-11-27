@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://cou774qrdveor"]
+[gd_scene load_steps=9 format=3 uid="uid://cou774qrdveor"]
 
 [ext_resource type="Script" uid="uid://c5re2eidhbil3" path="res://scripts/rice_cooking.gd" id="1_uvwbj"]
 [ext_resource type="Texture2D" uid="uid://c4dmcuorij63v" path="res://icon.svg" id="2_7iw1u"]
+[ext_resource type="Texture2D" uid="uid://w52oo6wffmu0" path="res://assets/Rice Cooking Assets/RICE COOKER INNER POT 160x.png" id="2_i5frx"]
 [ext_resource type="Texture2D" uid="uid://dm1y8li1nf3nr" path="res://assets/Rice Cooking Assets/HAND RICE COOKER.png" id="3_7iw1u"]
 [ext_resource type="Texture2D" uid="uid://bhj1ngj7y5n0l" path="res://assets/Rice Cooking Assets/Water.png" id="4_5kt2l"]
 [ext_resource type="AudioStream" uid="uid://dq47fh1goff5h" path="res://assets/Rice Cooking Assets/start rice cooking.wav" id="5_5kt2l"]
@@ -17,9 +18,9 @@ b = Vector2(-63.981033, -63.506775)
 script = ExtResource("1_uvwbj")
 
 [node name="bowl" type="Sprite2D" parent="."]
-position = Vector2(570, 400)
-scale = Vector2(2.5, 2.5)
-texture = ExtResource("2_7iw1u")
+position = Vector2(570, 357.89)
+scale = Vector2(3.475, 3.475)
+texture = ExtResource("2_i5frx")
 
 [node name="Hand" type="Sprite2D" parent="."]
 position = Vector2(581, 271)
@@ -41,9 +42,9 @@ texture = ExtResource("2_7iw1u")
 
 [node name="inner_bowl" type="Sprite2D" parent="."]
 clip_children = 1
-position = Vector2(570, 371.52)
-scale = Vector2(2.11, 2.5549998)
-texture = ExtResource("2_7iw1u")
+position = Vector2(570, 351.50003)
+scale = Vector2(3.145, 3.30625)
+texture = ExtResource("2_i5frx")
 
 [node name="Area2D" type="Area2D" parent="inner_bowl"]
 position = Vector2(0, 117.21309)

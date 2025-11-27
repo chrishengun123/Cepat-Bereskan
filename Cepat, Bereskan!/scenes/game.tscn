@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://glqgsitcf4j0"]
+[gd_scene load_steps=7 format=3 uid="uid://glqgsitcf4j0"]
 
 [ext_resource type="Script" uid="uid://du7mnuc5pefnv" path="res://scripts/game.gd" id="1_lnu2h"]
-[ext_resource type="Texture2D" uid="uid://bhkotqgk6t06t" path="res://assets/FINAL LAYOUT.png" id="2_iywne"]
+[ext_resource type="Texture2D" uid="uid://b8rmxlj6n0omk" path="res://assets/RUMAH BERANTAKAN coba.png" id="2_iywne"]
 [ext_resource type="PackedScene" uid="uid://c4rh0ino016d6" path="res://scenes/player.tscn" id="3_iywne"]
+[ext_resource type="Texture2D" uid="uid://bhkotqgk6t06t" path="res://assets/FINAL LAYOUT.png" id="3_p57ef"]
 [ext_resource type="PackedScene" uid="uid://bppvf2x2sut0c" path="res://scenes/ui.tscn" id="4_lbhrr"]
 [ext_resource type="AudioStream" uid="uid://daceplyvqwajx" path="res://assets/Cepat_Bereskan_Theme_Loop.wav" id="5_iywne"]
 
@@ -10,14 +11,15 @@
 script = ExtResource("1_lnu2h")
 
 [node name="grass_extension" type="Sprite2D" parent="."]
-position = Vector2(5929, -1718)
+position = Vector2(2954.0002, -756.00006)
+scale = Vector2(5, 5)
 texture = ExtResource("2_iywne")
 
 [node name="layout" type="TextureRect" parent="."]
 offset_right = 14880.0
 offset_bottom = 7440.0
 scale = Vector2(0.05, 0.05)
-texture = ExtResource("2_iywne")
+texture = ExtResource("3_p57ef")
 
 [node name="walls" type="StaticBody2D" parent="."]
 collision_mask = 0

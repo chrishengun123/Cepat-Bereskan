@@ -38,6 +38,7 @@ func _ready() -> void:
 		task.texture = minigames.textures.get(type).pick_random()
 		task.type = type
 		task_locations.set(type, locations)
+		#task.scale = Vector2(0.1,0.1)
 		if locations.size() == 0:
 			task_types.erase(type)
 		add_child(task)
