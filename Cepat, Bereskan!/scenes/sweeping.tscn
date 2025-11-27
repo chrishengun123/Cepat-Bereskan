@@ -29,7 +29,7 @@ texture = ExtResource("4_q4owh")
 
 [node name="Dust2" type="Sprite2D" parent="."]
 position = Vector2(571, 383.99994)
-scale = Vector2(8.5, 8.5)
+scale = Vector2(0.08, 0.08)
 texture = ExtResource("5_l4pg5")
 
 [node name="sfx" type="AudioStreamPlayer" parent="."]

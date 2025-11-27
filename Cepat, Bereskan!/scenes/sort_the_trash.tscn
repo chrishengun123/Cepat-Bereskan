@@ -56,14 +56,14 @@ script = ExtResource("6_svu8k")
 type = "inorganic"
 metadata/_custom_type_script = "uid://cu12gwchh7dqd"
 
-[node name="InorganicHitbox" type="Area2D" parent="InorganicBin"]
-position = Vector2(0, -0.3374939)
-scale = Vector2(0.48749992, 0.48749992)
+[node name="InorganicHitbox" type="Area2D" parent="."]
+position = Vector2(744, 264)
+scale = Vector2(0.39, 0.39)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="InorganicBin/InorganicHitbox"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InorganicHitbox"]
 position = Vector2(78.2052, 133.33325)
 scale = Vector2(7.3699994, 7.3699994)
 shape = SubResource("RectangleShape2D_ydwry")
 
 [connection signal="input_event" from="OrganicBin/OrganicHitbox" to="." method="_on_organic_hitbox_input_event"]
-[connection signal="input_event" from="InorganicBin/InorganicHitbox" to="." method="_on_inorganic_hitbox_input_event"]
+[connection signal="input_event" from="InorganicHitbox" to="." method="_on_inorganic_hitbox_input_event"]
