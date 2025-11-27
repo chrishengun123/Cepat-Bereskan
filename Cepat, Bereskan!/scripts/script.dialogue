@@ -38,6 +38,7 @@ do Global.play_sfx(load("res://assets/BeginningDialogue/Surprised SFX.wav"))
 ( SURPRISED SFX )
 Boy: Wait !!? Half an hour ??? I’M FINISHED
 do Global.ui.boy.visible = false
+do Global.sfx_player.stop()
 => END
 
 ~ good_end
@@ -61,6 +62,7 @@ Her worry instantly melted, replaced by a wave of tenderness. She walks closer, 
 Leaning down to her sleeping son, she smiles and kisses him lightly on the forehead.
 Mom: *whispering* Good boy.
 do Global.ui.win()
+do Global.sfx_player.stop()
 => END
 
 ~ bad_end_sweeping
@@ -106,4 +108,16 @@ Her eyes swept the room. Socks on the couch, open cans on the counter, crumpled 
 Mom: “You live like this?”
 Her eyes flashed with fury as she marched toward him. But halfway there, her foot landed on an empty can. She slipped, her arms flailing in the air for a few moments before she fell face-first onto the floor.
 Boy: “…Mom?”
+do Global.ui.lose()
 => END
+
+~ bad_end_rice_cooking
+A woman, still talking on her phone, opened her car door. "Yes Sir, thank you," she said just as the call cut off. A small grin spread across her face. As she stepped out and walked around her car, she caught sight of a ten-dollar bill. She plucked it up, thinking to herself, “I’m pretty lucky today.”
+She made her way to the front door of her house. The mature woman rang the doorbell once, but there was no response. She tried the bell a few more times, calling out, "Dear, I'm home!"
+When the silence stretched on for too long, her smile stiffened, and a cold dread began to surround her. She flipped the nearby welcome mat and retrieved a spare key.
+She unlocked the door and pushed it open.
+The sight that greeted her sent a jolt of pure shock through her heart, making her gasp. Her baggage slipped from her numb fingers and clattered to the floor. The entire interior of the house was a scene of devastation, completely burned, save for the section of the wall immediately surrounding the door.
+And then, with a terrible groaning sound, the partially scorched door itself suddenly fell inward, crashing to the ground, leaving the woman shocked and bewildered at the same time.
+do Global.ui.lose()
+=> END
+
