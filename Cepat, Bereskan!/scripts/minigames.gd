@@ -12,7 +12,7 @@ const locations:Dictionary = {
 
 const textures:Dictionary = {
 	"sweeping": [preload("res://assets/Sweeping Assets/DUST 1.png"), preload("res://assets/Sweeping Assets/DUST 2.png")],
-	"mopping": [preload("res://assets/Mopping Assets/SPILLED MESS.png")],
+	"mopping": [preload("res://assets/star indicator.png")],
 	"scrubbing": [preload("res://assets/star indicator.png")],
 	"rice_cooking": [preload("res://assets/star indicator.png")],
 	"hide_the_makeup": [preload("res://assets/star indicator.png")],
