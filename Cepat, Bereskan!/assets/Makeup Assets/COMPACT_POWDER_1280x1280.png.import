@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://blbi7t12u8ah1"
-path="res://.godot/imported/1280x FOUNDATION.png-f270544c7fc8dea8de02f467a02717ac.ctex"
+uid="uid://dsxtcfp31ej1v"
+path="res://.godot/imported/COMPACT_POWDER_1280x1280.png-26109d0953cc0fb70a951955689c5737.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Makeup Assets/1280x FOUNDATION.png"
-dest_files=["res://.godot/imported/1280x FOUNDATION.png-f270544c7fc8dea8de02f467a02717ac.ctex"]
+source_file="res://assets/Makeup Assets/COMPACT_POWDER_1280x1280.png"
+dest_files=["res://.godot/imported/COMPACT_POWDER_1280x1280.png-26109d0953cc0fb70a951955689c5737.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b2spojk1pwfhv"
-path="res://.godot/imported/EYESHADOW REVISED.png-1cf3572d7ff644d3dd0bf5ab2e25b10f.ctex"
+uid="uid://cnd5fepx2tsio"
+path="res://.godot/imported/FOUNDATION REVISED.png-3f69e1ef16a8a6a2045a525499010f88.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Makeup Assets/EYESHADOW REVISED.png"
-dest_files=["res://.godot/imported/EYESHADOW REVISED.png-1cf3572d7ff644d3dd0bf5ab2e25b10f.ctex"]
+source_file="res://assets/Makeup Assets/FOUNDATION REVISED.png"
+dest_files=["res://.godot/imported/FOUNDATION REVISED.png-3f69e1ef16a8a6a2045a525499010f88.ctex"]
 
 [params]
 

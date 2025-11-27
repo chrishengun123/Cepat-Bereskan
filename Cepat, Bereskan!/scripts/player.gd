@@ -2,6 +2,7 @@ extends CharacterBody2D
 class_name Player
 
 @onready var character:AnimatedSprite2D = $Character
+@onready var task_collider:Area2D = $task_collider
 var direction:Vector2
 
 func _physics_process(delta: float) -> void:

@@ -10,9 +10,12 @@ var tasks = preload("res://scenes/task.tscn")
 var minigames = preload("res://scripts/minigames.gd")
 var time_left:float = 120
 var tasks_left:Array = []
+var tasks_touched:Array = []
 
 func _ready() -> void:
 	Global.game = self
+	player.task_collider.area_entered.connect(_task_detect)
+	player.task_collider.area_exited.connect(_task_undetect)
 	var task_types:Array = minigames.locations.duplicate().keys()
 	var task_locations:Dictionary = minigames.locations.duplicate()
 	for i in range(7):
@@ -55,6 +58,23 @@ func _process(delta: float) -> void:
 		player.process_mode = Node.PROCESS_MODE_INHERIT
 		modulation.color = Color.WHITE
 
+func _unhandled_input(event: InputEvent) -> void:
+	if Input.is_action_just_pressed("ui_accept"):
+		if tasks_touched:
+			var task:Task = tasks_touched[0]
+			task.task_minigame = minigames.scenes.get(task.type).instantiate()
+			minigame.add_child(task.task_minigame)
+			task.task_started = true
 
 func _on_bgm_finished() -> void:
 	$bgm.play()
+
+func _task_detect(area: Area2D):
+	var task:Task = area.get_parent()
+	tasks_touched.append(task)
+	task.material.set_shader_parameter("enabled", true)
+
+func _task_undetect(area: Area2D):
+	var task:Task = area.get_parent()
+	tasks_touched.erase(task)
+	task.material.set_shader_parameter("enabled", false)

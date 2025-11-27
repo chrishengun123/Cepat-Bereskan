@@ -27,8 +27,8 @@ script = ExtResource("1_3qm7i")
 
 [node name="hitbox" type="Area2D" parent="."]
 material = SubResource("ShaderMaterial_ct837")
-collision_layer = 0
-collision_mask = 2
+collision_layer = 2
+collision_mask = 0
 
 [node name="shape" type="CollisionShape2D" parent="hitbox"]
 shape = SubResource("CircleShape2D_3qeyo")

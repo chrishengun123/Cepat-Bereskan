@@ -4,7 +4,6 @@ class_name Task
 const minigames = preload("res://scripts/minigames.gd")
 var game:Game
 var type:String
-var player_touching:bool = false
 var task_minigame:Node
 var task_started:bool = false
 
@@ -18,19 +17,3 @@ func _process(delta: float) -> void:
 		if !game.tasks_left:
 			DialogueManager.show_dialogue_balloon(Consts.dialogue_script, "good_end")
 		queue_free()
-
-func _unhandled_input(event: InputEvent) -> void:
-	if player_touching and Input.is_action_just_pressed("ui_accept"):
-		task_minigame = minigames.scenes.get(type).instantiate()
-		game.minigame.add_child(task_minigame)
-		task_started = true
-
-
-func _on_hitbox_body_entered(body: Node2D) -> void:
-	player_touching = true
-	material.set_shader_parameter("enabled", true)
-
-
-func _on_hitbox_body_exited(body: Node2D) -> void:
-	player_touching = false
-	material.set_shader_parameter("enabled", false)

@@ -60,27 +60,27 @@ func start(amount:int):
 		match makeup_sprite.pattern:
 			[Vector2i(0,0)]:
 				makeup_sprite.type = "beauty blender"
-				makeup_sprite.texture = load("res://assets/Makeup Assets/640x BEAUTY BLENDER.png")
+				makeup_sprite.texture = load("res://assets/Makeup Assets/BEAUTY BLENDER.png")
 			[Vector2i(0,0), Vector2i(1,0)]:
 				makeup_sprite.type = "lipstick"
-				makeup_sprite.texture = load("res://assets/Makeup Assets/1280x640 LIPSTICK.png")
+				makeup_sprite.texture = load("res://assets/Makeup Assets/LIPSTICK REVISED.png")
 			[Vector2i(0,0), Vector2i(0,1)]:
 				makeup_sprite.type = "foundation"
-				makeup_sprite.texture = load("res://assets/Makeup Assets/1280x FOUNDATION.png")
+				makeup_sprite.texture = load("res://assets/Makeup Assets/FOUNDATION REVISED.png")
 			[Vector2i(0,1), Vector2i(1,0), Vector2i(1,1)]:
 				makeup_sprite.type = "eye shadow"
-				makeup_sprite.texture = load("res://assets/Makeup Assets/1280x EYESHADOW.png")
+				makeup_sprite.texture = load("res://assets/Makeup Assets/EYESHADOW_3offset_1280x1280.png")
 			[Vector2i(0,0), Vector2i(0,1), Vector2i(1,0), Vector2i(1,1)]:
 				makeup_sprite.type = "powder"
-				makeup_sprite.texture = load("res://assets/Makeup Assets/1920x COMPACT POWDER.png")
+				makeup_sprite.texture = load("res://assets/Makeup Assets/COMPACT_POWDER_1280x1280.png")
 			[Vector2i(0,0), Vector2i(1,0), Vector2i(2,0), Vector2i(3,0)]:
 				makeup_sprite.type = "beauty blender"
-				makeup_sprite.texture = load("res://assets/Makeup Assets/640x BEAUTY BLENDER.png")
+				makeup_sprite.texture = load("res://assets/Makeup Assets/BEAUTY BLENDER.png")
 			[Vector2i(0,0), Vector2i(1,0), Vector2i(1,1), Vector2i(2,0)]:
 				makeup_sprite.type = "eyelash curler"
-				makeup_sprite.texture = load("res://assets/Makeup Assets/1920x1280 EYELASH CURLER.png")
-		makeup_sprite.position = Vector2(randf_range(640,1088), randf_range(64,576))
-		makeup_sprite.scale = Vector2.ONE*4.25/100
+				makeup_sprite.texture = load("res://assets/Makeup Assets/EYELASH CURLER REVISED.png")
+		makeup_sprite.position = Vector2(randf_range(640,1000), randf_range(200,600))
+		makeup_sprite.scale = Vector2.ONE*6/100
 		add_child(makeup_sprite)
 		makeup.append(makeup_sprite)
 
@@ -142,6 +142,15 @@ func _unhandled_input(event: InputEvent) -> void:
 			if item.held:
 				item.held = false
 				item.position = bag_space.to_global(bag_space.map_to_local(tile_pos)) + item.texture.get_size()*item.scale/2 - 640*item.scale/2
+				#Vector2(randf_range(640,1000), randf_range(200,600))
+				if item.position.x > 1100:
+					item.position.x = 1000
+				if item.position.x < 100:
+					item.position.x = 640
+				if item.position.y > 600:
+					item.position.y = 600
+				if item.position.y < 200:
+					item.position.y = 200
 		for tile in bag_space.get_used_cells():
 			if !filled.has(tile):
 				return

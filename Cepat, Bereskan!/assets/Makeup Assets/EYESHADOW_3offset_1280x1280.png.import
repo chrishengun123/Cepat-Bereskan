@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cxmjf4wb72o5b"
-path="res://.godot/imported/1280x EYESHADOW.png-59f8a961fc0e1ef660f038a5e434bfa4.ctex"
+uid="uid://c8mteo17uaerk"
+path="res://.godot/imported/EYESHADOW_3offset_1280x1280.png-ccaa8f61e68be5c0081fefe76df2ef07.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Makeup Assets/1280x EYESHADOW.png"
-dest_files=["res://.godot/imported/1280x EYESHADOW.png-59f8a961fc0e1ef660f038a5e434bfa4.ctex"]
+source_file="res://assets/Makeup Assets/EYESHADOW_3offset_1280x1280.png"
+dest_files=["res://.godot/imported/EYESHADOW_3offset_1280x1280.png-ccaa8f61e68be5c0081fefe76df2ef07.ctex"]
 
 [params]
 
