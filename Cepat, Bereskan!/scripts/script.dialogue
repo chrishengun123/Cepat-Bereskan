@@ -82,9 +82,13 @@ Then suddenly, ( Ding Dong SFX ), the sound of a doorbell blasting through the h
 The sound of the bell was the turning point, as the body, surprised, finally fell flat on the floor,  causing a large dust cloud.
 do Global.ui.boy.visible = true
 Boy: *Coughing* Seriously ?
+do Global.ui.boy.visible = false
 As the boy brushed off the dust from his clothes, the doorbell rang once again.
+do Global.ui.boy.visible = true
 Boy: Yeah, yeah! I’m coming!
+do Global.ui.boy.visible = false
 He pushed himself up and stumbled toward the door and stepped right onto a lonely dirty sock.
+do Global.ui.boy.visible = true
 Boy: *sighed* Aw.. come on…
 do Global.ui.boy.visible = false
 The boy mumbled in annoyance. Hearing the doorbell rang again, he yanked the door open.
@@ -109,16 +113,22 @@ do Global.ui.lose()
 The Boy was still hunched at his desk, picking up the last empty cans, trying to build them into a small can tower. He reached for one more when the doorbell suddenly rang.
 He flinched, snatched the can, and launched it at the trash bin like a champ. However, the can sailed past the bin, straight across the living room, and hit the TV screen with a sharp crack.
 He rushed to the door and pulled it open.
+do Global.ui.boy.visible = true
 Boy: “Mom ?”
+do Global.ui.boy.visible = false
 Mom: “I missed you, honey.”
 She offered a quick, warm smile. Then her nose wrinkled. She frowned, leaning forward to sniff the air.
 Mom: “What is that smell ?”
+do Global.ui.boy.visible = true
 Boy: “Ah…nothing!”
+do Global.ui.boy.visible = false
 He tried to block the entrance with his body, but she was already stepping past him.
 Her eyes swept the room. Socks on the couch, open cans on the counter, crumpled wrappers everywhere, and a trail of mess leading toward his bedroom. Her smile vanished, replaced by a stare of pure focus. The air felt suddenly tight.
 Mom: “You live like this?”
 Her eyes flashed with fury as she marched toward him. But halfway there, her foot landed on an empty can. She slipped, her arms flailing in the air for a few moments before she fell face-first onto the floor.
+do Global.ui.boy.visible = true
 Boy: “…Mom?”
+do Global.ui.boy.visible = false
 do Global.ui.lose()
 => END
 
@@ -133,13 +143,63 @@ do Global.ui.lose()
 => END
 
 ~ bad_end_scrubbing
+Hearing the sound of falling water from outside the door, she frowned a little.
+Mom: “He might be in a showershower.”
+Not wanting to interfere, she bent down, retrieved the spare key hidden beneath the doormat and unlocked the door.
+Just as she takes off her heels and steps inside, a wok accelerates toward her face like a flying saucer.
+Like any normal person who suddenly got greeted by a flying wok as they got home, she screams and closes her eyes to brace for the impact.
+Abnormally, the furious flying wok halts its rotation a few millimeters from her nose and executes a boomerang-style return flight path towards where it came from.
+Hearing the scream, a boy peeks out his head from the kitchen.
+do Global.ui.boy.visible = true
+Boy: “Mom?”
+do Global.ui.boy.visible = false
+The returning wok smacked squarely into his face, causing the young boy to fall backwards and head first on the floor.
 do Global.ui.lose()
 => END
 
 ~ bad_ending_mopping
+As the setting sun fell towards the backdrop of the small town. A middle-aged woman step down from her car, a large smile painted on her face.
+Mom: “I’m finally home.”
+Mom: “Dear, I’m home.”
+There was only silence.
+Her happy smile shifted towards a cold dark loving smile as she rang the 3rd time.
+do Global.ui.boy.visible = true
+Boy: “Coming !”
+do Global.ui.boy.visible = false
+Hearing the boy’s voice, the woman stopped ringing and waited for a full minute.
+Seeing the door still shut after several minutes, she let out a frustrated breath.
+She bent down, reached under the doormat, and took out the spare key.
+She pushed the door open.
+Reaching her head inside, she smelled a slightly weird stench coming from the house.
+Before searching for the source, she saw her son standing a few meters away, frozen in a weird pose.
+With her mind clouded by anger, she rambled as she walked closer to the boy.
+Mom: “What were you doing ? And why didn’t you open the door ? I waited for almost 10 minutes. This behavior is unacceptable, I left you alone in the house because I expected you to be responsible. I will confiscate your PC for a week. I expect–”
+do Global.ui.boy.visible = true
+Boy: “Wait !”
+do Global.ui.boy.visible = false
+Mom flinched at the sudden yell from her son. Just as she wanted to continue the ramble, her high heel landed on a mysterious white puddle on the floor.
+do Global.ui.boy.visible = true
+Boy: “Mom !”
+do Global.ui.boy.visible = false
 do Global.ui.lose()
 => END
 
 ~ bad_end_hide_the_makeup
+A middle-aged woman in a suit stood at the door, her beautiful smile hiding a vast array of coldness. After a long while of waiting, she lifted the doormat, retrieved the spare key, and entered the house.
+Much to her surprise, the house was unexpectedly quite clean.
+She moved through the rooms, looking for her son. At the door of his bedroom, she heard the sounds of rummaging.
+Pequid by curiosity, she quietly observed through the door opening.
+Inside, the boy was hurriedly stuffing various items into a black bag, the behavior looked quite suspicious to her.
+Mom: “Does he do drugs ?”
+With anxiety, she went inside.
+Mom:  “What are you doing?”
+The boy flinched, turning his face towards the voice as several items dropped to the floor.
+Foundation, eyeliner, lipstick, an array of cosmetics. She snickered as she observed the faint traces of makeup on her son’s rosy face.
+Mom: “Oh, I never knew I had a daughter.”
+The boy flushed immediately.
+Boy: “Wait…wait I can explain !”
+Without giving her son a chance to speak, she pounced at him.
+Mom: “Let Mom dress you up.”
+That day, the family had a new doll… daughter.
 do Global.ui.lose()
 => END
