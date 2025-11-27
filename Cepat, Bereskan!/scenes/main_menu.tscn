@@ -69,11 +69,17 @@ theme = SubResource("Theme_ekxnf")
 text = "Quit"
 
 [node name="credits" type="Control" parent="."]
-visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+
+[node name="Panel" type="Panel" parent="credits"]
+layout_mode = 0
+offset_left = 384.0
+offset_top = 64.0
+offset_right = 768.0
+offset_bottom = 640.0
 
 [node name="title" type="Label" parent="credits"]
 layout_mode = 0
