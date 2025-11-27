@@ -132,3 +132,14 @@ And then, with a terrible groaning sound, the partially scorched door itself sud
 do Global.ui.lose()
 => END
 
+~ bad_end_scrubbing
+do Global.ui.lose()
+=> END
+
+~ bad_ending_mopping
+do Global.ui.lose()
+=> END
+
+~ bad_end_hide_the_makeup
+do Global.ui.lose()
+=> END

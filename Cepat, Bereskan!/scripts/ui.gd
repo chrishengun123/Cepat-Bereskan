@@ -19,6 +19,8 @@ func _process(delta: float) -> void:
 	$time_left.modulate = Color(1-$time_left.value/$time_left.max_value, $time_left.value/$time_left.max_value, 0)
 	cutscene.visible = in_cutscene
 	$time_left.visible = !in_cutscene
+	if $pause_menu.visible or $end_screen.visible:
+		game.modulation.color = Color.DARK_GRAY
 
 func _unhandled_input(event: InputEvent) -> void:
 	if Input.is_action_just_pressed("pause"):

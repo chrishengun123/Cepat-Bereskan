@@ -2,10 +2,8 @@ extends Script
 class_name Minigames
 
 const locations:Dictionary = {
-	"sweeping": [Vector2(0,0)],
-	# Vector2(280,120), Vector2(280,180), Vector2(280,240), Vector2(340,240), Vector2(390,240)
-	#Vector2(280,120), Vector2(280,180), Vector2(280,240), 
-	"mopping": [Vector2(340,240), Vector2(390,240)],
+	"sweeping": [Vector2(280,120), Vector2(280,180), Vector2(280,240), Vector2(340,240), Vector2(390,240)],
+	"mopping": [Vector2(280,120), Vector2(280,180), Vector2(280,240), Vector2(340,240), Vector2(390,240)],
 	"scrubbing": [Vector2(640,245)],
 	"rice_cooking": [Vector2(600,240)],
 	"hide_the_makeup": [Vector2(80,200)],

@@ -48,6 +48,8 @@ func _process(delta: float) -> void:
 	if !ui.in_cutscene and tasks_left:
 		time_left -= delta
 	if time_left <= 0 and tasks_left:
+		for child:Node in minigame.get_children():
+			child.queue_free()
 		#random ending scene depending on unfinished tasks
 		DialogueManager.show_dialogue_balloon(Consts.dialogue_script, "bad_end_"+tasks_left.pick_random().type)
 		get_tree().paused = true
